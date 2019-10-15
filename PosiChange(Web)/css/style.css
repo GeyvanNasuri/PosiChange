@@ -1,0 +1,277 @@
+@import url(../css/reset.css);
+body, html{
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    max-width: 100%;
+
+
+}
+*{padding: 0; margin: 0; font-size: 100%;border: none; font-weight: 300; box-sizing: border-box; 
+    font-family:'Lato', sans-serif;}
+    
+/* h2 h1 e p */
+.titulo h2
+{
+    font-size: 1.5em;
+    color: #130400;
+    font-weight: 300;
+    color: white; 
+    font: bold  Helvetica, Sans-Serif; 
+    letter-spacing: -2px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px; 
+
+    text-align: center;
+
+}
+
+.conteudo p
+{
+    font-size: 1.5em;
+    color: black;
+    font-weight: 450px;
+    font: bold  Helvetica, Sans-Serif; 
+    letter-spacing: -2px;  
+    background: rgba(255, 255, 255);/* fallback color */
+    background: rgba(255, 255, 255);
+    padding: 8px; 
+
+    text-align: center;
+}
+
+/* Banner rotativo */
+.banner
+{
+    height: 15vh;
+    background-image: url(../img/enfermeiros.jpg);
+    background-size: 1990px 800px;
+    height: 529px;
+    width: 1910px;
+}
+
+
+.parallax {
+    /* Criando efeito parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-device-width:1024px) {
+    .parallax{
+        background-attachment: scroll;
+
+    }
+}
+
+.menu 
+{
+
+    height: 56px;
+    width: 450px;
+    line-height: 55px;
+    float: right;
+    background:hsl(348, 100%, 61%);
+    position: static;
+    display: block;
+    border-radius: 60px;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-right: 100px;
+    letter-spacing: -2px;  
+
+
+    
+
+}
+.menur
+{
+    width: auto;
+    height: 66px;
+    line-height: 66px;
+    float: left;
+    background:hsl(348, 100%, 61%);
+    position: static;
+    display: block;
+    border-radius: 30px;
+    color: white;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    letter-spacing: -2px;  
+    
+    
+
+}
+
+.menu li
+{
+    padding: 0px;
+    float: left;
+    letter-spacing: -2px;  
+
+}
+.menu li a
+{
+    color: white;
+    font-size: 1.2em;
+    padding: 20px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;	
+    text-decoration: none;
+    letter-spacing: -2px;  
+    
+
+
+
+    
+}
+.menu li a:hover
+{
+    border: none;
+    color: black;
+    
+}
+
+.titulo
+{
+    padding-top: 185px;
+    float: left;
+}
+
+.titulo h2
+{
+    font-size: 50px;
+    color: #130400;
+    font-weight: 125;
+    color: white; 
+    font: bold  Helvetica, Sans-Serif; 
+    letter-spacing: 1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px; 
+    padding-top: 10px;
+    float: center;
+
+
+}
+.titulo h3
+{
+    font-size: 30px;
+    color: #130400;
+    font-weight: 50;
+    color: white; 
+    font: bold  Helvetica, Sans-Serif; 
+    letter-spacing: 1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8px; 
+    padding-top: 0px;
+    float: left;
+    text-align: center;
+
+}
+.buttons
+{
+    width: 30%;
+    float: right;
+    padding-top: 100px;
+    text-decoration: none;
+    font-style: none;
+}
+
+.btn
+{
+    width: 90%;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    padding: 5%;
+    font-family: 'Helvetica Neue';
+    
+    
+
+}
+.btn-cadastrar
+{
+    color: #000000;
+    text-decoration: none;
+    font-style: none;
+}
+.btn-sobre
+{
+    color: #ffff;
+    margin-top: 2%;
+    text-decoration: none;
+    font-style: none;
+}
+
+.bg-white
+{
+    background-color: rgb(253, 91, 91);
+    color: white;
+}
+.bg-black
+{
+    background-color: #ffff;
+}
+.radius
+{
+    border-radius: 50px;
+}
+
+
+
+/* Container footer */
+/* esse ponto significa que todos os lugares que tiverem escrito container terá essas propriedades */
+.container
+{
+    width: 100%;
+    float: left;
+    padding: 4% 4%;
+    text-align: center;
+}
+.bg-gradient
+{
+    background:hsl(348, 90%, 62%);
+    
+}
+
+/* Rodapé (Footer) */
+.social-icons a
+{
+    font-size: 1.5em; 
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 3%;
+    text-decoration: none;
+    list-style: none;
+
+
+}
+
+.social-icons a:last-child
+{
+    margin-right: 0;
+
+}
+
+.social-icons a:hover
+{
+    color: white;
+
+}
+.copyright 
+{
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2%;
+
+}
+
