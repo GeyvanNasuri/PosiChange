@@ -16,5 +16,14 @@ namespace PosiChange.Formulários
         {
             InitializeComponent();
         }
+
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            var respota = MessageBox.Show("Deseja sair?", "PosiChange", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respota == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

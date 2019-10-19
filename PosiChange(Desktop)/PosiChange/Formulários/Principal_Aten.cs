@@ -16,5 +16,25 @@ namespace PosiChange.Formulários
         {
             InitializeComponent();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var respota = MessageBox.Show("Deseja sair?", "PosiChange", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respota == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (respota == DialogResult.No)
+            {
+                var Logout = MessageBox.Show("Deseja então deslogar do sistema?", "PosiChange", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Logout == DialogResult.Yes)
+                {
+                    Close();
+                    Login login = new Login();
+                    login.MdiParent = this;
+                    login.Show();
+                }
+            }
+        }
     }
 }
