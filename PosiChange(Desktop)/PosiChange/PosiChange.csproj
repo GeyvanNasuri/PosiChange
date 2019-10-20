@@ -143,6 +143,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\Cad_Enf.resx">
+      <DependentUpon>Cad_Enf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Imp_Coren.resx">
       <DependentUpon>Imp_Coren.cs</DependentUpon>
     </EmbeddedResource>

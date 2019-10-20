@@ -24,17 +24,18 @@ namespace PosiChange.Formulários
             {
                 this.Close();
             }
+            /*
             else if (respota == DialogResult.No)
             {
                 var Logout = MessageBox.Show("Deseja então deslogar do sistema?", "PosiChange", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Logout == DialogResult.Yes)
                 {
-                    Close();
+                    Principal_Aten aten = new Principal_Aten();
                     Login login = new Login();
-                    login.MdiParent = this;
                     login.Show();
                 }
             }
+            */
         }
     }
 }

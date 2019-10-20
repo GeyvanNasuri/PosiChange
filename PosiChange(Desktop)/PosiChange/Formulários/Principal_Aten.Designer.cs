@@ -33,6 +33,13 @@
             this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enfermeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarCracháToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resgistrarResponsávelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +59,9 @@
             // 
             // operaçõesToolStripMenuItem
             // 
+            this.operaçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enfermeiroToolStripMenuItem,
+            this.pacienteToolStripMenuItem});
             this.operaçõesToolStripMenuItem.Name = "operaçõesToolStripMenuItem";
             this.operaçõesToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.operaçõesToolStripMenuItem.Text = "&Operações";
@@ -75,16 +85,67 @@
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // enfermeiroToolStripMenuItem
+            // 
+            this.enfermeiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarToolStripMenuItem,
+            this.gerarCracháToolStripMenuItem});
+            this.enfermeiroToolStripMenuItem.Name = "enfermeiroToolStripMenuItem";
+            this.enfermeiroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enfermeiroToolStripMenuItem.Text = "&Enfermeiro";
+            // 
+            // cadastrarToolStripMenuItem
+            // 
+            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem.Text = "&Cadastrar";
+            // 
+            // gerarCracháToolStripMenuItem
+            // 
+            this.gerarCracháToolStripMenuItem.Name = "gerarCracháToolStripMenuItem";
+            this.gerarCracháToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gerarCracháToolStripMenuItem.Text = "&Gerar Crachá";
+            // 
+            // pacienteToolStripMenuItem
+            // 
+            this.pacienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarToolStripMenuItem1,
+            this.consultarToolStripMenuItem,
+            this.resgistrarResponsávelToolStripMenuItem});
+            this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
+            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pacienteToolStripMenuItem.Text = "&Paciente";
+            // 
+            // cadastrarToolStripMenuItem1
+            // 
+            this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.cadastrarToolStripMenuItem1.Text = "&Cadastrar";
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.consultarToolStripMenuItem.Text = "C&onsultar";
+            // 
+            // resgistrarResponsávelToolStripMenuItem
+            // 
+            this.resgistrarResponsávelToolStripMenuItem.Name = "resgistrarResponsávelToolStripMenuItem";
+            this.resgistrarResponsávelToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.resgistrarResponsávelToolStripMenuItem.Text = "&Registrar Responsável";
+            // 
             // Principal_Aten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal_Aten";
-            this.Text = "Principal_Aten";
+            this.Text = "PosiChange";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -99,5 +160,12 @@
         private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notificaçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enfermeiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerarCracháToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resgistrarResponsávelToolStripMenuItem;
     }
 }

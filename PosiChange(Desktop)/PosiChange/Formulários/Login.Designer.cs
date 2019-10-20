@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_sair = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_sair_login = new System.Windows.Forms.Button();
+            this.btn_entrar_login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_senha_login = new System.Windows.Forms.TextBox();
+            this.txt_usuario_login = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,12 +43,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.btn_sair);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_sair_login);
+            this.groupBox1.Controls.Add(this.btn_entrar_login);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_senha_login);
+            this.groupBox1.Controls.Add(this.txt_usuario_login);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(303, 398);
@@ -56,26 +56,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carregar Usuário";
             // 
-            // btn_sair
+            // pictureBox1
             // 
-            this.btn_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sair.Location = new System.Drawing.Point(156, 351);
-            this.btn_sair.Name = "btn_sair";
-            this.btn_sair.Size = new System.Drawing.Size(141, 41);
-            this.btn_sair.TabIndex = 5;
-            this.btn_sair.Text = "Cancelar";
-            this.btn_sair.UseVisualStyleBackColor = true;
-            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(290, 138);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btn_sair_login
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(6, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Entrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_sair_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sair_login.Location = new System.Drawing.Point(156, 351);
+            this.btn_sair_login.Name = "btn_sair_login";
+            this.btn_sair_login.Size = new System.Drawing.Size(141, 41);
+            this.btn_sair_login.TabIndex = 5;
+            this.btn_sair_login.Text = "Sair";
+            this.btn_sair_login.UseVisualStyleBackColor = false;
+            this.btn_sair_login.Click += new System.EventHandler(this.btn_sair_Click);
+            // 
+            // btn_entrar_login
+            // 
+            this.btn_entrar_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_entrar_login.Location = new System.Drawing.Point(6, 351);
+            this.btn_entrar_login.Name = "btn_entrar_login";
+            this.btn_entrar_login.Size = new System.Drawing.Size(141, 41);
+            this.btn_entrar_login.TabIndex = 4;
+            this.btn_entrar_login.Text = "Entrar";
+            this.btn_entrar_login.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -98,30 +106,22 @@
             this.label1.Text = "Login do Usuário";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // txt_senha_login
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(72, 277);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(141, 27);
-            this.textBox2.TabIndex = 1;
+            this.txt_senha_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_senha_login.Location = new System.Drawing.Point(72, 277);
+            this.txt_senha_login.Name = "txt_senha_login";
+            this.txt_senha_login.PasswordChar = '*';
+            this.txt_senha_login.Size = new System.Drawing.Size(141, 27);
+            this.txt_senha_login.TabIndex = 1;
             // 
-            // textBox1
+            // txt_usuario_login
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(72, 193);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 27);
-            this.textBox1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(7, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(290, 138);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.txt_usuario_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_usuario_login.Location = new System.Drawing.Point(72, 193);
+            this.txt_usuario_login.Name = "txt_usuario_login";
+            this.txt_usuario_login.Size = new System.Drawing.Size(141, 27);
+            this.txt_usuario_login.TabIndex = 0;
             // 
             // Login
             // 
@@ -147,11 +147,11 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_senha_login;
+        private System.Windows.Forms.TextBox txt_usuario_login;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.Button btn_entrar_login;
+        private System.Windows.Forms.Button btn_sair_login;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

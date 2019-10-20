@@ -51,3 +51,4 @@ D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.exe
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.pdb
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Principal_Aten.resources
+D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Cad_Enf.resources
