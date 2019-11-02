@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace PosiChange.Classes
 {
@@ -28,8 +29,48 @@ namespace PosiChange.Classes
             return builder.ToString();
         }
 
+        public Atendente()
+        {
 
+        }
 
+        public Atendente(int codAtendente, string nome, string login, string senha, DateTime intervalo, string turno, string telefone)
+        {
+            CodAtendente = codAtendente;
+            Nome = nome;
+            Login = login;
+            Senha = senha;
+            Intervalo = intervalo;
+            Turno = turno;
+            Telefone = telefone;
+        }
 
+        public Atendente(string nome, string login, string senha, DateTime intervalo, string turno, string telefone)
+        {
+            Nome = nome;
+            Login = login;
+            Senha = senha;
+            Intervalo = intervalo;
+            Turno = turno;
+            Telefone = telefone;
+        }
+
+        public void Inserir()
+        {
+            var com = Banco.Abrir();
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.CommandText = "sp_insert_atendente";
+            com.Parameters.Add("sp_nome", MySqlDbType.VarChar).Value = Nome;
+            com.Parameters.Add("sp_login", MySqlDbType.VarChar).Value = Login;
+            com.Parameters.Add("sp_senha", MySqlDbType.VarChar).Value = GerarMd5(Senha);
+            com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
+            com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
+            com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
+        }
+
+        public void EfetuarLogin()
+        {
+
+        }
     }
 }

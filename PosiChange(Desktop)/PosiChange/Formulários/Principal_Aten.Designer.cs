@@ -30,9 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.operaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notificaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enfermeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarCracháToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +37,9 @@
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resgistrarResponsávelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notificaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,25 +66,6 @@
             this.operaçõesToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.operaçõesToolStripMenuItem.Text = "&Operações";
             // 
-            // registrosToolStripMenuItem
-            // 
-            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
-            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.registrosToolStripMenuItem.Text = "&Registros";
-            // 
-            // notificaçõesToolStripMenuItem
-            // 
-            this.notificaçõesToolStripMenuItem.Name = "notificaçõesToolStripMenuItem";
-            this.notificaçõesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.notificaçõesToolStripMenuItem.Text = "&Notificações";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "&Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
             // enfermeiroToolStripMenuItem
             // 
             this.enfermeiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -99,6 +80,7 @@
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarToolStripMenuItem.Text = "&Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // gerarCracháToolStripMenuItem
             // 
@@ -133,6 +115,25 @@
             this.resgistrarResponsávelToolStripMenuItem.Name = "resgistrarResponsávelToolStripMenuItem";
             this.resgistrarResponsávelToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.resgistrarResponsávelToolStripMenuItem.Text = "&Registrar Responsável";
+            // 
+            // registrosToolStripMenuItem
+            // 
+            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
+            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.registrosToolStripMenuItem.Text = "&Registros";
+            // 
+            // notificaçõesToolStripMenuItem
+            // 
+            this.notificaçõesToolStripMenuItem.Name = "notificaçõesToolStripMenuItem";
+            this.notificaçõesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.notificaçõesToolStripMenuItem.Text = "&Notificações";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Principal_Aten
             // 

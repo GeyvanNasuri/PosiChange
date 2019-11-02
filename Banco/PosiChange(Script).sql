@@ -212,6 +212,7 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `posichange`.`mudancas` (
   `_cod_pac` INT(11) NOT NULL ,
+  `proxima` TIME NOT NULL ,
   `_cod_posicao` INT(11) NOT NULL ,
   INDEX `fk_mudancas_paciente1_idx` (`_cod_pac` ASC)  ,
   INDEX `fk_mudancas_posicao1_idx` (`_cod_posicao` ASC)  ,
@@ -234,7 +235,7 @@ USE `posichange` ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
     sp_login varchar(20),
@@ -264,7 +265,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
     sp_coren int,
@@ -293,7 +294,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
     sp_apr_fer bit,
@@ -320,7 +321,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
     sp_email varchar(45),
@@ -357,7 +358,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_atendente`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -385,7 +386,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_enfermeiro`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -409,7 +410,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_paciente`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -433,7 +434,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
+USE `posichange`$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_responsavel`(
 	sp_cod int,
 	sp_nome varchar(50),

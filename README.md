@@ -1,5 +1,5 @@
 # PosiChange
-### Repositório criado para armazenar os arquivos de desktop, mobile e web do projeto Tentacion em parceria com "..." para o desenvolvimento do PosiChange.
+### Repositório criado para armazenar os arquivos de desktop, mobile e web do projeto Tentacion em parceria com "NurseVision" para o desenvolvimento do PosiChange.
 
 # Apresentação
 ## este projeto tem como membros:
