@@ -107,6 +107,12 @@
     <Compile Include="Formulários\Cad_Pac.Designer.cs">
       <DependentUpon>Cad_Pac.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\Cad_Pos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cad_Pos.Designer.cs">
+      <DependentUpon>Cad_Pos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\Con_Enf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,10 +154,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>posichangeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="posichangeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>posichangeDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários\Cad_Enf.resx">
       <DependentUpon>Cad_Enf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\Cad_Pos.resx">
+      <DependentUpon>Cad_Pos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Imp_Coren.resx">
       <DependentUpon>Imp_Coren.cs</DependentUpon>
@@ -182,6 +196,17 @@
     </None>
     <None Include="posichangeDataSet.xss">
       <DependentUpon>posichangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="posichangeDataSet1.xsc">
+      <DependentUpon>posichangeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="posichangeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>posichangeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="posichangeDataSet1.xss">
+      <DependentUpon>posichangeDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
