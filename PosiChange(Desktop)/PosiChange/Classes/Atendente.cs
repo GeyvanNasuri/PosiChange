@@ -68,9 +68,24 @@ namespace PosiChange.Classes
             com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
         }
 
-        public void EfetuarLogin()
+        public bool EfetuarLogin(string _login, string _senha)
         {
-
+            //bool valido = false;
+            var com = new Banco();
+            string erro = String.Empty;
+            var comm = com.TentarConexao(out erro);
+            comm.CommandText = "select * from usuarios where login = '" + _login
+                + "' and senha = '" + GerarMD5(_senha) + "'";
+            var dr = comm.ExecuteReader();
+            while (dr.Read())
+            {
+                Id = dr.GetInt32(0);
+                Nome = dr.GetString(1);
+                Senha = dr.GetString(2);
+                Nivel = dr.GetInt32(4);
+                return /*valido =*/ true;
+            }
+            return false /*valido*/;
         }
     }
 }

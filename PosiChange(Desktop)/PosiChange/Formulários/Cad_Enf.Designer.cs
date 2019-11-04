@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_vol_enf = new System.Windows.Forms.Button();
+            this.btn_ver_enf = new System.Windows.Forms.Button();
+            this.btn_cad_enf = new System.Windows.Forms.Button();
             this.txt_telefone_cad_enf = new System.Windows.Forms.MaskedTextBox();
             this.txt_nivel_cad_enf = new System.Windows.Forms.TextBox();
             this.txt_intervalo_cad_enf = new System.Windows.Forms.MaskedTextBox();
@@ -41,9 +44,6 @@
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
             this.lbl_coren_cad_enf = new System.Windows.Forms.Label();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.btn_cad_enf = new System.Windows.Forms.Button();
-            this.btn_ver_enf = new System.Windows.Forms.Button();
-            this.btn_vol_enf = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,35 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Enfermeiro";
+            // 
+            // btn_vol_enf
+            // 
+            this.btn_vol_enf.Location = new System.Drawing.Point(340, 135);
+            this.btn_vol_enf.Name = "btn_vol_enf";
+            this.btn_vol_enf.Size = new System.Drawing.Size(75, 23);
+            this.btn_vol_enf.TabIndex = 15;
+            this.btn_vol_enf.Text = "Voltar";
+            this.btn_vol_enf.UseVisualStyleBackColor = true;
+            this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
+            // 
+            // btn_ver_enf
+            // 
+            this.btn_ver_enf.Location = new System.Drawing.Point(178, 135);
+            this.btn_ver_enf.Name = "btn_ver_enf";
+            this.btn_ver_enf.Size = new System.Drawing.Size(75, 23);
+            this.btn_ver_enf.TabIndex = 14;
+            this.btn_ver_enf.Text = "Verificar";
+            this.btn_ver_enf.UseVisualStyleBackColor = true;
+            this.btn_ver_enf.Click += new System.EventHandler(this.btn_ver_enf_Click);
+            // 
+            // btn_cad_enf
+            // 
+            this.btn_cad_enf.Location = new System.Drawing.Point(10, 135);
+            this.btn_cad_enf.Name = "btn_cad_enf";
+            this.btn_cad_enf.Size = new System.Drawing.Size(75, 23);
+            this.btn_cad_enf.TabIndex = 13;
+            this.btn_cad_enf.Text = "Cadastrar";
+            this.btn_cad_enf.UseVisualStyleBackColor = true;
             // 
             // txt_telefone_cad_enf
             // 
@@ -113,7 +142,9 @@
             // 
             // txt_coren_cad_enf
             // 
+            this.txt_coren_cad_enf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txt_coren_cad_enf.Location = new System.Drawing.Point(62, 51);
+            this.txt_coren_cad_enf.MaxLength = 6;
             this.txt_coren_cad_enf.Name = "txt_coren_cad_enf";
             this.txt_coren_cad_enf.Size = new System.Drawing.Size(84, 20);
             this.txt_coren_cad_enf.TabIndex = 2;
@@ -175,44 +206,17 @@
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
             // 
-            // btn_cad_enf
-            // 
-            this.btn_cad_enf.Location = new System.Drawing.Point(10, 135);
-            this.btn_cad_enf.Name = "btn_cad_enf";
-            this.btn_cad_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_cad_enf.TabIndex = 13;
-            this.btn_cad_enf.Text = "Cadastrar";
-            this.btn_cad_enf.UseVisualStyleBackColor = true;
-            // 
-            // btn_ver_enf
-            // 
-            this.btn_ver_enf.Location = new System.Drawing.Point(178, 135);
-            this.btn_ver_enf.Name = "btn_ver_enf";
-            this.btn_ver_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_ver_enf.TabIndex = 14;
-            this.btn_ver_enf.Text = "Verificar";
-            this.btn_ver_enf.UseVisualStyleBackColor = true;
-            // 
-            // btn_vol_enf
-            // 
-            this.btn_vol_enf.Location = new System.Drawing.Point(340, 135);
-            this.btn_vol_enf.Name = "btn_vol_enf";
-            this.btn_vol_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_vol_enf.TabIndex = 15;
-            this.btn_vol_enf.Text = "Voltar";
-            this.btn_vol_enf.UseVisualStyleBackColor = true;
-            this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
-            // 
             // Cad_Enf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(454, 203);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ClientSize = new System.Drawing.Size(454, 197);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Name = "Cad_Enf";
             this.Text = "PosiChange | Novo Enfermeiro";
+            this.Load += new System.EventHandler(this.Cad_Enf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

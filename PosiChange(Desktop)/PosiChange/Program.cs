@@ -17,7 +17,7 @@ namespace PosiChange
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cad_Pos());
+            Application.Run(new Cad_Enf());
         }
     }
 }
