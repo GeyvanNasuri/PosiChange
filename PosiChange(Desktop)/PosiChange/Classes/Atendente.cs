@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace PosiChange.Classes
@@ -17,6 +18,7 @@ namespace PosiChange.Classes
         public DateTime Intervalo { get; set; }
         public string Turno { get; set; }
         public string Telefone { get; set; }
+        public bool Acesso { get; set; }
         private string GerarMd5(string senha)
         {
             var md5hash = MD5.Create();
@@ -34,7 +36,7 @@ namespace PosiChange.Classes
 
         }
 
-        public Atendente(int codAtendente, string nome, string login, string senha, DateTime intervalo, string turno, string telefone)
+        public Atendente(int codAtendente, string nome, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso)
         {
             CodAtendente = codAtendente;
             Nome = nome;
@@ -43,9 +45,10 @@ namespace PosiChange.Classes
             Intervalo = intervalo;
             Turno = turno;
             Telefone = telefone;
+            Acesso = acesso;
         }
 
-        public Atendente(string nome, string login, string senha, DateTime intervalo, string turno, string telefone)
+        public Atendente(string nome, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso)
         {
             Nome = nome;
             Login = login;
@@ -53,6 +56,7 @@ namespace PosiChange.Classes
             Intervalo = intervalo;
             Turno = turno;
             Telefone = telefone;
+            Acesso = acesso;
         }
 
         public void Inserir()
@@ -66,26 +70,84 @@ namespace PosiChange.Classes
             com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
             com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
             com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
+            com.Parameters.Add("sp_acesso", MySqlDbType.Bit).Value = Acesso;
+            CodAtendente = Convert.ToInt32(com.ExecuteScalar());
+            com.Connection.Close();
         }
 
-        public bool EfetuarLogin(string _login, string _senha)
+        public bool EfetuarLogin()
         {
-            //bool valido = false;
-            var com = new Banco();
-            string erro = String.Empty;
-            var comm = com.TentarConexao(out erro);
-            comm.CommandText = "select * from usuarios where login = '" + _login
-                + "' and senha = '" + GerarMD5(_senha) + "'";
-            var dr = comm.ExecuteReader();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from atendente where 'login = " + Login + " and senha = " + GerarMd5(Senha) + "'";
+            var dr = com.ExecuteReader();
+            bool logado = false;
+            try
+            {
+                while (dr.Read())
+                {
+                    CodAtendente = dr.GetInt32(0);
+                    Nome = dr.GetString(1);
+                    Login = dr.GetString(2);
+                    Senha = dr.GetString(3);
+                    Intervalo = dr.GetDateTime(4);
+                    Turno = dr.GetString(5);
+                    Telefone = dr.GetString(6);
+                    logado = true;
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+            return logado;
+        }
+        public bool Alterar()
+        {
+            var com = Banco.Abrir();
+            bool alterado = false;
+            try
+            {
+                com.CommandType = System.Data.CommandType.StoredProcedure;
+                com.CommandText = "sp_update_atendente";
+                com.Parameters.Add("sp_cod", MySqlDbType.Int32).Value = CodAtendente;
+                com.Parameters.Add("sp_nome", MySqlDbType.VarChar).Value = Nome;
+                com.Parameters.Add("sp_senha", MySqlDbType.VarChar).Value = GerarMd5(Senha);
+                com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
+                com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
+                com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
+                com.Parameters.Add("sp_acesso", MySqlDbType.Bit).Value = Acesso;
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                alterado = true;
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+            return alterado;
+        }
+        public List<Atendente> ListaAtendente(string nome)
+        {
+            List<Atendente> atendentes = new List<Atendente>();
+
+            var com = Banco.Abrir();
+            com.CommandText = "select * from atendente where nome = '%" + nome + "%'";
+            var dr = com.ExecuteReader();
             while (dr.Read())
             {
-                Id = dr.GetInt32(0);
-                Nome = dr.GetString(1);
-                Senha = dr.GetString(2);
-                Nivel = dr.GetInt32(4);
-                return /*valido =*/ true;
+                Atendente ate = new Atendente();
+                ate.CodAtendente = dr.GetInt32(0);
+                ate.Nome = dr.GetString(1);
+                ate.Login = dr.GetString(2);
+                ate.Senha = dr.GetString(3);
+                ate.Intervalo = dr.GetDateTime(4);
+                ate.Turno = dr.GetString(5);
+                ate.Telefone = dr.GetString(6);
+                ate.Acesso = dr.GetBoolean(7);
+                atendentes.Add(ate);
             }
-            return false /*valido*/;
+            com.Connection.Close();
+            return atendentes;
         }
     }
 }

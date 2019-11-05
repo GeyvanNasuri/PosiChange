@@ -201,7 +201,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `posichange`.`posicao` (
   `cod_posicao` INT(11) NOT NULL AUTO_INCREMENT,
   `posicao` VARCHAR(50) NOT NULL,
-  `imagem` BLOB NOT NULL,
+  `imagem` LONGBLOB NOT NULL,
   PRIMARY KEY (`cod_posicao`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
@@ -255,6 +255,7 @@ USE `posichange` ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
     sp_login varchar(20),
@@ -284,6 +285,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
     sp_coren int,
@@ -312,6 +314,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
     sp_apr_fer bit,
@@ -338,6 +341,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
     sp_imagem blob
@@ -358,6 +362,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
     sp_email varchar(45),
@@ -394,6 +399,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_atendente`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -421,6 +427,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_enfermeiro`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -444,6 +451,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_paciente`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -467,6 +475,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
@@ -486,6 +495,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_responsavel`(
 	sp_cod int,
 	sp_nome varchar(50),
@@ -507,26 +517,6 @@ update `responsavel` set
 end$$
 
 DELIMITER ;
-
--- -----------------------------------------------------
--- trigger tg_insert_historico
--- -----------------------------------------------------
-
-DELIMITER $$
-CREATE DEFINER=`root`@`localhost` TRIGGER `tg_insert_historico` AFTER INSERT ON paciente
-for each row
-	begin
-		insert into historico_paciente
-			values(concat(
-				null,
-                'Paciente deu entrada no hospital',
-                last_insert_id(cod_pac),
-                now()
-			));
-    end$$
-DELIMITER ;
-
-drop trigger tg_insert_historico;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
