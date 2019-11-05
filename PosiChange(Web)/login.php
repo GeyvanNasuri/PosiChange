@@ -19,7 +19,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="login.php">Login</a></li>
         <li><a href="sobrenos.php">Sobre-Nós</a></li>
-        <li><a href="contato.php">Contato</a></li>
+
        </ul>
      </nav>
      <img src="img/logo.png" alt="750px" width="750px" height="150px">

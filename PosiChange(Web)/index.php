@@ -18,7 +18,6 @@
 <ul id="menu">
      <nav class="menu" id="menu">
        <ul>
-        <li><a href="contato/index.html">Contato</a></li>
         <li><a href="sobrenos/index.html">Sobre nós</a></li>
         <li><a href="login/index.html">Login</a></li>
         <li><a href="index.php">Home</a></li>
