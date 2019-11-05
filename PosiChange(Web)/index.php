@@ -19,7 +19,7 @@
      <nav class="menu" id="menu">
        <ul>
         <li><a href="sobrenos/index.html">Sobre nós</a></li>
-        <li><a href="login/index.html">Login</a></li>
+        <li><a href="login/index.php">Login</a></li>
         <li><a href="index.php">Home</a></li>
        </ul>
     <header>

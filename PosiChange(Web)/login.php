@@ -29,10 +29,10 @@
                 <fieldset>
                     <legend>Faça login</legend>
                     <label for=""><span>Login</span></label>
-                    <input name="CPF" type="text" class="input is-large" placeholder="CPF" name="txt_login" id="txt_login">
+                    <input name="CPF" type="text" class="input is-large" placeholder="CPF" name="txt_CPF" id="txt_CPF">
                     <label for=""><span>Senha</span></label>
                     <input name="senha" class="input is-large" type="password" placeholder="Senha" name="txt_senha" id="txt_senha">
-                    <button type="submit" class="button is-block is-danger is-large is-fullwidth" name="entrar" id="entrar" value="Entrar" class="botao">Entrar
+                    <button type="submit" class="button is-block is-danger is-large is-fullwidth" name="logar" id="logar" value="Logar" class="botao">Entrar
                 </fieldset>
             </form>       
         </div>

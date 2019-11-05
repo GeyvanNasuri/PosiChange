@@ -16,7 +16,7 @@
 
 
       <form action="index.php" class="login-form">
-        <h1>Login Posichange</h1>
+        <h1>Login PosiChange</h1>
 
         <div class="txtb">
           <input type="text">
