@@ -7,6 +7,7 @@
     <title> Enfermagem Decubito</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="css/bulma/bulma.min.css">
 </head>
 <body>
@@ -15,10 +16,10 @@
      
     <nav class="menu" id="menu">
        <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="paciente.html">Paciente</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="sobrenos.php">Sobre-Nós</a></li>
+        <li><a href="contato.php">Contato</a></li>
        </ul>
      </nav>
      <img src="img/logo.png" alt="750px" width="750px" height="150px">

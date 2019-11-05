@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div class="testimonial-section">
+      <div class="inner-width">
+        <h1>SOBRE NÓS</h1>
+        <div class="testimonial-pics">
+          <img src="img/gabriel.png" alt="test-1" class="active">
+          <img src="img/leandro.png" alt="test-2">
+          <img src="img/samuel.png" alt="test-3">
+          <img src="img/davi.png" alt="test-4">
+          <img src="img/matheus.png" alt="test-5">
+        </div>
+
+        <div class="testimonial-contents">
+          <div class="testimonial active" id="test-1">
+            <p>"Professor quanto que é o quebra pra passar de UC?"</p>
+            <span class="description">Gabriel / Desenvolvedor</span>
+          </div>
+
+          <div class="testimonial" id="test-2">
+            <p>"Tá dando trabalho mas até que o web ta saindo"</p>
+            <span class="description">Leandro / Desenvolvedor</span>
+          </div>
+
+          <div class="testimonial" id="test-3">
+            <p>"A vontade que eu tenho de comer mato é a mesma que eu tenho pra acabar esse curso."</p>
+            <span class="description">Samuel / Desenvolvedor</span>
+          </div>
+
+          <div class="testimonial" id="test-4">
+            <p>"Vou ser pai"</p>
+            <span class="description">Davi / Desenvolvedor</span>
+          </div>
+          <div class="testimonial" id="test-5">
+            <p>"Só sei que nada sei."</p>
+            <span class="description">Matheus / Desenvolvedor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $('.testimonial-pics img').click(function(){
+        $(".testimonial-pics img").removeClass("active");
+        $(this).addClass("active");
+
+        $(".testimonial").removeClass("active");
+        $("#"+$(this).attr("alt")).addClass("active");
+      });
+    </script>
+
+  </body>
+</html>
