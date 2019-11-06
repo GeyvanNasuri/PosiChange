@@ -26,26 +26,26 @@ else{
 
 // Aqui vai a Declaração da variavel de sessão 
  #logando Usuario
- if(isset($_POST['logar']))
- {
-     if(isset($_POST['email']))        
-     {            
-         $resp->efetuarLogin($_POST['txt_cpf'],$_POST['txt_senha']);
-         if($resp->getId()>0)
-         {
-             $_SESSION['logado_responsavel'] = true;
-             $_SESSION['id_responsavel'] = $resp->getId();
-             $_SESSION['nome_responsavel'] = $resp->getNome();
-             $_SESSION['email_responsavel'] = $resp->getEmail();   
-             var_dump($_SESSION);
-             header('location:../paciente/index.php?msg=logado com Sucesso');
-         }
-         else
-         {
-             header('location:/index.php?link=6&msg=Email ou senha Incorreto!');
-         }            
-     }
- }
+//  if(isset($_POST['logar']))
+//  {
+//      if(isset($_POST['email']))        
+//      {            
+//          $resp->efetuarLogin($_POST['txt_cpf'],$_POST['txt_senha']);
+//          if($resp->getId()>0)
+//          {
+//              $_SESSION['logado_responsavel'] = true;
+//              $_SESSION['id_responsavel'] = $resp->getId();
+//              $_SESSION['nome_responsavel'] = $resp->getNome();
+//              $_SESSION['email_responsavel'] = $resp->getEmail();   
+//              var_dump($_SESSION);
+//              header('location:../paciente/index.php?msg=logado com Sucesso');
+//          }
+//          else
+//          {
+//              header('location:/index.php?link=6&msg=Email ou senha Incorreto!');
+//          }            
+//  }
+// }
 
 
     #Encerrando a sessão

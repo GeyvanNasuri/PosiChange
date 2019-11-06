@@ -144,7 +144,6 @@ private $acesso;
         }
     }
     
-
     public function __construct($_cpf="",$_senha=""){
 
         $this->cpf = $_cpf;
