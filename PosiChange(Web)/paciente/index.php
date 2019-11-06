@@ -19,7 +19,20 @@
 <header>
     <P ALIGN="center">
     <IMG SRC="../img/logo.png" WIDTH="600" HEIGHT="100" /></P>
-
+    <!-- Aqui vai o $_session [nome_do_usuario] etc -->
+  <?php 
+    if(isset($_SESSION['logado_responsavel']))
+    {
+      if($_SESSION['logado_responsavel'])
+      {
+        echo '<a href="index.php?link=8">Perfil</a>';
+      }
+      else
+      {
+        echo '<a href="index.php?link=6">Logar-se</a>';
+      }
+    }
+    ?>
  </header>
 
     <div class="middle">
@@ -41,12 +54,27 @@
             <a href="../index.php" class="btn"><i class="material-icons">
 cancel
 </i>Encerrar</a>
-        
-          </div>
+         </div>
         </li>
-
       </div>
     </div>
+<?php
+    require_once('../config.php');
+    if(isset($_SESSION['logado_responsavel']))
+    {
+        if($_SESSION['logado_responsavel']==false)
+        {
+            header('location:index.php?msg=É necessario estar logado para vizualizar');
+        }
+    }
+?>
+<h1><?php
+ echo $_SESSION['nome']; ?></h1>
+<br><br>
+<h2><?php //echo $_SESSION['cod_pac']; ?></h2> // aqui vai o codigo do paciente 
+<br>
+<h3><a href="../login/op_login.php?sair=1">Desconectar-se</a></h3>
+
 </html>
 
 

@@ -15,25 +15,22 @@
   <body>
 
 
-      <form action="index.php" class="login-form">
+        <form id="frmlogin" name="frmlogin" action="op_login.php" method="post" class="login-form">
         <h1>Login PosiChange</h1>
-
+        <label>CPF</label>
         <div class="txtb">
-          <input type="text">
-          <span data-placeholder="CPF"></span>
+        <input type="text" name="txt_cpf" id="txt_cpf">
         </div>
-
+        <label>Senha</label>
         <div class="txtb">
-          <input type="password">
-          <span data-placeholder="Senha"></span>
+        <input type="password" name="txt_senha" id="txt_senha">
         </div>
+        <input type="submit" name="logar" id="logar" value="logar" class="logbtn">
 
-        <input type="submit" class="logbtn" value="Login">
-
-        <div class="bottom-text">
+        <div>
           Caso login não seja sucedido contatar o Administrador.
         </div>
-
+        </fieldset>
       </form>
 
       <script type="text/javascript">
