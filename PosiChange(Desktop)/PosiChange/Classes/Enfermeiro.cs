@@ -13,7 +13,7 @@ namespace PosiChange.Classes
     {
 
 
-        public int CodEnfermeiro { get; set; }
+        public int Cod { get; set; }
         public string Nome { get; set; }
         public int Coren { get; set; }
         public string Turno { get; set; }
@@ -28,7 +28,7 @@ namespace PosiChange.Classes
 
         public Enfermeiro(int codEnfermeiro, string nome, int coren, string turno, DateTime intervalo, string telefone, Nivel level)
         {
-            CodEnfermeiro = codEnfermeiro;
+            Cod = codEnfermeiro;
             Nome = nome;
             Coren = coren;
             Turno = turno;
@@ -58,7 +58,7 @@ namespace PosiChange.Classes
             com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
             com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
             com.Parameters.Add("sp_cod_nivel", MySqlDbType.Int32).Value = Level;
-            CodEnfermeiro = Convert.ToInt32(com.ExecuteScalar());
+            Cod = Convert.ToInt32(com.ExecuteScalar());
             com.Connection.Close();
         }
 
@@ -70,13 +70,13 @@ namespace PosiChange.Classes
             {
                 com.CommandType = System.Data.CommandType.StoredProcedure;
                 com.CommandText = "sp_update_enfermeiro";
-                com.Parameters.Add("sp_cod", MySqlDbType.Int32).Value = CodEnfermeiro;
+                com.Parameters.Add("sp_cod", MySqlDbType.Int32).Value = Cod;
                 com.Parameters.Add("sp_nome", MySqlDbType.VarChar).Value = Nome;
                 com.Parameters.Add("sp_coren", MySqlDbType.Int32).Value = Coren;
                 com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
                 com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
                 com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
-                com.Parameters.Add("sp_cod_nivel", MySqlDbType.Int32).Value = Level.CodNivel;
+                com.Parameters.Add("sp_cod_nivel", MySqlDbType.Int32).Value = Level.Cod;
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 alterado = true;
@@ -97,13 +97,13 @@ namespace PosiChange.Classes
             while (dr.Read())
             {
                 Enfermeiro enf = new Enfermeiro();
-                enf.CodEnfermeiro = dr.GetInt32(0);
+                enf.Cod = dr.GetInt32(0);
                 enf.Nome = dr.GetString(1);
                 enf.Coren = dr.GetInt32(2);
                 enf.Intervalo = dr.GetDateTime(3);
                 enf.Turno = dr.GetString(4);
                 enf.Telefone = dr.GetString(5);
-                enf.Level.CodNivel = dr.GetInt32(6);
+                enf.Level.Cod = dr.GetInt32(6);
                 enfermeiros.Add(enf);
             }
             com.Connection.Close();

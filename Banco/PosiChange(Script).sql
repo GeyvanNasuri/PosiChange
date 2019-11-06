@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS `posichange`.`paciente` (
   PRIMARY KEY (`cod_pac`),
   UNIQUE INDEX `cod_pac_UNIQUE` (`cod_pac` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -61,10 +60,10 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `posichange`.`agendamento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `posichange`.`agendamento` (
-  `idagendamento` INT(11) NOT NULL AUTO_INCREMENT,
+  `cod_age` INT(11) NOT NULL,
   `_cod_res` INT(11) NOT NULL,
   `dia` DATETIME NOT NULL,
-  PRIMARY KEY (`idagendamento`),
+  PRIMARY KEY (`cod_age`),
   INDEX `fk_agendamento_responsavel1_idx` (`_cod_res` ASC),
   CONSTRAINT `fk_agendamento_responsavel1`
     FOREIGN KEY (`_cod_res`)
@@ -204,7 +203,6 @@ CREATE TABLE IF NOT EXISTS `posichange`.`posicao` (
   `imagem` LONGBLOB NOT NULL,
   PRIMARY KEY (`cod_posicao`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -255,7 +253,6 @@ USE `posichange` ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
     sp_login varchar(20),
@@ -285,7 +282,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
     sp_coren int,
@@ -314,13 +310,11 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
     sp_apr_fer bit,
     sp_des_fer varchar(150),
-    sp_sit_pac varchar(100),
-    sp_cod_pos int
+    sp_sit_pac varchar(100)
 )
 begin
 insert into `paciente` values(
@@ -328,8 +322,7 @@ insert into `paciente` values(
     sp_nome,
     sp_apr_fer,
     sp_des_fer,
-    sp_sit_pac,
-    sp_cod_pos
+    sp_sit_pac
 );
 select * from `paciente` where last_insert_id();
 end$$
@@ -341,7 +334,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
     sp_imagem blob
@@ -362,7 +354,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
     sp_email varchar(45),
@@ -399,7 +390,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_atendente`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -427,7 +417,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_enfermeiro`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -451,7 +440,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_paciente`(
 	sp_cod int,
     sp_nome varchar(50),
@@ -475,7 +463,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
@@ -495,7 +482,6 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_responsavel`(
 	sp_cod int,
 	sp_nome varchar(50),
