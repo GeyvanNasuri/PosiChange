@@ -1,7 +1,7 @@
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver\\php\\ext\\php_curl.dll' - N\xef\xbf\xbdo foi poss\xef\xbf\xbdvel encontrar o m\xef\xbf\xbddulo especificado.\r\n in Unknown on line 0
-[Wed Nov 06 14:05:12.581476 2019] [mpm_winnt:notice] [pid 80916:tid 816] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
-[Wed Nov 06 14:05:12.581476 2019] [mpm_winnt:notice] [pid 80916:tid 816] AH00456: Server built: Nov  3 2017 01:01:54
-[Wed Nov 06 14:05:12.581476 2019] [core:notice] [pid 80916:tid 816] AH00094: Command line: 'C:\\Users\\gabriel.vrnascimento\\Pictures\\Tentacion\\usbwebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver/apache2'
-[Wed Nov 06 14:05:12.597097 2019] [mpm_winnt:notice] [pid 80916:tid 816] AH00418: Parent: Created child process 78560
-PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver\\php\\ext\\php_curl.dll' - N\xef\xbf\xbdo foi poss\xef\xbf\xbdvel encontrar o m\xef\xbf\xbddulo especificado.\r\n in Unknown on line 0
-[Wed Nov 06 14:05:13.425028 2019] [mpm_winnt:notice] [pid 78560:tid 800] AH00354: Child: Starting 64 worker threads.
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/Documentos/Cenarios/GitHub/Tentacion/usbwebserver\\php\\ext\\php_curl.dll' - N\xef\xbf\xbdo foi poss\xef\xbf\xbdvel encontrar o m\xef\xbf\xbddulo especificado.\r\n in Unknown on line 0
+[Thu Nov 07 01:26:28.130222 2019] [mpm_winnt:notice] [pid 4716:tid 292] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Thu Nov 07 01:26:28.286231 2019] [mpm_winnt:notice] [pid 4716:tid 292] AH00456: Server built: Nov  3 2017 01:01:54
+[Thu Nov 07 01:26:28.300232 2019] [core:notice] [pid 4716:tid 292] AH00094: Command line: 'D:\\Documentos\\Cenarios\\GitHub\\Tentacion\\usbwebserver/apache2/bin/httpd_usbwv8.exe -d D:/Documentos/Cenarios/GitHub/Tentacion/usbwebserver/apache2'
+[Thu Nov 07 01:26:28.316233 2019] [mpm_winnt:notice] [pid 4716:tid 292] AH00418: Parent: Created child process 1724
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/Documentos/Cenarios/GitHub/Tentacion/usbwebserver\\php\\ext\\php_curl.dll' - N\xef\xbf\xbdo foi poss\xef\xbf\xbdvel encontrar o m\xef\xbf\xbddulo especificado.\r\n in Unknown on line 0
+[Thu Nov 07 01:26:32.193455 2019] [mpm_winnt:notice] [pid 1724:tid 312] AH00354: Child: Starting 64 worker threads.

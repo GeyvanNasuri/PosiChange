@@ -2,7 +2,7 @@
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
 -- Schema posichange
@@ -157,6 +157,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`infracao` (
   `infracao_cometida` VARCHAR(45) NOT NULL,
   `_pac` INT(11) NOT NULL,
   `_enf` INT(11) NOT NULL,
+  `nov_inf` BIT NOT NULL,
   PRIMARY KEY (`cod_inf`),
   INDEX `fk_infracao_paciente1_idx` (`_pac` ASC),
   INDEX `fk_infracao_enfermagem1_idx` (`_enf` ASC),
@@ -336,7 +337,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
-    sp_imagem blob
+    sp_imagem longblob
 )
 begin
 insert into `responsavel` values(
@@ -356,13 +357,11 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
-    sp_email varchar(45),
-    sp_senha varchar(20),
     sp_rg varchar(13),
     sp_cpf varchar(14),
+    sp_senha varchar(20),
     sp_telefone varchar(15),
-    sp_endereco varchar(200),
-    sp_agendamento datetime,
+    sp_email varchar(45),
     sp_acesso bit(1),
     sp_cod_pac int
 )
@@ -370,13 +369,11 @@ begin
 insert into `responsavel` values(
 	null,
     sp_nome,
-    sp_email,
-    sp_senha,
     sp_rg,
     sp_cpf,
+	sp_senha,
     sp_telefone,
-    sp_endereco,
-    sp_agendamento,
+    sp_email,
     sp_acesso,
     sp_cod_pac
 );
@@ -466,7 +463,7 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
-    sp_imagem blob
+    sp_imagem longblob
 )
 begin
 update `responsavel` set
@@ -487,8 +484,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_responsavel`(
 	sp_nome varchar(50),
     sp_senha varchar(20),
     sp_telefone varchar(15),
-    sp_endereco varchar(200),
-    sp_agendamento datetime,
+    sp_email varchar(50),
     sp_acesso bit(1)
 )
 begin
@@ -496,8 +492,7 @@ update `responsavel` set
     nome = sp_nome,
     senha = sp_senha,
     telefone = sp_telefone,
-    endereco = sp_endereco,
-    agendamento = sp_agendamento,
+    email = sp_email,
     pri_ace = sp_acesso
     where cod_res = sp_cod;
 end$$
