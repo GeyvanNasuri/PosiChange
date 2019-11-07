@@ -40,5 +40,24 @@ namespace PosiChange.Classes
             Cod = Convert.ToInt32(com.ExecuteScalar());
             com.Connection.Close();
         }
+
+        public List<Historico> ListaHistorico()
+        {
+            List<Historico> historicos = new List<Historico>();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from historico_paciente";
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Historico his = new Historico();
+                his.Cod = dr.GetInt32(0);
+                his.Razao = dr.GetString(1);
+                his.Patient.Cod = dr.GetInt32(2);
+                his.Registro = dr.GetDateTime(3);
+                historicos.Add(his);
+            }
+            com.Connection.Close();
+            return historicos;
+        }
     }
 }

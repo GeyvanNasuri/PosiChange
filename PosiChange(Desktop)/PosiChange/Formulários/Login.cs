@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PosiChange.Classes;
 
 namespace PosiChange.Formulários
 {
@@ -23,6 +24,29 @@ namespace PosiChange.Formulários
             if (respota == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void btn_entrar_login_Click(object sender, EventArgs e)
+        {
+            Atendente atendente = new Atendente();
+            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text))
+            {
+                if (atendente.Level.Cod == 1)
+                {
+                    Principal_Adm adm = new Principal_Adm();
+                    adm.ShowDialog();
+                }
+                else if (atendente.Level.Cod == 2) 
+                {
+                    Principal_Aten aten = new Principal_Aten();
+                    aten.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Login e/ou senha incoenrente", "PosiChange",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

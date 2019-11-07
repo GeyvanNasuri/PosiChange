@@ -75,6 +75,18 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
+-- Table `posichange`.`nivel`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `posichange`.`nivel` (
+  `cod_nivel` INT(11) NOT NULL AUTO_INCREMENT,
+  `nivel` VARCHAR(20) NOT NULL,
+  `sigla` CHAR(3) NOT NULL,
+  PRIMARY KEY (`cod_nivel`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `posichange`.`atendimento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `posichange`.`atendimento` (
@@ -86,21 +98,16 @@ CREATE TABLE IF NOT EXISTS `posichange`.`atendimento` (
   `turno` VARCHAR(10) NOT NULL,
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `pri_ace` BIT(1) NOT NULL,
+  `_nivel` INT(11) NOT NULL,
   PRIMARY KEY (`cod_ate`, `intervalo`),
   UNIQUE INDEX `login_UNIQUE` (`login` ASC),
-  UNIQUE INDEX `cod_ate_UNIQUE` (`cod_ate` ASC))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `posichange`.`nivel`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`nivel` (
-  `cod_nivel` INT(11) NOT NULL AUTO_INCREMENT,
-  `nivel` VARCHAR(20) NOT NULL,
-  `sigla` CHAR(3) NOT NULL,
-  PRIMARY KEY (`cod_nivel`))
+  UNIQUE INDEX `cod_ate_UNIQUE` (`cod_ate` ASC),
+  INDEX `fk_atendimento_nivel1_idx` (`_nivel` ASC),
+  CONSTRAINT `fk_atendimento_nivel1`
+    FOREIGN KEY (`_nivel`)
+    REFERENCES `posichange`.`nivel` (`cod_nivel`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -261,7 +268,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
     sp_intervalo time,
     sp_turno varchar(10),
     sp_telefone varchar(15),
-    sp_acesso bit(1)
+    sp_acesso bit(1),
+    sp_cos_nivel int
 )
 begin
 	insert into `atendimento` values(
@@ -271,7 +279,9 @@ begin
         sp_senha,
         sp_intervalo,
         sp_turno,
-        sp_telefone
+        sp_telefone,
+        sp_acesso,
+        sp_cod_nivel
     );
 	select * from `atendente` where last_insert_id();
 end$$
@@ -337,7 +347,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
-    sp_imagem longblob
+    sp_imagem blob
 )
 begin
 insert into `responsavel` values(
@@ -357,11 +367,13 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
+    sp_email varchar(45),
+    sp_senha varchar(20),
     sp_rg varchar(13),
     sp_cpf varchar(14),
-    sp_senha varchar(20),
     sp_telefone varchar(15),
-    sp_email varchar(45),
+    sp_endereco varchar(200),
+    sp_agendamento datetime,
     sp_acesso bit(1),
     sp_cod_pac int
 )
@@ -369,11 +381,13 @@ begin
 insert into `responsavel` values(
 	null,
     sp_nome,
+    sp_email,
+    sp_senha,
     sp_rg,
     sp_cpf,
-	sp_senha,
     sp_telefone,
-    sp_email,
+    sp_endereco,
+    sp_agendamento,
     sp_acesso,
     sp_cod_pac
 );
@@ -463,7 +477,7 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
-    sp_imagem longblob
+    sp_imagem blob
 )
 begin
 update `responsavel` set

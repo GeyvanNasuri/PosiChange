@@ -94,3 +94,7 @@ C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Con_Enf.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Con_Pac.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Principal_Adm.resources
+D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Cad_Pac.resources
+D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Con_Enf.resources
+D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Con_Pac.resources
+D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Principal_Adm.resources

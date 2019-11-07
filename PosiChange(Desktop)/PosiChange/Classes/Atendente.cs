@@ -19,6 +19,7 @@ namespace PosiChange.Classes
         public string Turno { get; set; }
         public string Telefone { get; set; }
         public bool Acesso { get; set; }
+        internal Nivel Level { get; set; }
         private string GerarMd5(string senha)
         {
             var md5hash = MD5.Create();
@@ -36,7 +37,7 @@ namespace PosiChange.Classes
 
         }
 
-        public Atendente(int codAtendente, string nome, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso)
+        public Atendente(int codAtendente, string nome, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso, Nivel level)
         {
             CodAtendente = codAtendente;
             Nome = nome;
@@ -46,9 +47,10 @@ namespace PosiChange.Classes
             Turno = turno;
             Telefone = telefone;
             Acesso = acesso;
+            Level = level;
         }
 
-        public Atendente(string nome, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso)
+        public Atendente(string nome, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso, Nivel level)
         {
             Nome = nome;
             Login = login;
@@ -57,6 +59,7 @@ namespace PosiChange.Classes
             Turno = turno;
             Telefone = telefone;
             Acesso = acesso;
+            Level = level;
         }
 
         public void Inserir()
@@ -71,14 +74,15 @@ namespace PosiChange.Classes
             com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
             com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
             com.Parameters.Add("sp_acesso", MySqlDbType.Bit).Value = Acesso;
+            com.Parameters.Add("sp_cod_nivel", MySqlDbType.Int32).Value = Level.Cod;
             CodAtendente = Convert.ToInt32(com.ExecuteScalar());
             com.Connection.Close();
         }
 
-        public bool EfetuarLogin()
+        public bool EfetuarLogin(string login, string senha)
         {
             var com = Banco.Abrir();
-            com.CommandText = "select * from atendente where 'login = " + Login + " and senha = " + GerarMd5(Senha) + "'";
+            com.CommandText = "select * from atendente where 'login = " + login + " and senha = " + GerarMd5(senha) + "'";
             var dr = com.ExecuteReader();
             bool logado = false;
             try
@@ -92,6 +96,7 @@ namespace PosiChange.Classes
                     Intervalo = dr.GetDateTime(4);
                     Turno = dr.GetString(5);
                     Telefone = dr.GetString(6);
+                    com.Connection.Close();
                     logado = true;
                 }
             }
