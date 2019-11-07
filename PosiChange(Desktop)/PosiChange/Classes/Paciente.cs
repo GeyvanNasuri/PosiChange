@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PosiChange.Classes;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace PosiChange.Classes
 {
@@ -70,7 +71,7 @@ namespace PosiChange.Classes
             }
             catch (Exception Ex)
             {
-                
+                MessageBox.Show(Ex.Message);
                 throw;
             }
             return alterado;
