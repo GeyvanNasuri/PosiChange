@@ -37,7 +37,13 @@ namespace PosiChange.Formulários
         private void btn_ver_enf_Click(object sender, EventArgs e)
         {
             var enf = new Enfermeiro();
-            if (true)
+
+            if (enf.Coren == Convert.ToInt32(txt_coren_cad_enf.Text))
+            {
+                MessageBox.Show("Este Coren ja está em uso!", "PosiChange | Cadastro de Enfermeiro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_coren_cad_enf.Focus();
+            }
+            else if (enf.Coren != Convert.ToInt32(txt_coren_cad_enf.Text)) 
             {
                 btn_cad_enf.Enabled = true;
             }

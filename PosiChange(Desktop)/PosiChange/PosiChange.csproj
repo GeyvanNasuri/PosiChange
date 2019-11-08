@@ -86,6 +86,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Agendamento.cs" />
     <Compile Include="Classes\Atendente.cs" />
     <Compile Include="Classes\Banco.cs" />
     <Compile Include="Classes\Enfermeiro.cs" />

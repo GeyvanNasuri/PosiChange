@@ -12,6 +12,7 @@ namespace PosiChange.Formulários
 {
     public partial class Principal_Aten : Form
     {
+
         public Principal_Aten()
         {
             InitializeComponent();
@@ -25,19 +26,16 @@ namespace PosiChange.Formulários
             {
                 this.Close();
             }
-            /*
+            
             else if (respota == DialogResult.No)
             {
                 var Logout = MessageBox.Show("Deseja então deslogar do sistema?", "PosiChange",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Logout == DialogResult.Yes)
                 {
-                    Principal_Aten aten = new Principal_Aten();
-                    Login login = new Login();
-                    login.Show();
+
                 }
             }
-            */
         }
 
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
