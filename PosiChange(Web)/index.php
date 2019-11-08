@@ -14,7 +14,7 @@
 
 </head>
 <body>
-    
+
 <ul id="menu">
      <nav class="menu" id="menu">
        <ul>
@@ -23,11 +23,14 @@
         <li><a href="index.php">Home</a></li>
        </ul>
     <header>
-    <img src="img/logo.png" alt="650px" width="650px" height="150px">
-    <section class="banner parallax" id="banner">
+    <div id="imagem">
+    <img src="img/logo.png" alt="650px" width="650px" height="150px" id="banner" name="banner">
+    </div>
+    <section class="banner" id="banner">    
+    </div>
     
      
-    <div class="banner container primeira parallax" id="primeira">
+    <div class="banner container" id="primeira">
                     <div class="titulo">
               
                     <h2>
@@ -58,7 +61,7 @@
     </header>
  
 
-
+<div id="footer">
     <footer class="rodape container bg-gradient">
             <div class="social-icons">
                 <a href="https://www.facebook.com/posichangeti85/" target="_blanck"> 
@@ -88,6 +91,8 @@
                     Copyright © Senac 2019. Todos os direitos reservados. 
                 </p>
             </div>
+        
+</div>
         </footer>
 </body>
 </html>
