@@ -21,15 +21,17 @@
     <IMG SRC="../img/logo.png" WIDTH="600" HEIGHT="100" /></P>
     <!-- Aqui vai o $_session [nome_do_usuario] etc -->
   <?php 
-    if(isset($_SESSION['logado_responsavel']))
+    require_once("../login/op_login.php");
+    if(isset($_SESSION['logado']))
     {
-      if($_SESSION['logado_responsavel'])
+      if($_SESSION['logado'])
       {
-        echo '<a href="index.php?link=8">Perfil</a>';
+        echo($_SESSION[nome_responsavel]);
+        echo '<a href="index.php">Perfil</a>';
       }
       else
       {
-        echo '<a href="index.php?link=6">Logar-se</a>';
+        echo '<a href="index.php">Logar-se</a>';
       }
     }
     ?>

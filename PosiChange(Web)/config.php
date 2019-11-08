@@ -9,9 +9,24 @@ if (!isset($_SESSION)){
 date_default_timezone_set('America/Sao_Paulo');
 
 //inicia carregamento das classes do projeto
-spl_autoload_register(function($nome_classe){
-    $nome_arquivo = "class".DIRECTORY_SEPARATOR.$nome_classe.".php";
-    if(file_exists($nome_arquivo)){
+// spl_autoload_register(function($nome_classe)
+//     {
+//         $server_str = $_SERVER['REQUEST_URI'];
+//         $caminho = strpos($server_str,'admin') !== false?'class':'admin/class';
+//         $nome_arquivo = $caminho.DIRECTORY_SEPARATOR.$nome_classe.".php";
+//         if(file_exists($nome_arquivo))
+//         {
+//             require_once($nome_arquivo);
+//         }
+//     });    
+spl_autoload_register(function($nome_classe)
+{
+
+    $server_str = $_SERVER['REQUEST_URI'];
+    $caminho = strpos($server_str,'admin') !== false?'class':'admin/Class';
+    $nome_arquivo = $caminho.DIRECTORY_SEPARATOR.$nome_classe.".php";
+    if(file_exists($nome_arquivo))
+    {
         require_once($nome_arquivo);
     }
 });
