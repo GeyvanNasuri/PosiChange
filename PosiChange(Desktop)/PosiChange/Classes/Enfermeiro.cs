@@ -15,6 +15,8 @@ namespace PosiChange.Classes
 
         public int Cod { get; set; }
         public string Nome { get; set; }
+        public string RG { get; set; }
+        public string CPF { get; set; }
         public int Coren { get; set; }
         public string Turno { get; set; }
         public DateTime Intervalo { get; set; }
@@ -26,10 +28,12 @@ namespace PosiChange.Classes
             
         }
 
-        public Enfermeiro(int codEnfermeiro, string nome, int coren, string turno, DateTime intervalo, string telefone, Nivel level)
+        public Enfermeiro(int cod, string nome, string rg, string cpf, int coren, string turno, DateTime intervalo, string telefone, Nivel level)
         {
-            Cod = codEnfermeiro;
+            Cod = cod;
             Nome = nome;
+            RG = rg;
+            CPF = cpf;
             Coren = coren;
             Turno = turno;
             Intervalo = intervalo;
@@ -37,9 +41,11 @@ namespace PosiChange.Classes
             Level = level;
         }
 
-        public Enfermeiro(string nome, int coren, string turno, DateTime intervalo, string telefone, Nivel level)
+        public Enfermeiro(string nome, string rg, string cpf, int coren, string turno, DateTime intervalo, string telefone, Nivel level)
         {
             Nome = nome;
+            RG = rg;
+            CPF = cpf;
             Coren = coren;
             Turno = turno;
             Intervalo = intervalo;
@@ -53,6 +59,8 @@ namespace PosiChange.Classes
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.CommandText = "sp_insert_enfermeiro";
             com.Parameters.Add("sp_nome", MySqlDbType.VarChar).Value = Nome;
+            com.Parameters.Add("sp_rg", MySqlDbType.VarChar).Value = RG;
+            com.Parameters.Add("sp_cpf", MySqlDbType.VarChar).Value = CPF;
             com.Parameters.Add("sp_coren", MySqlDbType.Int32).Value = Coren;
             com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
             com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
@@ -99,11 +107,13 @@ namespace PosiChange.Classes
                 Enfermeiro enf = new Enfermeiro();
                 enf.Cod = dr.GetInt32(0);
                 enf.Nome = dr.GetString(1);
-                enf.Coren = dr.GetInt32(2);
-                enf.Intervalo = dr.GetDateTime(3);
-                enf.Turno = dr.GetString(4);
-                enf.Telefone = dr.GetString(5);
-                enf.Level.Cod = dr.GetInt32(6);
+                enf.RG = dr.GetString(2);
+                enf.CPF = dr.GetString(3);
+                enf.Coren = dr.GetInt32(4);
+                enf.Intervalo = dr.GetDateTime(5);
+                enf.Turno = dr.GetString(6);
+                enf.Telefone = dr.GetString(7);
+                enf.Level.Cod = dr.GetInt32(8);
                 enfermeiros.Add(enf);
             }
             com.Connection.Close();

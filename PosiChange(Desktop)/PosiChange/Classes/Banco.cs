@@ -13,7 +13,7 @@ namespace PosiChange.Classes
         public static MySqlCommand Abrir()
         {
             // RegEx
-            string strConn = @"User Id=root;Host=localhost;Database=posichange;Persist Security Info=True";
+            string strConn = @"User Id=root;password=usbw;Host=localhost;Database=posichange;Persist Security Info=True";
             MySqlConnection cn = new MySqlConnection(strConn);
             cn.Open();
             MySqlCommand comm = new MySqlCommand();

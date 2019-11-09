@@ -13,6 +13,8 @@ namespace PosiChange.Classes
     {
         public int Cod { get; set; }
         public string Nome { get; set; }
+        public string RG { get; set; }
+        public string CPF { get; set; }
         public bool Ferida { get; set; }
         public string Descricao { get; set; }
         public string Situacao { get; set; }
@@ -22,9 +24,11 @@ namespace PosiChange.Classes
 
         }
 
-        public Paciente(int cod, string nome, bool ferida, string descricao, string situacao)
+        public Paciente(int cod, string nome, string rg, string cpf, bool ferida, string descricao, string situacao)
         {
             Cod = cod;
+            RG = rg;
+            CPF = cpf;
             Nome = nome;
             Ferida = ferida;
             Descricao = descricao;
@@ -45,6 +49,8 @@ namespace PosiChange.Classes
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.CommandText = "sp_insert_paciente";
             com.Parameters.Add("sp_nome", MySqlDbType.VarChar).Value = Nome;
+            com.Parameters.Add("sp_rg", MySqlDbType.VarChar).Value = RG;
+            com.Parameters.Add("sp_cpf", MySqlDbType.VarChar).Value = CPF;
             com.Parameters.Add("sp_apr_fer", MySqlDbType.Bit).Value = Ferida;
             com.Parameters.Add("sp_des_fer", MySqlDbType.VarChar).Value = Descricao;
             com.Parameters.Add("sp_sit_pac", MySqlDbType.VarChar).Value = Situacao;
@@ -88,9 +94,11 @@ namespace PosiChange.Classes
                 Paciente pac = new Paciente();
                 pac.Cod = dr.GetInt32(0);
                 pac.Nome = dr.GetString(1);
-                pac.Ferida = dr.GetBoolean(2);
-                pac.Descricao = dr.GetString(3);
-                pac.Situacao = dr.GetString(4);
+                pac.RG = dr.GetString(2);
+                pac.CPF = dr.GetString(3);
+                pac.Ferida = dr.GetBoolean(4);
+                pac.Descricao = dr.GetString(5);
+                pac.Situacao = dr.GetString(6);
                 pacientes.Add(pac);
             }
             com.Connection.Close();
