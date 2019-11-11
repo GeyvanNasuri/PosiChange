@@ -1,4 +1,6 @@
 <?php
+include_once('../config.php');
+$resp = new Responsavel();  
 
 ?>
 <!DOCTYPE html>
@@ -17,16 +19,21 @@
 
 
 <header>
-    <P ALIGN="center">
-    <IMG SRC="../img/logo.png" WIDTH="600" HEIGHT="100" /></P>
+    <p ALIGN="center">
+      <img SRC="../img/logo.png" WIDTH="600" HEIGHT="100" />
+    </p>
     <!-- Aqui vai o $_session [nome_do_usuario] etc -->
+    <h1><?php echo $_SESSION['nome_responsavel']; ?></h1>
+    <h1><?php echo $_SESSION['id_responsavel'];?></h1>
+  
+    <?php var_dump($_SESSION['nome_responsavel']);?>
   <?php 
     require_once("../login/op_login.php");
     if(isset($_SESSION['logado']))
     {
       if($_SESSION['logado'])
       {
-        echo($_SESSION[nome_responsavel]);
+        //echo($_SESSION[nome_responsavel]);
         echo '<a href="index.php">Perfil</a>';
       }
       else
