@@ -92,8 +92,10 @@
     <Compile Include="Classes\Enfermeiro.cs" />
     <Compile Include="Classes\Historico.cs" />
     <Compile Include="Classes\Infracao.cs" />
+    <Compile Include="Classes\Mudanca.cs" />
     <Compile Include="Classes\Nivel.cs" />
     <Compile Include="Classes\Paciente.cs" />
+    <Compile Include="Classes\Posicao.cs" />
     <Compile Include="Classes\Quarto.cs" />
     <Compile Include="Classes\Responsavel.cs" />
     <Compile Include="Formulários\Cad_Enf.cs">

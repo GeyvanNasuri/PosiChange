@@ -11,8 +11,6 @@ namespace PosiChange.Classes
 {
     public class Enfermeiro
     {
-
-
         public int Cod { get; set; }
         public string Nome { get; set; }
         public string RG { get; set; }

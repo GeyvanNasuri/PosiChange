@@ -75,5 +75,10 @@ namespace PosiChange.Formulários
             Con_Pac pac = new Con_Pac();
             pac.ShowDialog();
         }
+
+        private void infraçõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // btn_infracao infracao = Color.Red;
+        }
     }
 }

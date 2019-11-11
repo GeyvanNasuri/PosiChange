@@ -42,7 +42,7 @@
             this.quartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.históricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_infracao = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -78,27 +78,27 @@
             this.consultarToolStripMenuItem1,
             this.gerarCracháToolStripMenuItem});
             this.enfermeiroToolStripMenuItem.Name = "enfermeiroToolStripMenuItem";
-            this.enfermeiroToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.enfermeiroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.enfermeiroToolStripMenuItem.Text = "&Enfermeiro";
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarToolStripMenuItem.Text = "&Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem1
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem1.Text = "C&onsultar";
             this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
             // 
             // gerarCracháToolStripMenuItem
             // 
             this.gerarCracháToolStripMenuItem.Name = "gerarCracháToolStripMenuItem";
-            this.gerarCracháToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.gerarCracháToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gerarCracháToolStripMenuItem.Text = "&Gerar Crachá";
             this.gerarCracháToolStripMenuItem.Click += new System.EventHandler(this.gerarCracháToolStripMenuItem_Click);
             // 
@@ -109,7 +109,7 @@
             this.consultarToolStripMenuItem,
             this.resgistrarResponsávelToolStripMenuItem});
             this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pacienteToolStripMenuItem.Text = "&Paciente";
             // 
             // cadastrarToolStripMenuItem1
@@ -144,29 +144,30 @@
             // quartosToolStripMenuItem
             // 
             this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
-            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quartosToolStripMenuItem.Text = "&Quartos";
             // 
             // históricoToolStripMenuItem
             // 
             this.históricoToolStripMenuItem.Name = "históricoToolStripMenuItem";
-            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.históricoToolStripMenuItem.Text = "&Histórico";
             // 
             // notificaçõesToolStripMenuItem
             // 
             this.notificaçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infraçõesToolStripMenuItem,
+            this.btn_infracao,
             this.agendamentosToolStripMenuItem});
             this.notificaçõesToolStripMenuItem.Name = "notificaçõesToolStripMenuItem";
             this.notificaçõesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.notificaçõesToolStripMenuItem.Text = "&Notificações";
             // 
-            // infraçõesToolStripMenuItem
+            // btn_infracao
             // 
-            this.infraçõesToolStripMenuItem.Name = "infraçõesToolStripMenuItem";
-            this.infraçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.infraçõesToolStripMenuItem.Text = "&Infrações";
+            this.btn_infracao.Name = "btn_infracao";
+            this.btn_infracao.Size = new System.Drawing.Size(180, 22);
+            this.btn_infracao.Text = "&Infrações";
+            this.btn_infracao.Click += new System.EventHandler(this.infraçõesToolStripMenuItem_Click);
             // 
             // agendamentosToolStripMenuItem
             // 
@@ -217,7 +218,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resgistrarResponsávelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quartosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem infraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btn_infracao;
         private System.Windows.Forms.ToolStripMenuItem agendamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
