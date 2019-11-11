@@ -8,10 +8,13 @@ require_once('../config.php');
 $resp = new responsavel();  
 
 if(isset($_POST['logar']))
+
  {
+
      if(isset($_POST['txt_cpf']))        
      {       
         // var_dump($_POST[`txt_cpf`]);
+
          $resp->efetuarLogin($_POST['txt_cpf'],$_POST['txt_senha']);
          if($resp->getId()>0)
          {
