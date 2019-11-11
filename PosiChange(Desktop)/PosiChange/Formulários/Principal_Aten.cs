@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PosiChange.Formulários;
 
 namespace PosiChange.Formulários
 {
@@ -78,7 +79,7 @@ namespace PosiChange.Formulários
 
         private void infraçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // btn_infracao infracao = Color.Red;
+            //btn_infracao infracao = Color.Red;
         }
     }
 }
