@@ -5,7 +5,7 @@ require_once('../config.php');
 
 
  #logando Usuario
-$resp = new Responsavel();  
+$resp = new responsavel();  
 
 if(isset($_POST['logar']))
  {

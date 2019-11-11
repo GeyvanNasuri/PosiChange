@@ -103,9 +103,8 @@
         }
         public function efetuarLogin($_cpf, $_senha){
             $sql = new Sql();
-            $senha_cript = md5($_senha);
             $results = $sql->select("SELECT * FROM responsavel WHERE cpf = :cpf AND senha = :senha",
-            array(':cpf'=>$_cpf,":senha"=>$senha_cript));
+            array(':cpf'=>$_cpf,":senha"=>$_senha));
             if (count($results)>0) {
                 $this->setData($results[0]);
             }
