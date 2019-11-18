@@ -42,8 +42,10 @@ namespace PosiChange.Classes
                 lvl.Cod = dr.GetInt32(0);
                 lvl.Level = dr.GetString(1);
                 lvl.Sigla = dr.GetString(2);
+                com.ExecuteNonQuery();
                 nivels.Add(lvl);
             }
+            com.Connection.Close();
             return nivels;
         }
     }

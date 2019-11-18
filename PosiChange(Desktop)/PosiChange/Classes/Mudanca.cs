@@ -13,6 +13,14 @@ namespace PosiChange.Classes
         internal Posicao Position { get; set; }
         public DateTime Tempo { get; set; }
 
+        public Mudanca() { }
 
+        public Mudanca(Paciente patient, DateTime proxima, Posicao position, DateTime tempo)
+        {
+            Patient = patient;
+            Proxima = proxima;
+            Position = position;
+            Tempo = tempo;
+        }
     }
 }

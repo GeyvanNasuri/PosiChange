@@ -25,20 +25,21 @@ namespace PosiChange.Classes
             Patient = patient;
         }
 
-        public void Insert()
+        public void Insert(string andar, string room)
         {
             var com = Banco.Abrir();
-            com.CommandText = "insert into quarto values(null, '" + Andar + "', '" + Room + "');";
+            com.CommandText = "insert into quarto values(null, '" + andar + "', '" + room + "');";
+            com.ExecuteNonQuery();
             com.Connection.Close();
         }
 
-        public bool InserirPaciente()
+        public bool InserirPaciente(Paciente patient, int cod)
         {
             bool alterado = false;
             var com = Banco.Abrir();
             try
             {
-                com.CommandText = "update quarto set _pac = " + Patient.Cod + " where cod_quarto = " + Cod;
+                com.CommandText = "update quarto set _pac = " + patient.Cod + " where cod_quarto = " + cod;
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 alterado = true;

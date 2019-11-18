@@ -34,10 +34,7 @@ namespace PosiChange.Classes
             return builder.ToString();
         }
 
-        public Atendente()
-        {
-
-        }
+        public Atendente() { }
 
         public Atendente(int cod, string nome, string rg, string cpf, string login, string senha, DateTime intervalo, string turno, string telefone, bool acesso, Nivel level)
         {
@@ -106,16 +103,18 @@ namespace PosiChange.Classes
                     Intervalo = dr.GetDateTime(6);
                     Turno = dr.GetString(7);
                     Telefone = dr.GetString(8);
+                    com.ExecuteNonQuery();
                     com.Connection.Close();
                     logado = true;
                 }
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(Ex.Message);
+                throw Ex;
             }
             return logado;
         }
+
         public bool Alterar()
         {
             var com = Banco.Abrir();
@@ -141,6 +140,7 @@ namespace PosiChange.Classes
             }
             return alterado;
         }
+
         public List<Atendente> ListaAtendente(string nome)
         {
             List<Atendente> atendentes = new List<Atendente>();
@@ -163,6 +163,7 @@ namespace PosiChange.Classes
                 ate.Acesso = dr.GetBoolean(9);
                 atendentes.Add(ate);
             }
+            com.ExecuteNonQuery();
             com.Connection.Close();
             return atendentes;
         }

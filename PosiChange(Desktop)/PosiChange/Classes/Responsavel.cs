@@ -31,10 +31,7 @@ namespace PosiChange.Classes
             return builder.ToString();
         }
 
-        public Responsavel()
-        {
-
-        }
+        public Responsavel() { }
 
         public Responsavel(int cod, string nome, string rG, string cPF, string senha, string telefone, string email, bool acesso, Paciente patient)
         {

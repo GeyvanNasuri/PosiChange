@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace PosiChange.Classes
 {
@@ -12,27 +13,27 @@ namespace PosiChange.Classes
         public string Infringement { get; set; }
         internal Paciente Patient { get; set; }
         internal Enfermeiro Nurse { get; set; }
+        public DateTime Data { get; set; }
         public bool Nova { get; set; }
 
-        public Infracao()
-        {
+        public Infracao() { }
 
-        }
-
-        public Infracao(int cod, string infringement, Paciente patient, Enfermeiro nurse, bool nova)
+        public Infracao(int cod, string infringement, Paciente patient, Enfermeiro nurse, DateTime data, bool nova)
         {
             Cod = cod;
             Infringement = infringement;
             Patient = patient;
             Nurse = nurse;
+            Data = data;
             Nova = nova;
         }
 
-        public Infracao(string infringement, Paciente patient, Enfermeiro nurse, bool nova)
+        public Infracao(string infringement, Paciente patient, Enfermeiro nurse, DateTime data, bool nova)
         {
             Infringement = infringement;
             Patient = patient;
             Nurse = nurse;
+            Data = data;
             Nova = nova;
         }
 
@@ -49,6 +50,7 @@ namespace PosiChange.Classes
                 inf.Infringement = dr.GetString(1);
                 inf.Patient.Cod = dr.GetInt32(2);
                 inf.Nurse.Cod = dr.GetInt32(3);
+                inf.Data = dr.GetDateTime(4);
                 inf.Nova = dr.GetBoolean(4);
                 infracoes.Add(inf);
             }
@@ -69,6 +71,7 @@ namespace PosiChange.Classes
                 inf.Infringement = dr.GetString(1);
                 inf.Patient.Cod = dr.GetInt32(2);
                 inf.Nurse.Cod = dr.GetInt32(3);
+                inf.Data = dr.GetDateTime(4);
                 inf.Nova = dr.GetBoolean(4);
                 infracoes.Add(inf);
             }
@@ -76,23 +79,38 @@ namespace PosiChange.Classes
             return infracoes;
         }
 
-        public bool Verificar(bool nova)
+        public bool Verificar(int cod)
         {
             bool verificado = false;
             var com = Banco.Abrir();
             try
             {
-                com.CommandText = "update infracao set nov_inf = " + nova + " where cod_inf =" + Cod;
+                com.CommandText = "update infracao set nov_inf = 0 where cod_inf =" + cod;
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 verificado = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
             return verificado;
         }
+        /*
+        public void Inserir()
+        {
+            var com = Banco.Abrir();
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.CommandText = "sp_insert_infracao";
+            com.Parameters.Add("sp_infracao", MySqlDbType.VarChar).Value = Infringement;
+            com.Parameters.Add("sp_cod_pac", MySqlDbType.Int32).Value = Patient.Cod;
+            com.Parameters.Add("sp_cod_enf", MySqlDbType.Int32).Value = Nurse.Cod;
+            com.Parameters.Add("sp_data", MySqlDbType.DateTime).Value = Data;
+            com.Parameters.Add("sp_nova", MySqlDbType.Bit).Value = Nova;
+            Cod = Convert.ToInt32(com.ExecuteScalar());
+            com.Connection.Close();
+        }
+        */
     }
 }

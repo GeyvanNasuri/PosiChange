@@ -99,6 +99,7 @@ namespace PosiChange.Classes
                 pac.Ferida = dr.GetBoolean(4);
                 pac.Descricao = dr.GetString(5);
                 pac.Situacao = dr.GetString(6);
+                com.ExecuteNonQuery();
                 pacientes.Add(pac);
             }
             com.Connection.Close();

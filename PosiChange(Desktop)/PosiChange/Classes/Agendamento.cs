@@ -34,7 +34,7 @@ namespace PosiChange.Classes
             Novo = novo;
         }
 
-        public List<Agendamento> ListaAgenda()
+        public List<Agendamento> NovaVisita()
         {
             List<Agendamento> agendamentos = new List<Agendamento>();
             var com = Banco.Abrir();
@@ -53,8 +53,41 @@ namespace PosiChange.Classes
             return agendamentos;
         }
 
+        public List<Agendamento> HistoricoVisita()
+        {
+            List<Agendamento> agendamentos = new List<Agendamento>();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from agendamento";
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Agendamento age = new Agendamento();
+                age.Cod = dr.GetInt32(0);
+                age.Responsible.Cod = dr.GetInt32(1);
+                age.Dia = dr.GetDateTime(2);
+                age.Novo = dr.GetBoolean(3);
+                agendamentos.Add(age);
+            }
+            return agendamentos;
+        }
 
+        public bool VisitaFeita(int cod)
+        {
+            bool feita = false;
+            var com = Banco.Abrir();
+            try
+            {
+                com.CommandText = "update agendamento set nov_age = 0 where cod_age =" + cod;
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                feita = true;
+            }
+            catch (Exception ex)
+            {
 
-
+                throw ex;
+            }
+            return feita;
+        }
     }
 }

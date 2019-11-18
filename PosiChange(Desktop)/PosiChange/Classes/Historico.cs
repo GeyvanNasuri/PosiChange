@@ -33,11 +33,12 @@ namespace PosiChange.Classes
             Registro = registro;
         }
 
-        public void Insert()
+        public void Insert(string razao, Paciente patient)
         {
             var com = Banco.Abrir();
-            com.CommandText = "insert into historico_paciente values(null, " + Razao + ", " + Patient.Cod + ", now())";
+            com.CommandText = "insert into historico_paciente values(null, " + razao + ", " + patient.Cod + ", now())";
             Cod = Convert.ToInt32(com.ExecuteScalar());
+            com.ExecuteNonQuery();
             com.Connection.Close();
         }
 

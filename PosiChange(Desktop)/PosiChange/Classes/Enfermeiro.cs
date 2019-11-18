@@ -21,10 +21,7 @@ namespace PosiChange.Classes
         public string Telefone { get; set; }
         internal Nivel Level { get; set; }
         
-        public Enfermeiro()
-        {
-            
-        }
+        public Enfermeiro() { }
 
         public Enfermeiro(int cod, string nome, string rg, string cpf, int coren, string turno, DateTime intervalo, string telefone, Nivel level)
         {
@@ -93,6 +90,7 @@ namespace PosiChange.Classes
             }
             return alterado;
         }
+
         public List<Enfermeiro> ListaEnfermeiro(string nome)
         {
             List<Enfermeiro> enfermeiros = new List<Enfermeiro>();
@@ -112,6 +110,7 @@ namespace PosiChange.Classes
                 enf.Turno = dr.GetString(6);
                 enf.Telefone = dr.GetString(7);
                 enf.Level.Cod = dr.GetInt32(8);
+                com.ExecuteNonQuery();
                 enfermeiros.Add(enf);
             }
             com.Connection.Close();
