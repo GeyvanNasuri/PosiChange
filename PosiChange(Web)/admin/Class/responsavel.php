@@ -5,7 +5,6 @@
         private $nome;
         private $rg;
         private $cpf;
-        private $agendamento;
         private $senha;
         private $telefone;
         private $email;
@@ -40,14 +39,7 @@
         public function setCpf($value){
         $this->cpf = $value;
         }
-        
-        public function getAgend(){
-        return $this->agendamento;
-        }
-        public function setAgend($value){
-        $this->agendamento = $value;
-        }
-        
+               
         public function getSenha(){
         return $this->senha;
         }
@@ -87,11 +79,13 @@
 
         public function loadById($_id){
             $sql = new Sql();
-            $results = $sql->select("SELECT * FROM responsavel WHERE id = :id",array(':id'=>$_id));
-            if (count($results)>0) {
+            $results = $sql->select("SELECT * FROM responsavel WHERE cod_res = :id",array(':id'=>$_id));
+            if (count($results)>0) 
+            {
                 $this->setData($results[0]);
             }
         }
+
         public static function getList(){
             $sql = new Sql();
             return $sql->select("SELECT * FROM responsavel order by nome");
@@ -109,31 +103,29 @@
                 $this->setData($results[0]);
             }
         }
-        public function setData($dados){ 
-            $this->setId($dados['id']);
-            $this->setNome($dados['nome']);
-            $this->setRg($dados['rg']);
-            $this->setCpf($dados['cpf']);
-            $this->setAgend($dados['agendamento']);
-            $this->setSenha($dados['senha']);
-            $this->setTelefone($dados['telefone']);
-            $this->setEmail($dados['email']);
-            $this->setPaciente($dados['paciente']);
-            $this->setAcesso($dados['acesso']);
+        public function setData($data){  // erros aquix
+            $this->setId($data['cod_res']);
+            $this->setNome($data['nome']);
+            $this->setRg($data['rg']);
+            $this->setCpf($data['cpf']);
+            $this->setSenha($data['senha']);
+            $this->setTelefone($data['telefone']);
+            $this->setEmail($data['email']);
+            $this->setPaciente($data['paciente']);
+            $this->setAcesso($data['acesso']);
 
         }
         public function insert(){
             $sql = new Sql();
-            $results = $sql->select("CALL sp_insert_responsavel(:sp_nome, :sp_email, :sp_senha, :sp_rg, :sp_cpf, :sp_telefone, :sp_endereco, :sp_agendamento, sp_acesso, sp_cod_pac)",
+            $results = $sql->select("CALL sp_insert_responsavel(:sp_nome, :sp_email, :sp_senha, :sp_rg, :sp_cpf, :sp_telefone, :sp_endereco, sp_acesso, sp_cod_pac)",
                 array(
                     ":sp_nome"=>$this->getNome(),
                     ":sp_email"=>$this->getEmail(),
-                    ":sp_senha"=>md5($this->getSenha()),
+                    ":sp_senha"=>$this->getSenha(),
                     ":sp_rg"=>$this->getRg(),
                     ":sp_cpf"=>$this->getCpf(),
                     ":sp_telefone"=>$this->getTelefone(),
                     ":sp_endereco"=>$this->getEndereco(),
-                    ":sp_agendamento"=>$this->getAgend(),
                     ":sp_acesso"=>$this->getAcesso(),
                     ":sp_cod_pac"=>$this->getPaciente(),
                 ));
@@ -142,8 +134,11 @@
             }
         }
         
-        public function __construct($_cpf="",$_senha=""){
-
+        public function __construct($_id='',$_nome="",$_email="",$_cpf="",$_senha="")
+        {
+            $this->id = $_id;
+            $this->nome = $_nome;
+            $this->email = $_email;
             $this->cpf = $_cpf;
             $this->senha = $_senha;
         }

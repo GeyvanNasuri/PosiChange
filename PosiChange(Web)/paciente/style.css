@@ -18,12 +18,35 @@
     
     
     }
+    #sidebar {
+      z-index: 2001;
+      position: fixed;
+      width: 220px;
+      background-color: #2F2E33;
+      border-color: #2f4050;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    height: 100%;
+  }
+  .sidebar-nav .menu>li>a {
+    color: #9EA6AF;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 10px 20px 40px;
+  }
+  .sidebar-nav li:hover a {
+    background: #2A292E;
+    color: #fff;
+  }
+  .sidebar-nav a i {
+    width: 30px;
+    text-align: center;
+    padding-right: 10px;
+  }
 
-
-.sistema{
-  color: black;
-  background-color: black;
-}
+  
     
 /* h2 h1 e p */
 .titulo h2

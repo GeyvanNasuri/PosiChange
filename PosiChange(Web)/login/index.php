@@ -13,12 +13,17 @@ require_once('../config.php');
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 
   </head>
-  <body>
-
+  <body>  
+      <?php
+      require_once('../config.php');
+      $pac = Paciente::getList();
+      ?>
+      
 
         <form id="frmlogin" name="frmlogin" action="op_login.php" method="post" class="login-form">
         <h1>Login PosiChange</h1>
         <label>CPF</label>
+        <input type="hidden" id="id" name="id">
         <div class="txtb">
         <input type="text" name="txt_cpf" id="txt_cpf">
         </div>

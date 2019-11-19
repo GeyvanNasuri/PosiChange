@@ -25,25 +25,12 @@ $resp = new Responsavel();
       <img SRC="../img/logo.png" WIDTH="600" HEIGHT="100" />
     </p>
     <!-- Aqui vai o $_session [nome_do_usuario] etc -->
-    <h1><?php echo $_SESSION['nome_responsavel']; ?></h1>
-    <h1><?php echo $_SESSION['id_responsavel'];?></h1>
-  
-    <?php var_dump($_SESSION['nome_responsavel']);?>
-  <?php 
-    require_once("../login/op_login.php");
-    if(isset($_SESSION['logado']))
-    {
-      if($_SESSION['logado'])
-      {
-        //echo($_SESSION[nome_responsavel]);
-        echo '<a href="index.php">Perfil</a>';
-      }
-      else
-      {
-        echo '<a href="index.php">Logar-se</a>';
-      }
-    }
-    ?>
+    <h2> Responsável: <?php require_once('../login/op_login.php');
+           
+           echo $_SESSION['nome']; ?> </h2> 
+    <h2> Paciente: <?php echo $_SESSION['paciente'];?> </h2>
+   
+
  </header>
 
     <div class="middle">
@@ -65,6 +52,7 @@ $resp = new Responsavel();
             <a href="../index.php" class="btn"><i class="material-icons">
 cancel
 </i>Encerrar</a>
+
          </div>
         </li>
       </div>
