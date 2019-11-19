@@ -30,9 +30,9 @@ namespace PosiChange.Formulários
         private void btn_entrar_login_Click(object sender, EventArgs e)
         {
             Atendente atendente = new Atendente();
-            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == atendente.Cod > 0)
+            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == true && atendente.Cod > 0)
             {
-                if (atendente.Level.Cod == 1)
+                if (atendente.Level.Cod == 1 || atendente.Level.Cod == 2)
                 {
                     Principal_Adm adm = new Principal_Adm();
                     adm.ShowDialog();
@@ -47,7 +47,7 @@ namespace PosiChange.Formulários
                     login.Hide();
                 }
             }
-            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == atendente.Cod < 0)
+            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == false)
             {
                 MessageBox.Show("Login e/ou senha incoenrente", "PosiChange",
                      MessageBoxButtons.OK, MessageBoxIcon.Information);

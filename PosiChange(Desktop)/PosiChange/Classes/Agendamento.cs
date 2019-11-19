@@ -47,9 +47,11 @@ namespace PosiChange.Classes
                 age.Responsible.Cod = dr.GetInt32(1);
                 age.Dia = dr.GetDateTime(2);
                 age.Novo = dr.GetBoolean(3);
+                com.ExecuteNonQuery();
+                com.Connection.Close();
                 agendamentos.Add(age);
             }
-            com.Connection.Close();
+            
             return agendamentos;
         }
 
@@ -66,6 +68,8 @@ namespace PosiChange.Classes
                 age.Responsible.Cod = dr.GetInt32(1);
                 age.Dia = dr.GetDateTime(2);
                 age.Novo = dr.GetBoolean(3);
+                com.ExecuteNonQuery();
+                com.Connection.Close();
                 agendamentos.Add(age);
             }
             return agendamentos;
