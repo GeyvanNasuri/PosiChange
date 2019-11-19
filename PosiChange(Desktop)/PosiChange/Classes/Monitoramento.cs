@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace PosiChange.Classes
 {
-    public class Historico
+    public class Monitoramento
     {
         public int Cod { get; set; }
         public string Razao { get; set; }
         internal Paciente Patient { get; set; }
         public DateTime Registro { get; set; }
 
-        public Historico()
-        {
+        public Monitoramento() { }
 
-        }
-
-        public Historico(int cod, string razao, Paciente patient, DateTime registro)
+        public Monitoramento(int cod, string razao, Paciente patient, DateTime registro)
         {
             Cod = cod;
             Razao = razao;
@@ -26,7 +23,7 @@ namespace PosiChange.Classes
             Registro = registro;
         }
 
-        public Historico(string razao, Paciente patient, DateTime registro)
+        public Monitoramento(string razao, Paciente patient, DateTime registro)
         {
             Razao = razao;
             Patient = patient;
@@ -36,29 +33,30 @@ namespace PosiChange.Classes
         public void Insert(string razao, Paciente patient)
         {
             var com = Banco.Abrir();
-            com.CommandText = "insert into historico_paciente values(null, " + razao + ", " + patient.Cod + ", now())";
+            com.CommandText = "insert into Monitoramento_paciente values(null, " + razao + ", " + patient.Cod + ", now())";
             Cod = Convert.ToInt32(com.ExecuteScalar());
             com.ExecuteNonQuery();
             com.Connection.Close();
         }
 
-        public List<Historico> ListaHistorico()
+        public List<Monitoramento> ListaMonitoramento()
         {
-            List<Historico> historicos = new List<Historico>();
+            List<Monitoramento> Monitoramentos = new List<Monitoramento>();
             var com = Banco.Abrir();
-            com.CommandText = "select * from historico_paciente";
+            com.CommandText = "select * from Monitoramento_paciente";
             var dr = com.ExecuteReader();
             while (dr.Read())
             {
-                Historico his = new Historico();
+                Monitoramento his = new Monitoramento();
                 his.Cod = dr.GetInt32(0);
                 his.Razao = dr.GetString(1);
                 his.Patient.Cod = dr.GetInt32(2);
                 his.Registro = dr.GetDateTime(3);
-                historicos.Add(his);
+                Monitoramentos.Add(his);
             }
             com.Connection.Close();
-            return historicos;
+            return Monitoramentos;
         }
+
     }
 }

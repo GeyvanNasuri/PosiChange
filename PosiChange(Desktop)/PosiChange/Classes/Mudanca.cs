@@ -28,10 +28,31 @@ namespace PosiChange.Classes
         public void Inserir(Paciente patient, DateTime proxima, Posicao position, DateTime tempo, bool ativo)
         {
             var com = Banco.Abrir();
-            com.CommandText = "insert into mudancas values(null, " + patient.Cod + ", '" + proxima + "', " + position.Cod + ", '" + tempo + ", " + ativo + "')";
+            com.CommandText = "insert into mudancas values(" + patient.Cod + ", '" + proxima + "', " + position.Cod + ", '" + tempo + ", " + ativo + "')";
             com.ExecuteNonQuery();
             com.Connection.Close();
 
+        }
+
+        public bool Alterar(Paciente patient, DateTime proxima, Posicao position, DateTime tempo, bool ativo)
+        {
+            bool alterado = false;
+            var com = Banco.Abrir();
+            try
+            {
+                com.CommandText = "update mudancas set proxima = '" + proxima + "', _cod_posicao = " + position.Cod +
+                    ", minimo = '" + tempo + "', ativo = " + ativo + " where _cod_pac = " + patient.Cod;
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                alterado = true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return alterado;
         }
     }
 }

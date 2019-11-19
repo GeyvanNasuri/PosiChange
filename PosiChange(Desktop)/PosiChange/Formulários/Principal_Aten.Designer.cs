@@ -45,6 +45,7 @@
             this.btn_infracao = new System.Windows.Forms.ToolStripMenuItem();
             this.agendamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitoramentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,7 +137,8 @@
             // 
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quartosToolStripMenuItem,
-            this.históricoToolStripMenuItem});
+            this.históricoToolStripMenuItem,
+            this.monitoramentoToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.registrosToolStripMenuItem.Text = "&Registros";
@@ -182,6 +184,12 @@
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // monitoramentoToolStripMenuItem
+            // 
+            this.monitoramentoToolStripMenuItem.Name = "monitoramentoToolStripMenuItem";
+            this.monitoramentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.monitoramentoToolStripMenuItem.Text = "&Monitoramento";
+            // 
             // Principal_Aten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,5 +230,6 @@
         private System.Windows.Forms.ToolStripMenuItem agendamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem monitoramentoToolStripMenuItem;
     }
 }

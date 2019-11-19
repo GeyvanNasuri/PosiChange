@@ -51,5 +51,25 @@ namespace PosiChange.Classes
             }
             return alterado;
         }
+
+        public List<Quarto> ListaQuarto(Paciente patient)
+        {
+            List<Quarto> quartos = new List<Quarto>();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from quarto where _pac = " + patient.Cod;
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Quarto qua = new Quarto();
+                qua.Cod = dr.GetInt32(0);
+                qua.Andar = dr.GetString(1);
+                qua.Room = dr.GetString(2);
+                qua.Patient.Cod = dr.GetInt32(3);
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                quartos.Add(qua);
+            }
+            return quartos;
+        }
     }
 }
