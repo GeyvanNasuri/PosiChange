@@ -37,6 +37,25 @@ namespace PosiChange.Classes
             Nova = nova;
         }
 
+        public bool Ocorrencia()
+        {
+            bool ocorreu = false;
+            var com = Banco.Abrir();
+            try
+            {
+                com.CommandText = "select * from infracao where nov_inf = 1";
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                ocorreu = true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return ocorreu;
+        }
+
         public List<Infracao> ListaOcorrencia()
         {
             List<Infracao> infracoes = new List<Infracao>();

@@ -1,4 +1,5 @@
 ﻿using System;
+using PosiChange.Classes;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,6 @@ namespace PosiChange.Formulários
 {
     public partial class Principal_Aten : Form
     {
-
         public Principal_Aten()
         {
             InitializeComponent();
@@ -21,7 +21,11 @@ namespace PosiChange.Formulários
 
         private void Principal_Aten_Load(object sender, EventArgs e)
         {
-            //Color.Yellow;
+            Infracao inf = new Infracao();
+            if (inf.Ocorrencia() == true)
+            {
+
+            }
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
