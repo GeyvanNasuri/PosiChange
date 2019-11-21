@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cad_Enf));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
             this.txt_rg = new System.Windows.Forms.MaskedTextBox();
@@ -259,6 +260,7 @@
             this.ClientSize = new System.Drawing.Size(626, 186);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cad_Enf";
             this.Text = "PosiChange | Novo Enfermeiro";
             this.Load += new System.EventHandler(this.Cad_Enf_Load);

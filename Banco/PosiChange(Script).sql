@@ -65,6 +65,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`agendamento` (
   `cod_age` INT(11) NOT NULL,
   `_cod_res` INT(11) NOT NULL,
   `dia` DATETIME NOT NULL,
+  `nov_age` BIT NOT NULL,
   PRIMARY KEY (`cod_age`) ,
   INDEX `fk_agendamento_responsavel1_idx` (`_cod_res` ASC) ,
   CONSTRAINT `fk_agendamento_responsavel1`

@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Con_Pac));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.dgv_informacoes = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_nome = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_nome = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informacoes)).BeginInit();
             this.SuspendLayout();
@@ -104,23 +105,6 @@
             this.dgv_informacoes.Size = new System.Drawing.Size(715, 197);
             this.dgv_informacoes.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome";
-            // 
-            // txt_nome
-            // 
-            this.txt_nome.Location = new System.Drawing.Point(61, 19);
-            this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(664, 20);
-            this.txt_nome.TabIndex = 0;
-            // 
             // Column1
             // 
             this.Column1.Frozen = true;
@@ -167,6 +151,23 @@
             this.Column6.HeaderText = "Situação do Paciente";
             this.Column6.Name = "Column6";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nome";
+            // 
+            // txt_nome
+            // 
+            this.txt_nome.Location = new System.Drawing.Point(61, 19);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(664, 20);
+            this.txt_nome.TabIndex = 0;
+            // 
             // Con_Pac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,6 +176,7 @@
             this.ClientSize = new System.Drawing.Size(762, 323);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Con_Pac";
             this.Text = "PosiChange | Consulta de Pacientes";
             this.groupBox1.ResumeLayout(false);

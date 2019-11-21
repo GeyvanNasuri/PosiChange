@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imp_Coren));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_atuacao = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
@@ -119,6 +120,7 @@
             this.ClientSize = new System.Drawing.Size(417, 622);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Imp_Coren";
             this.Text = "Crachá";
             this.groupBox1.ResumeLayout(false);

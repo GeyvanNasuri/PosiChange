@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Con_Enf));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.btn_cracha = new System.Windows.Forms.Button();
@@ -210,6 +211,7 @@
             this.ClientSize = new System.Drawing.Size(718, 319);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Con_Enf";
             this.Text = "PosiChange | Consulta de Enfermeiro";
             this.groupBox1.ResumeLayout(false);

@@ -70,15 +70,12 @@ C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\QRCoder.dll
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Renci.SshNet.dll
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\System.Drawing.Common.dll
-C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.xml
-C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.MySql.xml
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\EntityFramework.xml
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Google.Protobuf.pdb
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Google.Protobuf.xml
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\MySql.Data.xml
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Renci.SshNet.xml
-C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.csprojAssemblyReference.cache
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Cad_Enf.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Cad_Pos.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Imp_Coren.resources
@@ -100,3 +97,4 @@ D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Principal_Adm.resources
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Cad_Ate.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.Cad_Ate.resources
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.csprojAssemblyReference.cache

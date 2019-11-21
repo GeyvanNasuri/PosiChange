@@ -21,11 +21,28 @@ namespace PosiChange.Formulários
 
         private void Principal_Aten_Load(object sender, EventArgs e)
         {
-            Infracao inf = new Infracao();
+            /*Infracao inf = new Infracao();
+            Agendamento age = new Agendamento();
             if (inf.Ocorrencia() == true)
             {
-
+                btn_notificacao.BackColor = Color.Red;
+                btn_infracao.BackColor = Color.Red;
             }
+            else if (inf.Ocorrencia() == false)
+            {
+                btn_notificacao.BackColor = Color.Transparent;
+                btn_infracao.BackColor = Color.Transparent;
+            }
+            if (age.Agenda() == true)
+            {
+                btn_notificacao.BackColor = Color.Yellow;
+                btn_agendamento.BackColor = Color.Yellow;
+            }
+            else if (age.Agenda() == false)
+            {
+                btn_notificacao.BackColor = Color.Transparent;
+                btn_agendamento.BackColor = Color.Transparent;
+            }*/
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

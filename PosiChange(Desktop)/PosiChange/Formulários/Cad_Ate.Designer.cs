@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cad_Ate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
             this.txt_rg = new System.Windows.Forms.MaskedTextBox();
@@ -279,6 +280,7 @@
             this.ClientSize = new System.Drawing.Size(618, 189);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cad_Ate";
             this.Text = "PosiChange | Cadastro de Atendente";
             this.groupBox1.ResumeLayout(false);

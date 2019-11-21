@@ -34,6 +34,25 @@ namespace PosiChange.Classes
             Novo = novo;
         }
 
+        public bool Agenda()
+        {
+            bool agendou = false;
+            var com = Banco.Abrir();
+            try
+            {
+                com.CommandText = "select * from agendamento where nov_age = 1";
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                agendou = true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return agendou;
+        }
+
         public List<Agendamento> NovaVisita()
         {
             List<Agendamento> agendamentos = new List<Agendamento>();

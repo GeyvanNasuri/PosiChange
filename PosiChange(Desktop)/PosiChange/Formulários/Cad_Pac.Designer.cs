@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cad_Pac));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbt_nao = new System.Windows.Forms.RadioButton();
             this.rbt_sim = new System.Windows.Forms.RadioButton();
@@ -229,6 +230,7 @@
             this.ClientSize = new System.Drawing.Size(567, 218);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cad_Pac";
             this.Text = "PosiChange | Cadastro de Paciente";
             this.Load += new System.EventHandler(this.Cad_Pac_Load);
