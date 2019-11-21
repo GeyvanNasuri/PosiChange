@@ -50,31 +50,29 @@ namespace PosiChange.Formulários
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cad_Enf enf = new Cad_Enf();
-            enf.ShowDialog();
+            enf.MdiParent = this;
+            enf.Show();
         }
 
         private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Con_Enf enf = new Con_Enf();
-            enf.ShowDialog();
-        }
-
-        private void gerarCracháToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Imp_Coren cracha = new Imp_Coren();
-            cracha.ShowDialog();
+            enf.MdiParent = this;
+            enf.Show();
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Cad_Pac pac = new Cad_Pac();
-            pac.ShowDialog();
+            pac.MdiParent = this;
+            pac.Show();
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Con_Pac pac = new Con_Pac();
-            pac.ShowDialog();
+            pac.MdiParent = this;
+            pac.Show();
         }
 
         private void infraçõesToolStripMenuItem_Click(object sender, EventArgs e)

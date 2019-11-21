@@ -99,6 +99,12 @@
     <Compile Include="Classes\Posicao.cs" />
     <Compile Include="Classes\Quarto.cs" />
     <Compile Include="Classes\Responsavel.cs" />
+    <Compile Include="Formulários\Cad_Ate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\Cad_Ate.Designer.cs">
+      <DependentUpon>Cad_Ate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\Cad_Enf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\Cad_Ate.resx">
+      <DependentUpon>Cad_Ate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\Cad_Enf.resx">
       <DependentUpon>Cad_Enf.cs</DependentUpon>
     </EmbeddedResource>

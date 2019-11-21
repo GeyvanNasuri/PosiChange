@@ -2,7 +2,7 @@
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
 -- Schema posichange
@@ -20,10 +20,12 @@ USE `posichange` ;
 CREATE TABLE IF NOT EXISTS `posichange`.`paciente` (
   `cod_pac` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
+  `rg` VARCHAR(12) NOT NULL,
+  `cpf` VARCHAR(15) NOT NULL,
   `apr_fer` BIT(1) NOT NULL,
   `des_fer` VARCHAR(150) NULL DEFAULT NULL,
   `sit_pac` VARCHAR(300) NOT NULL,
-  PRIMARY KEY (`cod_pac`),
+  PRIMARY KEY (`cod_pac`) ,
   UNIQUE INDEX `cod_pac_UNIQUE` (`cod_pac` ASC) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -35,14 +37,14 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `posichange`.`responsavel` (
   `cod_res` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
-  `rg` VARCHAR(13) NOT NULL,
+  `rg` VARCHAR(12) NOT NULL,
   `cpf` VARCHAR(14) NOT NULL,
   `senha` VARCHAR(20) NOT NULL,
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `email` VARCHAR(45) NOT NULL,
   `pri_ace` BIT(1) NOT NULL,
   `_pac` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_res`),
+  PRIMARY KEY (`cod_res`) ,
   UNIQUE INDEX `rg_UNIQUE` (`rg` ASC) ,
   UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) ,
   UNIQUE INDEX `cod_res_UNIQUE` (`cod_res` ASC) ,
@@ -63,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`agendamento` (
   `cod_age` INT(11) NOT NULL,
   `_cod_res` INT(11) NOT NULL,
   `dia` DATETIME NOT NULL,
-  PRIMARY KEY (`cod_age`),
+  PRIMARY KEY (`cod_age`) ,
   INDEX `fk_agendamento_responsavel1_idx` (`_cod_res` ASC) ,
   CONSTRAINT `fk_agendamento_responsavel1`
     FOREIGN KEY (`_cod_res`)
@@ -81,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`nivel` (
   `cod_nivel` INT(11) NOT NULL AUTO_INCREMENT,
   `nivel` VARCHAR(20) NOT NULL,
   `sigla` CHAR(3) NOT NULL,
-  PRIMARY KEY (`cod_nivel`))
+  PRIMARY KEY (`cod_nivel`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -92,6 +94,8 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `posichange`.`atendimento` (
   `cod_ate` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
+  `rg` VARCHAR(12) NOT NULL,
+  `cpf` VARCHAR(14) NOT NULL,
   `login` VARCHAR(20) NOT NULL,
   `senha` VARCHAR(32) NOT NULL,
   `intervalo` TIME NOT NULL,
@@ -99,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`atendimento` (
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `pri_ace` BIT(1) NOT NULL,
   `_nivel` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_ate`, `intervalo`),
+  PRIMARY KEY (`cod_ate`, `intervalo`) ,
   UNIQUE INDEX `login_UNIQUE` (`login` ASC) ,
   UNIQUE INDEX `cod_ate_UNIQUE` (`cod_ate` ASC) ,
   INDEX `fk_atendimento_nivel1_idx` (`_nivel` ASC) ,
@@ -118,12 +122,14 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `posichange`.`enfermagem` (
   `cod_enf` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
+  `rg` VARCHAR(12) NOT NULL,
+  `cpf` VARCHAR(14) NOT NULL,
   `coren` INT(11) NOT NULL,
   `turno` VARCHAR(10) NOT NULL,
   `intervalo` TIME NOT NULL,
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `_nivel` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_enf`),
+  PRIMARY KEY (`cod_enf`) ,
   UNIQUE INDEX `coren_UNIQUE` (`coren` ASC) ,
   UNIQUE INDEX `cod_enf_UNIQUE` (`cod_enf` ASC) ,
   INDEX `fk_enfermagem_nivel1_idx` (`_nivel` ASC) ,
@@ -144,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`historico_paciente` (
   `razao` VARCHAR(100) NULL DEFAULT NULL,
   `_pac` INT(11) NOT NULL,
   `hora_reg` DATETIME NOT NULL,
-  PRIMARY KEY (`cod_his_pac`),
+  PRIMARY KEY (`cod_his_pac`) ,
   UNIQUE INDEX `cod_his_pac_UNIQUE` (`cod_his_pac` ASC) ,
   INDEX `fk_historico_paciente_paciente1_idx` (`_pac` ASC) ,
   CONSTRAINT `fk_historico_paciente_paciente1`
@@ -166,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`infracao` (
   `_enf` INT(11) NULL,
   `ocorrido` DATETIME NOT NULL,
   `nov_inf` BIT NOT NULL,
-  PRIMARY KEY (`cod_inf`),
+  PRIMARY KEY (`cod_inf`) ,
   INDEX `fk_infracao_paciente1_idx` (`_pac` ASC) ,
   INDEX `fk_infracao_enfermagem1_idx` (`_enf` ASC) ,
   CONSTRAINT `fk_infracao_enfermagem1`
@@ -191,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`monitoramento_paciente` (
   `des_fer_ant` VARCHAR(100) NOT NULL,
   `des_fer_atu` VARCHAR(100) NOT NULL,
   `_pac` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_mon`),
+  PRIMARY KEY (`cod_mon`) ,
   UNIQUE INDEX `cod_mon_UNIQUE` (`cod_mon` ASC) ,
   INDEX `fk_monitoramento_paciente_paciente1_idx` (`_pac` ASC) ,
   CONSTRAINT `fk_monitoramento_paciente_paciente1`
@@ -210,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `posichange`.`posicao` (
   `cod_posicao` INT(11) NOT NULL AUTO_INCREMENT,
   `posicao` VARCHAR(50) NOT NULL,
   `imagem` LONGBLOB NOT NULL,
-  PRIMARY KEY (`cod_posicao`))
+  PRIMARY KEY (`cod_posicao`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -223,8 +229,9 @@ CREATE TABLE IF NOT EXISTS `posichange`.`mudancas` (
   `proxima` TIME NOT NULL,
   `_cod_posicao` INT(11) NOT NULL,
   `minimo` TIME NOT NULL,
-  INDEX `fk_mudancas_paciente1_idx` (`_cod_pac` ASC),
-  INDEX `fk_mudancas_posicao1_idx` (`_cod_posicao` ASC),
+  `ativo` BIT NOT NULL,
+  INDEX `fk_mudancas_paciente1_idx` (`_cod_pac` ASC) ,
+  INDEX `fk_mudancas_posicao1_idx` (`_cod_posicao` ASC) ,
   CONSTRAINT `fk_mudancas_paciente1`
     FOREIGN KEY (`_cod_pac`)
     REFERENCES `posichange`.`paciente` (`cod_pac`)
@@ -255,8 +262,6 @@ CREATE TABLE IF NOT EXISTS `posichange`.`quarto` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-USE `posichange` ;
-
 -- -----------------------------------------------------
 -- procedure sp_insert_atendente
 -- -----------------------------------------------------
@@ -264,6 +269,8 @@ USE `posichange` ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
+    sp_rg varchar(12),
+    sp_cpf varchar(15),
     sp_login varchar(20),
     sp_senha varchar(32),
     sp_intervalo time,
@@ -275,6 +282,8 @@ begin
 	insert into `atendimento` values(
 		null,
         sp_nome,
+        sp_rg,
+        sp_cpf,
         sp_login,
         sp_senha,
         sp_intervalo,
@@ -293,6 +302,8 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
+	sp_rg varchar(12),
+    sp_cpf varchar(15),
     sp_coren int,
     sp_turno varchar(10),
     sp_intervalo time,
@@ -303,6 +314,8 @@ begin
 insert into `enfermagem` values(
 	null,
     spnome,
+	sp_rg,
+	sp_cpf,
     spcoren,
     spturno,
     spintervalo,
@@ -321,6 +334,8 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
+    sp_rg varchar(12),
+    sp_cpf varchar(15),
     sp_apr_fer bit,
     sp_des_fer varchar(150),
     sp_sit_pac varchar(100)
@@ -329,6 +344,8 @@ begin
 insert into `paciente` values(
 	null,
     sp_nome,
+	sp_rg,
+	sp_cpf,
     sp_apr_fer,
     sp_des_fer,
     sp_sit_pac
@@ -348,7 +365,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_posicao`(
     sp_imagem longblob
 )
 begin
-insert into `posicao` values(
+insert into `responsavel` values(
 	null,
     sp_posicao,
     sp_imagem
@@ -365,10 +382,10 @@ DELIMITER ;
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
+    sp_rg varchar(12),
+    sp_cpf varchar(15),
     sp_email varchar(45),
     sp_senha varchar(20),
-    sp_rg varchar(13),
-    sp_cpf varchar(14),
     sp_telefone varchar(15),
     sp_endereco varchar(200),
     sp_agendamento datetime,
@@ -379,10 +396,10 @@ begin
 insert into `responsavel` values(
 	null,
     sp_nome,
-    sp_email,
-    sp_senha,
     sp_rg,
     sp_cpf,
+    sp_email,
+    sp_senha,
     sp_telefone,
     sp_endereco,
     sp_agendamento,

@@ -96,7 +96,33 @@ namespace PosiChange.Classes
             List<Enfermeiro> enfermeiros = new List<Enfermeiro>();
             
             var com = Banco.Abrir();
-            com.CommandText = "select * from enfermeiro where nome = '%" + nome + "%'";
+            com.CommandText = "select * from enfermagem where nome = '%" + nome + "%'";
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Enfermeiro enf = new Enfermeiro();
+                enf.Cod = dr.GetInt32(0);
+                enf.Nome = dr.GetString(1);
+                enf.RG = dr.GetString(2);
+                enf.CPF = dr.GetString(3);
+                enf.Coren = dr.GetInt32(4);
+                enf.Intervalo = dr.GetDateTime(5);
+                enf.Turno = dr.GetString(6);
+                enf.Telefone = dr.GetString(7);
+                enf.Level.Cod = dr.GetInt32(8);
+                com.ExecuteNonQuery();
+                enfermeiros.Add(enf);
+            }
+            com.Connection.Close();
+            return enfermeiros;
+        }
+
+        public List<Enfermeiro> TodosEnfermeiro()
+        {
+            List<Enfermeiro> enfermeiros = new List<Enfermeiro>();
+
+            var com = Banco.Abrir();
+            com.CommandText = "select * from enfermagem";
             var dr = com.ExecuteReader();
             while (dr.Read())
             {

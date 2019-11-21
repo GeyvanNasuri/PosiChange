@@ -34,7 +34,7 @@ namespace PosiChange.Formulários
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            var respota = MessageBox.Show("Deseja sair?", "PosiChange", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var respota = MessageBox.Show("Deseja sair?", "PosiChange | Gerar Crachá", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respota == DialogResult.Yes)
             {
                 this.Close();
