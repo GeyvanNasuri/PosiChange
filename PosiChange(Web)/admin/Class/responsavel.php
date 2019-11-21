@@ -111,7 +111,7 @@
             $this->setSenha($data['senha']);
             $this->setTelefone($data['telefone']);
             $this->setEmail($data['email']);
-            $this->setPaciente($data['paciente']);
+            $this->setPaciente($data['cod_pac']);
             $this->setAcesso($data['acesso']);
 
         }
@@ -134,13 +134,15 @@
             }
         }
         
-        public function __construct($_id='',$_nome="",$_email="",$_cpf="",$_senha="")
+        public function __construct($_id='',$_rg='',$_telefone='',$_nome="",$_email="",$_cpf="",$_senha="")
         {
             $this->id = $_id;
             $this->nome = $_nome;
             $this->email = $_email;
+            $this->rg = $_rg;
             $this->cpf = $_cpf;
             $this->senha = $_senha;
+            $this->telefone = $_telefone;
         }
 
     }

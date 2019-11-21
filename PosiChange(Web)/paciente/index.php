@@ -1,10 +1,4 @@
-<?php
-include_once('../config.php');
 
-
-$resp = new Responsavel();  
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,51 +12,77 @@ $resp = new Responsavel();
 
 </head>
 <body>
-
-
 <header>
     <p ALIGN="center">
       <img SRC="../img/logo.png" WIDTH="600" HEIGHT="100" />
     </p>
     <!-- Aqui vai o $_session [nome_do_usuario] etc -->
-    <h2> Responsável: <?php require_once('../login/op_login.php');
-           
-           echo $_SESSION['nome']; ?> </h2> 
-    <h2> Paciente: <?php echo $_SESSION['paciente'];?> </h2>
-   
 
  </header>
+ <?php
+include_once('../config.php');
+$resp = new Responsavel();  
 
-    <div class="middle">
+?>
+    <div class="topo" id="topo">
+    <h3> Seja bem-vindo <?php require_once('../login/op_login.php');
+           
+           echo $rest = substr($_SESSION['nome'], 0, -16); ?> </h3> 
+    
+    </div>
       <div class="menu">
         <li class="item" id='profile'>
-          <a href="#profile" class="btn"><i class="material-icons">perm_identity</i></i>Paciente</a>
+          <a href="#profile" class="btn"><i class="material-icons">perm_identity</i></i>Área do Responsável</a>
           <div class="smenu">
-                    <a href="#">Informações Gerais</a>
-                    <a href="#">Estado Atual</a>
+                    <a href="index.php?link=1">Informações Gerais</a>
+
           </div>
         </li>
         <li class="item" id="messages">
           <a href="#messages" class="btn"><i class="material-icons">date_range</i>Agendamento</a>
           <div class="smenu">
-            <a href="#">Novo Agendamento</a>
-            <a href="#">Cancelamento de Agendamento</a>
+            <a href="index.php?link=2">Novo Agendamento</a>
+            <a href="index.php?link=3">Cancelamento de Agendamento</a>
 
             <li class="item" id="messages">
             <a href="../index.php" class="btn"><i class="material-icons">
 cancel
 </i>Encerrar</a>
-
          </div>
         </li>
       </div>
-    </div>
+
+      <div id="centro" class="centro">
+                <?php      
+                  $link = isset($_GET['link'])? $_GET['link']:'';
+                  $pag[1] = "informacoes.php";                    
+                  $pag[2] = "estado.php";
+                  $pag[3] = "novoagend.php"; 
+                  $pag[4] = "cancelaagenda.php";
+                  if(!empty($link))
+                  {
+                      if(file_exists($pag[$link]))
+                      {
+                          include($pag[$link]);
+                      }
+                      else
+                      {
+                          include($pag[1]); //Mostre o home
+                      }
+                  }
+                  else
+                  {
+                      include($pag[1]); //Mostre o home
+                  }   
+
+                ?>
+            </div>
+
+            
+
+
 </html>
-
-
-
 <footer>
-
 </footer>
 </body>
 </html>

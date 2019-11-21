@@ -24,7 +24,9 @@ if(isset($_POST['logar']))
              $_SESSION['cpf'] = $resp->getCpf();
              $_SESSION['nome'] = $resp->getNome();
              $_SESSION['email'] = $resp->getEmail();   
-             $_SESSION['paciente'] = $resp->getPaciente();   
+             $_SESSION['telefone'] = $resp->getTelefone();
+             $_SESSION['rg'] = $resp->getRg();  
+             $_SESSION['paciente'] = $resp->getPaciente();     
              
              var_dump($_SESSION);
              header('location:../paciente/index.php');
