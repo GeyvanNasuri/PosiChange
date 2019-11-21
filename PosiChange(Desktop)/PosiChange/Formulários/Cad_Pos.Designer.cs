@@ -120,7 +120,7 @@
             // 
             this.txt_posicao.Location = new System.Drawing.Point(6, 40);
             this.txt_posicao.Name = "txt_posicao";
-            this.txt_posicao.Size = new System.Drawing.Size(100, 20);
+            this.txt_posicao.Size = new System.Drawing.Size(324, 20);
             this.txt_posicao.TabIndex = 0;
             // 
             // Cad_Pos

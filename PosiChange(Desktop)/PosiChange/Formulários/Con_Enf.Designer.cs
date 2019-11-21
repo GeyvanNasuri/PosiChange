@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txt_nome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_cracha = new System.Windows.Forms.Button();
+            this.btn_alterar = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.dgv_informacoes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,10 +42,8 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.btn_alterar = new System.Windows.Forms.Button();
-            this.btn_cracha = new System.Windows.Forms.Button();
-            this.btn_voltar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_nome = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informacoes)).BeginInit();
             this.SuspendLayout();
@@ -64,22 +64,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta de Enfermeiro";
             // 
-            // txt_nome
+            // btn_voltar
             // 
-            this.txt_nome.Location = new System.Drawing.Point(61, 19);
-            this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(609, 20);
-            this.txt_nome.TabIndex = 0;
+            this.btn_voltar.Location = new System.Drawing.Point(601, 265);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 6;
+            this.btn_voltar.Text = "&Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
-            // label1
+            // btn_cracha
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome";
+            this.btn_cracha.Location = new System.Drawing.Point(520, 265);
+            this.btn_cracha.Name = "btn_cracha";
+            this.btn_cracha.Size = new System.Drawing.Size(75, 23);
+            this.btn_cracha.TabIndex = 5;
+            this.btn_cracha.Text = "&Crachá";
+            this.btn_cracha.UseVisualStyleBackColor = true;
+            this.btn_cracha.Click += new System.EventHandler(this.btn_cracha_Click);
+            // 
+            // btn_alterar
+            // 
+            this.btn_alterar.Location = new System.Drawing.Point(438, 265);
+            this.btn_alterar.Name = "btn_alterar";
+            this.btn_alterar.Size = new System.Drawing.Size(75, 23);
+            this.btn_alterar.TabIndex = 4;
+            this.btn_alterar.Text = "&Alterar";
+            this.btn_alterar.UseVisualStyleBackColor = true;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(356, 265);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.TabIndex = 3;
+            this.btn_buscar.Text = "&Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // dgv_informacoes
             // 
@@ -163,44 +185,22 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 65;
             // 
-            // btn_buscar
+            // label1
             // 
-            this.btn_buscar.Location = new System.Drawing.Point(350, 266);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscar.TabIndex = 3;
-            this.btn_buscar.Text = "&Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nome";
             // 
-            // btn_alterar
+            // txt_nome
             // 
-            this.btn_alterar.Location = new System.Drawing.Point(432, 266);
-            this.btn_alterar.Name = "btn_alterar";
-            this.btn_alterar.Size = new System.Drawing.Size(75, 23);
-            this.btn_alterar.TabIndex = 4;
-            this.btn_alterar.Text = "&Alterar";
-            this.btn_alterar.UseVisualStyleBackColor = true;
-            // 
-            // btn_cracha
-            // 
-            this.btn_cracha.Location = new System.Drawing.Point(514, 266);
-            this.btn_cracha.Name = "btn_cracha";
-            this.btn_cracha.Size = new System.Drawing.Size(75, 23);
-            this.btn_cracha.TabIndex = 5;
-            this.btn_cracha.Text = "&Crachá";
-            this.btn_cracha.UseVisualStyleBackColor = true;
-            this.btn_cracha.Click += new System.EventHandler(this.btn_cracha_Click);
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.Location = new System.Drawing.Point(595, 266);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
-            this.btn_voltar.TabIndex = 6;
-            this.btn_voltar.Text = "&Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = true;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            this.txt_nome.Location = new System.Drawing.Point(61, 19);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(609, 20);
+            this.txt_nome.TabIndex = 0;
             // 
             // Con_Enf
             // 

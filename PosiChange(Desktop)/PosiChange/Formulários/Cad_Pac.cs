@@ -16,5 +16,10 @@ namespace PosiChange.Formulários
         {
             InitializeComponent();
         }
+
+        private void Cad_Pac_Load(object sender, EventArgs e)
+        {
+            txt_descricao.Enabled = false;
+        }
     }
 }

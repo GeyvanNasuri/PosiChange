@@ -83,14 +83,14 @@
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarToolStripMenuItem.Text = "&Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem1
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.consultarToolStripMenuItem1.Text = "C&onsultar";
             this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
             // 
@@ -101,7 +101,7 @@
             this.consultarToolStripMenuItem,
             this.resgistrarResponsávelToolStripMenuItem});
             this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pacienteToolStripMenuItem.Text = "&Paciente";
             // 
             // cadastrarToolStripMenuItem1
@@ -123,6 +123,7 @@
             this.resgistrarResponsávelToolStripMenuItem.Name = "resgistrarResponsávelToolStripMenuItem";
             this.resgistrarResponsávelToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.resgistrarResponsávelToolStripMenuItem.Text = "&Registrar Responsável";
+            this.resgistrarResponsávelToolStripMenuItem.Click += new System.EventHandler(this.resgistrarResponsávelToolStripMenuItem_Click);
             // 
             // registrosToolStripMenuItem
             // 

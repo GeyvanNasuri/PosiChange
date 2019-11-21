@@ -105,5 +105,28 @@ namespace PosiChange.Classes
             com.Connection.Close();
             return pacientes;
         }
+
+        public List<Paciente> TodosPacientes()
+        {
+            List<Paciente> pacientes = new List<Paciente>();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from paciente";
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Paciente pac = new Paciente();
+                pac.Cod = dr.GetInt32(0);
+                pac.Nome = dr.GetString(1);
+                pac.RG = dr.GetString(2);
+                pac.CPF = dr.GetString(3);
+                pac.Ferida = dr.GetBoolean(4);
+                pac.Descricao = dr.GetString(5);
+                pac.Situacao = dr.GetString(6);
+                com.ExecuteNonQuery();
+                pacientes.Add(pac);
+            }
+            com.Connection.Close();
+            return pacientes;
+        }
     }
 }

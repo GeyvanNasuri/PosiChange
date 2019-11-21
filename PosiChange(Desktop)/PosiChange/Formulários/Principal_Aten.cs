@@ -79,5 +79,10 @@ namespace PosiChange.Formulários
         {
             //btn_infracao infracao = Color.Red;
         }
+
+        private void resgistrarResponsávelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
