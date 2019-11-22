@@ -1,7 +1,7 @@
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver\\php\\ext\\php_curl.dll' - N\xef\xbf\xbdo foi poss\xef\xbf\xbdvel encontrar o m\xef\xbf\xbddulo especificado.\r\n in Unknown on line 0
-[Thu Nov 21 14:59:55.309146 2019] [mpm_winnt:notice] [pid 36176:tid 656] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
-[Thu Nov 21 14:59:55.310143 2019] [mpm_winnt:notice] [pid 36176:tid 656] AH00456: Server built: Nov  3 2017 01:01:54
-[Thu Nov 21 14:59:55.310143 2019] [core:notice] [pid 36176:tid 656] AH00094: Command line: 'C:\\Users\\gabriel.vrnascimento\\Pictures\\Tentacion\\usbwebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver/apache2'
-[Thu Nov 21 14:59:55.356210 2019] [mpm_winnt:notice] [pid 36176:tid 656] AH00418: Parent: Created child process 37008
+[Fri Nov 22 14:05:46.272197 2019] [mpm_winnt:notice] [pid 34120:tid 772] AH00455: Apache/2.4.29 (Win32) PHP/7.1.11 configured -- resuming normal operations
+[Fri Nov 22 14:05:46.272197 2019] [mpm_winnt:notice] [pid 34120:tid 772] AH00456: Server built: Nov  3 2017 01:01:54
+[Fri Nov 22 14:05:46.272197 2019] [core:notice] [pid 34120:tid 772] AH00094: Command line: 'C:\\Users\\gabriel.vrnascimento\\Pictures\\Tentacion\\usbwebserver/apache2/bin/httpd_usbwv8.exe -d C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver/apache2'
+[Fri Nov 22 14:05:46.287693 2019] [mpm_winnt:notice] [pid 34120:tid 772] AH00418: Parent: Created child process 90284
 PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Users/gabriel.vrnascimento/Pictures/Tentacion/usbwebserver\\php\\ext\\php_curl.dll' - N\xef\xbf\xbdo foi poss\xef\xbf\xbdvel encontrar o m\xef\xbf\xbddulo especificado.\r\n in Unknown on line 0
-[Thu Nov 21 14:59:56.162413 2019] [mpm_winnt:notice] [pid 37008:tid 820] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 22 14:05:47.428050 2019] [mpm_winnt:notice] [pid 90284:tid 800] AH00354: Child: Starting 64 worker threads.

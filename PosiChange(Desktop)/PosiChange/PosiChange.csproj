@@ -104,97 +104,151 @@
     <Compile Include="Classes\Posicao.cs" />
     <Compile Include="Classes\Quarto.cs" />
     <Compile Include="Classes\Responsavel.cs" />
-    <Compile Include="Formulários\Cad_Ate.cs">
+    <Compile Include="Formulários\frm_agenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Cad_Ate.Designer.cs">
-      <DependentUpon>Cad_Ate.cs</DependentUpon>
+    <Compile Include="Formulários\frm_agenda.Designer.cs">
+      <DependentUpon>frm_agenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Cad_Enf.cs">
+    <Compile Include="Formulários\frm_cad_ate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Cad_Enf.Designer.cs">
-      <DependentUpon>Cad_Enf.cs</DependentUpon>
+    <Compile Include="Formulários\frm_cad_ate.Designer.cs">
+      <DependentUpon>frm_cad_ate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Cad_Pac.cs">
+    <Compile Include="Formulários\frm_cad_enf.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Cad_Pac.Designer.cs">
-      <DependentUpon>Cad_Pac.cs</DependentUpon>
+    <Compile Include="Formulários\frm_cad_enf.Designer.cs">
+      <DependentUpon>frm_cad_enf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Cad_Pos.cs">
+    <Compile Include="Formulários\frm_cad_pac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Cad_Pos.Designer.cs">
-      <DependentUpon>Cad_Pos.cs</DependentUpon>
+    <Compile Include="Formulários\frm_cad_pac.Designer.cs">
+      <DependentUpon>frm_cad_pac.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Con_Enf.cs">
+    <Compile Include="Formulários\frm_historico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Con_Enf.Designer.cs">
-      <DependentUpon>Con_Enf.cs</DependentUpon>
+    <Compile Include="Formulários\frm_historico.Designer.cs">
+      <DependentUpon>frm_historico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Con_Pac.cs">
+    <Compile Include="Formulários\frm_infracao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Con_Pac.Designer.cs">
-      <DependentUpon>Con_Pac.cs</DependentUpon>
+    <Compile Include="Formulários\frm_infracao.Designer.cs">
+      <DependentUpon>frm_infracao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Imp_Coren.cs">
+    <Compile Include="Formulários\frm_monitor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Imp_Coren.Designer.cs">
-      <DependentUpon>Imp_Coren.cs</DependentUpon>
+    <Compile Include="Formulários\frm_monitor.Designer.cs">
+      <DependentUpon>frm_monitor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Login.cs">
+    <Compile Include="Formulários\frm_quarto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Formulários\frm_quarto.Designer.cs">
+      <DependentUpon>frm_quarto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Principal_Adm.cs">
+    <Compile Include="Formulários\frrm_cad_pos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Principal_Adm.Designer.cs">
-      <DependentUpon>Principal_Adm.cs</DependentUpon>
+    <Compile Include="Formulários\frrm_cad_pos.Designer.cs">
+      <DependentUpon>frrm_cad_pos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Principal_Aten.cs">
+    <Compile Include="Formulários\frm_cad_res.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\Principal_Aten.Designer.cs">
-      <DependentUpon>Principal_Aten.cs</DependentUpon>
+    <Compile Include="Formulários\frm_cad_res.Designer.cs">
+      <DependentUpon>frm_cad_res.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_con_enf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_con_enf.Designer.cs">
+      <DependentUpon>frm_con_enf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_con_pac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_con_pac.Designer.cs">
+      <DependentUpon>frm_con_pac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_imp_cor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_imp_cor.Designer.cs">
+      <DependentUpon>frm_imp_cor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_pri_adm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_pri_adm.Designer.cs">
+      <DependentUpon>frm_pri_adm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frm_pri_ate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_pri_ate.Designer.cs">
+      <DependentUpon>frm_pri_ate.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formulários\Cad_Ate.resx">
-      <DependentUpon>Cad_Ate.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_agenda.resx">
+      <DependentUpon>frm_agenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Cad_Enf.resx">
-      <DependentUpon>Cad_Enf.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_cad_ate.resx">
+      <DependentUpon>frm_cad_ate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Cad_Pac.resx">
-      <DependentUpon>Cad_Pac.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_cad_enf.resx">
+      <DependentUpon>frm_cad_enf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Cad_Pos.resx">
-      <DependentUpon>Cad_Pos.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_cad_pac.resx">
+      <DependentUpon>frm_cad_pac.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Con_Enf.resx">
-      <DependentUpon>Con_Enf.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_historico.resx">
+      <DependentUpon>frm_historico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Con_Pac.resx">
-      <DependentUpon>Con_Pac.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_infracao.resx">
+      <DependentUpon>frm_infracao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Imp_Coren.resx">
-      <DependentUpon>Imp_Coren.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_monitor.resx">
+      <DependentUpon>frm_monitor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_quarto.resx">
+      <DependentUpon>frm_quarto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Principal_Adm.resx">
-      <DependentUpon>Principal_Adm.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frrm_cad_pos.resx">
+      <DependentUpon>frrm_cad_pos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\Principal_Aten.resx">
-      <DependentUpon>Principal_Aten.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_cad_res.resx">
+      <DependentUpon>frm_cad_res.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_con_enf.resx">
+      <DependentUpon>frm_con_enf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_con_pac.resx">
+      <DependentUpon>frm_con_pac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_imp_cor.resx">
+      <DependentUpon>frm_imp_cor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_pri_adm.resx">
+      <DependentUpon>frm_pri_adm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_pri_ate.resx">
+      <DependentUpon>frm_pri_ate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -13,7 +13,7 @@ namespace PosiChange.Classes
         internal Responsavel Responsible { get; set; }
         public DateTime Dia { get; set; }
         public bool Novo { get; set; }
-
+        
         public Agendamento()
         {
 

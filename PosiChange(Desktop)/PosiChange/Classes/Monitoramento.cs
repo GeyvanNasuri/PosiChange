@@ -9,32 +9,29 @@ namespace PosiChange.Classes
     public class Monitoramento
     {
         public int Cod { get; set; }
-        public string Razao { get; set; }
+        public string DescricaoAtual { get; set; }
         internal Paciente Patient { get; set; }
-        public DateTime Registro { get; set; }
 
         public Monitoramento() { }
 
-        public Monitoramento(int cod, string razao, Paciente patient, DateTime registro)
+        public Monitoramento(int cod,string descricaoAtual, Paciente patient)
         {
             Cod = cod;
-            Razao = razao;
+            DescricaoAtual = descricaoAtual;
             Patient = patient;
-            Registro = registro;
         }
-
-        public Monitoramento(string razao, Paciente patient, DateTime registro)
+        
+        public Monitoramento(string descricaoAtual, Paciente patient)
         {
-            Razao = razao;
+            DescricaoAtual = descricaoAtual;
             Patient = patient;
-            Registro = registro;
         }
 
-        public void Insert(string razao, Paciente patient)
+        public void Insert(string descricaoAtual, Paciente patient)
         {
             var com = Banco.Abrir();
-            com.CommandText = "insert into Monitoramento_paciente values(null, " + razao + ", " + patient.Cod + ", now())";
-            Cod = Convert.ToInt32(com.ExecuteScalar());
+            com.CommandText = "insert into monitoramento_paciente values(null, " + patient.Descricao + ", " + descricaoAtual + ", " + patient.Cod + ")";
+            //Cod = Convert.ToInt32(com.ExecuteScalar());
             com.ExecuteNonQuery();
             com.Connection.Close();
         }
@@ -47,12 +44,14 @@ namespace PosiChange.Classes
             var dr = com.ExecuteReader();
             while (dr.Read())
             {
-                Monitoramento his = new Monitoramento();
-                his.Cod = dr.GetInt32(0);
-                his.Razao = dr.GetString(1);
-                his.Patient.Cod = dr.GetInt32(2);
-                his.Registro = dr.GetDateTime(3);
-                Monitoramentos.Add(his);
+                Monitoramento mo = new Monitoramento();
+                mo.Cod = dr.GetInt32(0);
+                mo.Patient.Descricao = dr.GetString(1);
+                mo.DescricaoAtual = dr.GetString(2);
+                mo.Patient.Cod = dr.GetInt32(3);
+                Monitoramentos.Add(mo);
+                com.ExecuteNonQuery();
+                com.Connection.Close();
             }
             com.Connection.Close();
             return Monitoramentos;
