@@ -21,6 +21,7 @@ namespace PosiChange.Formulários
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             Atendente atendente = new Atendente();
+            atendente.Inserir();
             atendente.Nome = txt_nome.Text;
             atendente.RG = txt_rg.Text;
             atendente.CPF = txt_cpf.Text;
