@@ -261,7 +261,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     list-style: none;
     text-decoration: none;
     
@@ -303,6 +303,17 @@
     margin-right: 10px;
     
   }
+
+  /* Botão Agendar */
+  .btna{ 
+ 
+    padding: 12px 20px;
+    background: #fa4f4f;
+    color: white;
+    position: relative;
+    
+  }
+/* Menu */
   .smenu{
     background: rgb(255, 254, 254);
     overflow: hidden;
@@ -344,3 +355,61 @@
     font-weight: 45px;
     font-size: 45px;
   }
+
+  #formulario-menor form{
+    width: 350px;
+    margin: 20px auto;
+    border:2px solid #ccc;
+}
+
+#formulario-menor fieldset{
+    border: 0;
+    padding: 0 15px 10px 15px;
+}
+#formulario-menor legend
+{
+  font-family: 'Roboto Condensed', sans-serif;
+    color: #fa4f4f;
+    font-weight: bold;
+    padding: 10px 0;
+}
+#formulario-menor label{
+    display: block;
+    padding: 3px 0;
+    text-align: center;
+}
+
+#formulario-menor span{display: block;
+    font: 16px;
+    color: #fa4f4f;}
+
+#formulario-menor input{padding: 3px;
+                        width: 300px;
+                        border: 1px solid #fa4f4f;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-weight: bold;
+}
+
+
+table {
+   padding-left: 734px;
+   display: block;
+
+}
+
+tr {
+  padding-left: 100px;
+}
+th {
+
+  width: 150px;
+  height: 22px;
+}
+td {
+  padding-left: 100px;
+
+}
+
+/*  name="btn_inserir_post"> */
+/*         <form action="op_post.php?inserir=1" */
+

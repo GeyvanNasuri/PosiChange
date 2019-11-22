@@ -27,7 +27,13 @@ $resp = new Responsavel();
     <div class="topo" id="topo">
     <h3> Seja bem-vindo <?php require_once('../login/op_login.php');
            
-           echo $rest = substr($_SESSION['nome'], 0, -16); ?> </h3> 
+           $Nome = $_SESSION['nome'];
+$primeiroNome = explode(" ", $Nome);
+ 
+
+ 
+//ou
+echo current($primeiroNome); // Fulano?>! </h3> 
     
     </div>
       <div class="menu">
@@ -42,7 +48,7 @@ $resp = new Responsavel();
           <a href="#messages" class="btn"><i class="material-icons">date_range</i>Agendamento</a>
           <div class="smenu">
             <a href="index.php?link=2">Novo Agendamento</a>
-            <a href="index.php?link=3">Cancelamento de Agendamento</a>
+            <a href="index.php?link=3">Ver Agendamentos</a>
 
             <li class="item" id="messages">
             <a href="../index.php" class="btn"><i class="material-icons">
@@ -56,9 +62,8 @@ cancel
                 <?php      
                   $link = isset($_GET['link'])? $_GET['link']:'';
                   $pag[1] = "informacoes.php";                    
-                  $pag[2] = "estado.php";
-                  $pag[3] = "novoagend.php"; 
-                  $pag[4] = "cancelaagenda.php";
+                  $pag[2] = "novoagend.php"; 
+                  $pag[3] = "agendamentos.php";
                   if(!empty($link))
                   {
                       if(file_exists($pag[$link]))

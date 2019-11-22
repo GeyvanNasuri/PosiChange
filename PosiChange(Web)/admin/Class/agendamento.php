@@ -68,6 +68,10 @@ class Agendamento{
                 ":novo"=>$_novo
             ));
     }
+
+    public function Listar(){
+
+    }
     
     // cancelando agendamento
     public function cancel(){
