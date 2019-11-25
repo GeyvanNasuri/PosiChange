@@ -167,5 +167,24 @@ namespace PosiChange.Classes
             com.Connection.Close();
             return atendentes;
         }
+
+        public bool Verificalogin(string login)
+        {
+            bool existe = false;
+            var com = Banco.Abrir();
+            try
+            {
+                com.CommandText = "select * from atendimento where login = " + login;
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                existe = true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return existe;
+        }
     }
 }

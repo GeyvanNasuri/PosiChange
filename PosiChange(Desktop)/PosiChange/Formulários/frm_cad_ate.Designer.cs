@@ -187,6 +187,7 @@
             this.btn_voltar.TabIndex = 15;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // btn_verificar
             // 
@@ -196,6 +197,7 @@
             this.btn_verificar.TabIndex = 14;
             this.btn_verificar.Text = "Verificar";
             this.btn_verificar.UseVisualStyleBackColor = true;
+            this.btn_verificar.Click += new System.EventHandler(this.btn_verificar_Click);
             // 
             // btn_cadastrar
             // 

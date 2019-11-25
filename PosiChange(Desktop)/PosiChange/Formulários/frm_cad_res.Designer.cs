@@ -30,30 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_res));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmb_paciente = new System.Windows.Forms.ComboBox();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_telefone_cad_enf = new System.Windows.Forms.Label();
+            this.txt_senha = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
             this.txt_rg = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_vol_enf = new System.Windows.Forms.Button();
-            this.btn_ver_enf = new System.Windows.Forms.Button();
             this.btn_cad_enf = new System.Windows.Forms.Button();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.txt_senha = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_telefone_cad_enf = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_paciente);
             this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_telefone);
@@ -65,7 +64,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_vol_enf);
-            this.groupBox1.Controls.Add(this.btn_ver_enf);
             this.groupBox1.Controls.Add(this.btn_cad_enf);
             this.groupBox1.Controls.Add(this.txt_nome);
             this.groupBox1.Controls.Add(this.lbl_nome_cad_enf);
@@ -75,6 +73,79 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Resposável";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 17);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Paciente";
+            // 
+            // cmb_paciente
+            // 
+            this.cmb_paciente.FormattingEnabled = true;
+            this.cmb_paciente.Location = new System.Drawing.Point(85, 127);
+            this.cmb_paciente.Name = "cmb_paciente";
+            this.cmb_paciente.Size = new System.Drawing.Size(208, 21);
+            this.cmb_paciente.TabIndex = 29;
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(254, 91);
+            this.txt_email.MaxLength = 45;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(282, 20);
+            this.txt_email.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(194, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "E-mail";
+            // 
+            // txt_telefone
+            // 
+            this.txt_telefone.Location = new System.Drawing.Point(85, 91);
+            this.txt_telefone.Mask = "(00) 00000-0000";
+            this.txt_telefone.Name = "txt_telefone";
+            this.txt_telefone.Size = new System.Drawing.Size(84, 20);
+            this.txt_telefone.TabIndex = 25;
+            // 
+            // lbl_telefone_cad_enf
+            // 
+            this.lbl_telefone_cad_enf.AutoSize = true;
+            this.lbl_telefone_cad_enf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_telefone_cad_enf.Location = new System.Drawing.Point(7, 91);
+            this.lbl_telefone_cad_enf.Name = "lbl_telefone_cad_enf";
+            this.lbl_telefone_cad_enf.Size = new System.Drawing.Size(72, 17);
+            this.lbl_telefone_cad_enf.TabIndex = 26;
+            this.lbl_telefone_cad_enf.Text = "Telefone";
+            // 
+            // txt_senha
+            // 
+            this.txt_senha.Location = new System.Drawing.Point(367, 56);
+            this.txt_senha.MaxLength = 20;
+            this.txt_senha.Name = "txt_senha";
+            this.txt_senha.PasswordChar = '*';
+            this.txt_senha.Size = new System.Drawing.Size(169, 20);
+            this.txt_senha.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(308, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Senha";
             // 
             // txt_cpf
             // 
@@ -120,24 +191,17 @@
             this.btn_vol_enf.TabIndex = 15;
             this.btn_vol_enf.Text = "Voltar";
             this.btn_vol_enf.UseVisualStyleBackColor = true;
-            // 
-            // btn_ver_enf
-            // 
-            this.btn_ver_enf.Location = new System.Drawing.Point(380, 125);
-            this.btn_ver_enf.Name = "btn_ver_enf";
-            this.btn_ver_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_ver_enf.TabIndex = 14;
-            this.btn_ver_enf.Text = "Verificar";
-            this.btn_ver_enf.UseVisualStyleBackColor = true;
+            this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
             // 
             // btn_cad_enf
             // 
-            this.btn_cad_enf.Location = new System.Drawing.Point(299, 125);
+            this.btn_cad_enf.Location = new System.Drawing.Point(380, 125);
             this.btn_cad_enf.Name = "btn_cad_enf";
             this.btn_cad_enf.Size = new System.Drawing.Size(75, 23);
             this.btn_cad_enf.TabIndex = 13;
             this.btn_cad_enf.Text = "Cadastrar";
             this.btn_cad_enf.UseVisualStyleBackColor = true;
+            this.btn_cad_enf.Click += new System.EventHandler(this.btn_cad_enf_Click);
             // 
             // txt_nome
             // 
@@ -157,79 +221,6 @@
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
             // 
-            // txt_senha
-            // 
-            this.txt_senha.Location = new System.Drawing.Point(367, 56);
-            this.txt_senha.MaxLength = 20;
-            this.txt_senha.Name = "txt_senha";
-            this.txt_senha.PasswordChar = '*';
-            this.txt_senha.Size = new System.Drawing.Size(169, 20);
-            this.txt_senha.TabIndex = 23;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(308, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Senha";
-            // 
-            // txt_telefone
-            // 
-            this.txt_telefone.Location = new System.Drawing.Point(85, 91);
-            this.txt_telefone.Mask = "(00) 00000-0000";
-            this.txt_telefone.Name = "txt_telefone";
-            this.txt_telefone.Size = new System.Drawing.Size(84, 20);
-            this.txt_telefone.TabIndex = 25;
-            // 
-            // lbl_telefone_cad_enf
-            // 
-            this.lbl_telefone_cad_enf.AutoSize = true;
-            this.lbl_telefone_cad_enf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone_cad_enf.Location = new System.Drawing.Point(7, 91);
-            this.lbl_telefone_cad_enf.Name = "lbl_telefone_cad_enf";
-            this.lbl_telefone_cad_enf.Size = new System.Drawing.Size(72, 17);
-            this.lbl_telefone_cad_enf.TabIndex = 26;
-            this.lbl_telefone_cad_enf.Text = "Telefone";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "E-mail";
-            // 
-            // txt_email
-            // 
-            this.txt_email.Location = new System.Drawing.Point(254, 91);
-            this.txt_email.MaxLength = 45;
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(282, 20);
-            this.txt_email.TabIndex = 28;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(85, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 21);
-            this.comboBox1.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 17);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Paciente";
-            // 
             // frm_cad_res
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +232,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cad_res";
             this.Text = "PosiChange | Cadastro de Responsável";
+            this.Load += new System.EventHandler(this.frm_cad_res_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -255,7 +247,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_vol_enf;
-        private System.Windows.Forms.Button btn_ver_enf;
         private System.Windows.Forms.Button btn_cad_enf;
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label lbl_nome_cad_enf;
@@ -266,6 +257,6 @@
         private System.Windows.Forms.MaskedTextBox txt_telefone;
         private System.Windows.Forms.Label lbl_telefone_cad_enf;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_paciente;
     }
 }

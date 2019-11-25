@@ -110,3 +110,5 @@ D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_login.resources
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_pri_adm.resources
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_pri_ate.resources
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.xml
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.MySql.xml

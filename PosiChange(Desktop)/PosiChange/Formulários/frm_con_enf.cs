@@ -33,7 +33,7 @@ namespace PosiChange.Formulários
             {
                 var dr = enf.ListaEnfermeiro(txt_nome.Text);
                 DataTable dt = new DataTable();
-                //dt.Load(dr);
+                //dt.Load(enf.ListaEnfermeiro(txt_nome.Text));
                 dgv_informacoes.DataSource = dr;
                 foreach (var item in enf.ListaEnfermeiro(txt_nome.Text))
                 {
@@ -53,7 +53,7 @@ namespace PosiChange.Formulários
             {
                 var dr = enf.TodosEnfermeiro();
                 DataTable dt = new DataTable();
-                //dt.Load(dr);
+                //dt.Load(enf.ListaEnfermeiro(txt_nome.Text));
                 dgv_informacoes.DataSource = dr;
                 foreach (var item in enf.TodosEnfermeiro())
                 {

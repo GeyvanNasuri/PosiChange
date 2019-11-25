@@ -12,10 +12,10 @@ using System.IO;
 
 namespace PosiChange.Formulários
 {
-    public partial class frrm_cad_pos : Form
+    public partial class frm_cad_pos : Form
     {
         string imgPos;
-        public frrm_cad_pos()
+        public frm_cad_pos()
         {
             InitializeComponent();
         }

@@ -95,6 +95,7 @@
             this.rbt_sim.TabStop = true;
             this.rbt_sim.Text = "Sim";
             this.rbt_sim.UseVisualStyleBackColor = true;
+            this.rbt_sim.CheckedChanged += new System.EventHandler(this.rbt_sim_CheckedChanged);
             // 
             // txt_cpf
             // 
@@ -158,6 +159,7 @@
             this.btn_cad_enf.TabIndex = 13;
             this.btn_cad_enf.Text = "Cadastrar";
             this.btn_cad_enf.UseVisualStyleBackColor = true;
+            this.btn_cad_enf.Click += new System.EventHandler(this.btn_cad_enf_Click);
             // 
             // txt_situacao
             // 
@@ -170,7 +172,7 @@
             // 
             this.txt_descricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txt_descricao.Location = new System.Drawing.Point(167, 87);
-            this.txt_descricao.MaxLength = 6;
+            this.txt_descricao.MaxLength = 150;
             this.txt_descricao.Name = "txt_descricao";
             this.txt_descricao.Size = new System.Drawing.Size(366, 20);
             this.txt_descricao.TabIndex = 4;

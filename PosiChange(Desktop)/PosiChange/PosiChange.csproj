@@ -152,11 +152,11 @@
     <Compile Include="Formulários\frm_quarto.Designer.cs">
       <DependentUpon>frm_quarto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frrm_cad_pos.cs">
+    <Compile Include="Formulários\frm_cad_pos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\frrm_cad_pos.Designer.cs">
-      <DependentUpon>frrm_cad_pos.cs</DependentUpon>
+    <Compile Include="Formulários\frm_cad_pos.Designer.cs">
+      <DependentUpon>frm_cad_pos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários\frm_cad_res.cs">
       <SubType>Form</SubType>
@@ -226,8 +226,8 @@
     <EmbeddedResource Include="Formulários\frm_quarto.resx">
       <DependentUpon>frm_quarto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frrm_cad_pos.resx">
-      <DependentUpon>frrm_cad_pos.cs</DependentUpon>
+    <EmbeddedResource Include="Formulários\frm_cad_pos.resx">
+      <DependentUpon>frm_cad_pos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frm_cad_res.resx">
       <DependentUpon>frm_cad_res.cs</DependentUpon>

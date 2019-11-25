@@ -60,12 +60,12 @@ namespace PosiChange.Formulários
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Logout == DialogResult.Yes)
                 {
-                    frm_pri_ate aten = new frm_pri_ate();
-                    frm_login login = new frm_login();
-                    
-                    login.Show();
+                    // comando para fecha um formalario enquanto carrega outro!
+                    this.Hide();
+                    Form formL = new frm_login();
+                    formL.Closed += (s, args) => this.Close();
+                    formL.Show();
                 }
-                this.Close();
             }
         }
 

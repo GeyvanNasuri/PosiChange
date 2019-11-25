@@ -142,5 +142,24 @@ namespace PosiChange.Classes
             com.Connection.Close();
             return enfermeiros;
         }
+
+        public bool Verificalogin(int coren)
+        {
+            bool existe = false;
+            var com = Banco.Abrir();
+            try
+            {
+                com.CommandText = "select * from enfermagem where coren = " + coren;
+                com.ExecuteNonQuery();
+                com.Connection.Close();
+                existe = true;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return existe;
+        }
     }
 }

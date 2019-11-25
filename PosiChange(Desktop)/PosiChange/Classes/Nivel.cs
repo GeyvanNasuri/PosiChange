@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace PosiChange.Classes
 {
@@ -30,11 +31,11 @@ namespace PosiChange.Classes
             Sigla = sigla;
         }
 
-        public List<Nivel> ListaNiveis(int cod)
+        public List<Nivel> ListaNiveis()
         {
             List<Nivel> nivels = new List<Nivel>();
             var com = Banco.Abrir();
-            com.CommandText = "select * from nivel where cod_nivel = '" + cod + "'";
+            com.CommandText = "select * from nivel";
             var dr = com.ExecuteReader();
             while (dr.Read())
             {
@@ -47,6 +48,16 @@ namespace PosiChange.Classes
             }
             com.Connection.Close();
             return nivels;
+        }
+
+        public MySqlDataReader Niveis()
+        {
+            
+            var com = Banco.Abrir();
+            com.CommandText = "select * from nivel";
+            var dr = com.ExecuteReader();
+            
+            return dr;
         }
     }
 }

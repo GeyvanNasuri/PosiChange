@@ -18,6 +18,11 @@ namespace PosiChange.Formulários
             InitializeComponent();
         }
 
+        private void frm_login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_sair_Click(object sender, EventArgs e)
         {
             var respota = MessageBox.Show("Deseja sair?", "PosiChange", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -34,17 +39,17 @@ namespace PosiChange.Formulários
             {
                 if (atendente.Level.Cod == 1 || atendente.Level.Cod == 2)
                 {
-                    frm_pri_adm adm = new frm_pri_adm();
-                    adm.ShowDialog();
-                    frm_login login = new frm_login();
-                    login.Hide();
+                    this.Hide();
+                    Form formD = new frm_pri_adm();
+                    formD.Closed += (s, args) => this.Close();
+                    formD.Show();
                 }
                 if (atendente.Level.Cod == 2)
                 {
-                    frm_pri_ate aten = new frm_pri_ate();
-                    aten.ShowDialog();
-                    frm_login login = new frm_login();
-                    login.Hide();
+                    this.Hide();
+                    Form formA = new frm_pri_ate();
+                    formA.Closed += (s, args) => this.Close();
+                    formA.Show();
                 }
             }
             if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == false)
@@ -53,5 +58,7 @@ namespace PosiChange.Formulários
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+       
     }
 }
