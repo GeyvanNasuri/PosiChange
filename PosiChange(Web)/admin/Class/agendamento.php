@@ -1,23 +1,23 @@
 <?php
 class Agendamento{
 
- private $id;
- private $cod_resp;
+ private $cod_age;
+ private $cod_res;
  private $dia;
  private $novo;
 
- public function getId(){
-    return $this->id;
+ public function getCodAge(){
+    return $this->cod_age;
     }
-    public function setId($value){
-    $this->id = $value;
+    public function setCodAge($value){
+    $this->cod_age = $value;
     }
 
-    public function getCodResp(){
-    return $this->cod_resp;
+    public function getCodRes(){
+    return $this->cod_res;
     }
-    public function setCodResp($value){
-    $this->cod_resp = $value;
+    public function setCodRes($value){
+    $this->cod_res = $value;
     }
 
     public function getDia(){
@@ -46,11 +46,11 @@ class Agendamento{
     // inserindo agendamento
     public function insert(){
         $sql = new Sql();
-        $results = $sql->query("INSERT INTO agendamento VALUES(null, :_res, :dia, :nov_age)",
+        $results = $sql->query("INSERT INTO agendamento VALUES(null, :_cod_res, :dia, :cod_age)",
             array(
-                ":_res"=>$this->getCodResp(),
+                ":_cod_res"=>$this->getCodRes(),
                 ":dia"=>$this->getDia(),
-                ":nov_age"=>$this->getNovo()
+                ":cod_age"=>$this->getCodAge()
             ));
         if (count($results)>0) {
             $this->setData($results[0]);
@@ -58,30 +58,27 @@ class Agendamento{
     }
 
     // alterando agendamento
-    public function update($_id, $_codresp, $_dia, $_novo){
+    public function update( $_dia, $_novo){
         $sql = new Sql();
         $sql->query("UPDATE agendamento SET dia = :dia, novo = :novo 
-            WHERE id = :id",
+            WHERE cod_age = :cod_age",
             array(
-                ":id"=>$_id,
                 ":dia"=>$_dia,
                 ":novo"=>$_novo
             ));
     }
 
-    public function Listar(){
 
-    }
     
     // cancelando agendamento
     public function cancel(){
         $sql = new Sql();
-        $sql->query("DELETE FROM agendamento WHERE id = :id",array(":id"=>$this->getId()));
+        $sql->query("DELETE FROM agendamento WHERE cod_age = :cod_age",array(":cod_age"=>$this->getCodAge()));
     }
 
     // fazendo construtores
-    public function __construct($_codresp="",$_dia="",$_novo=""){
-        $this->cod_resp = $_codresp;
+    public function __construct($_codres="",$_dia="",$_novo=""){
+        $this->cod_res = $_codres;
         $this->dia = $_dia;
         $this->novo = $_novo;
     }
