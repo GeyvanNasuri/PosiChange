@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_ate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbt_acesso = new System.Windows.Forms.RadioButton();
             this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
             this.txt_rg = new System.Windows.Forms.MaskedTextBox();
             this.cmb_nivel = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.lbl_intervalo_cad_enf = new System.Windows.Forms.Label();
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.rbt_acesso = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,18 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Atendente";
+            // 
+            // rbt_acesso
+            // 
+            this.rbt_acesso.AutoSize = true;
+            this.rbt_acesso.Checked = true;
+            this.rbt_acesso.Location = new System.Drawing.Point(10, 120);
+            this.rbt_acesso.Name = "rbt_acesso";
+            this.rbt_acesso.Size = new System.Drawing.Size(100, 17);
+            this.rbt_acesso.TabIndex = 27;
+            this.rbt_acesso.TabStop = true;
+            this.rbt_acesso.Text = "Primeiro Acesso";
+            this.rbt_acesso.UseVisualStyleBackColor = true;
             // 
             // txt_cpf
             // 
@@ -275,18 +287,6 @@
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
             // 
-            // rbt_acesso
-            // 
-            this.rbt_acesso.AutoSize = true;
-            this.rbt_acesso.Checked = true;
-            this.rbt_acesso.Location = new System.Drawing.Point(10, 120);
-            this.rbt_acesso.Name = "rbt_acesso";
-            this.rbt_acesso.Size = new System.Drawing.Size(100, 17);
-            this.rbt_acesso.TabIndex = 27;
-            this.rbt_acesso.TabStop = true;
-            this.rbt_acesso.Text = "Primeiro Acesso";
-            this.rbt_acesso.UseVisualStyleBackColor = true;
-            // 
             // frm_cad_ate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +298,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cad_ate";
             this.Text = "PosiChange | Cadastro de Atendente";
+            this.Load += new System.EventHandler(this.frm_cad_ate_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -20,7 +20,10 @@ namespace PosiChange.Formulários
 
         private void dgv_informacoes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (true)
+            {
 
+            }
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
