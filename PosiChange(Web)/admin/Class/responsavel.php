@@ -134,7 +134,7 @@
             }
         }
         
-        public function __construct($_id='',$_rg='',$_telefone='',$_nome="",$_email="",$_cpf="",$_senha="")
+        public function __construct($_id='',$_rg='',$_telefone='',$_nome="",$_email="",$_cpf="",$_senha="",$_cod_pac="")
         {
             $this->id = $_id;
             $this->nome = $_nome;
@@ -143,6 +143,7 @@
             $this->cpf = $_cpf;
             $this->senha = $_senha;
             $this->telefone = $_telefone;
+            $this->paciente = $_cod_pac;
         }
 
     }
