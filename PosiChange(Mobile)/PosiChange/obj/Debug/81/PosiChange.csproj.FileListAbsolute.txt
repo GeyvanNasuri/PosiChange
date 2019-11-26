@@ -1,0 +1,4 @@
+C:\Users\samuel.atomimatu\Pictures\Tentacion\PosiChange(Mobile)\PosiChange\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\samuel.atomimatu\Pictures\Tentacion\PosiChange(Mobile)\PosiChange\obj\Debug\81\PosiChange.csprojAssemblyReference.cache
+C:\Users\samuel.atomimatu\Pictures\Tentacion\PosiChange(Mobile)\PosiChange\obj\Debug\81\libraryimports.cache.stamp
+C:\Users\samuel.atomimatu\Pictures\Tentacion\PosiChange(Mobile)\PosiChange\obj\Debug\81\res.flag

@@ -4,4 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+		<SurfaceView
+		android:id="@+id/CameraPreview"
+		android:layout_centerInParent="true"
+		android:layout_width="match_parent"
+        android:layout_height="480px"
+		/>
+
+		<TextView
+			android:layout_centerInParent="true"
+			android:gravity="center_horizontal"
+			android:textSize="20sp"
+			android:layout_below="@+id/CameraPreview"
+		    android:layout_marginTop="20dp"
+		    android:text="Por Favor, posicione o QrCode em frente ao scanner !"
+			android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+			/>
 </RelativeLayout>
