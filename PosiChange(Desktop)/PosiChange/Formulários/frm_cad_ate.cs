@@ -40,11 +40,11 @@ namespace PosiChange.Formulários
             atendente.CPF = txt_cpf.Text;
             atendente.Login = txt_login.Text;
             atendente.Senha = txt_senha.Text;
-            atendente.Intervalo = Convert.ToDateTime(Convert.ToDateTime(txt_intervalo.Text).Hour);
+            atendente.Intervalo = Convert.ToDateTime(txt_intervalo.Text);
             atendente.Turno = txt_turno.Text;
             atendente.Telefone = txt_telefone.Text;
             atendente.Acesso = rbt_acesso.Checked;
-            atendente.Level.Cod = Convert.ToInt32(cmb_nivel.Text);
+            atendente.Level.Cod = Convert.ToInt32(cmb_nivel.SelectedValue);
             atendente.Inserir();
         }
 

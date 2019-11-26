@@ -168,7 +168,7 @@
             this.txt_nome.Size = new System.Drawing.Size(664, 20);
             this.txt_nome.TabIndex = 0;
             // 
-            // Con_Pac
+            // frm_con_pac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,8 +177,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Con_Pac";
-            this.Text = "PosiChange | Consulta de Pacientes";
+            this.Name = "frm_con_pac";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_informacoes)).EndInit();

@@ -124,7 +124,7 @@
             this.txt_posicao.Size = new System.Drawing.Size(324, 20);
             this.txt_posicao.TabIndex = 0;
             // 
-            // Cad_Pos
+            // frm_cad_pos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,8 +133,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Cad_Pos";
-            this.Text = "PosiChange | Registro de Posições";
+            this.Name = "frm_cad_pos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_posicao)).EndInit();

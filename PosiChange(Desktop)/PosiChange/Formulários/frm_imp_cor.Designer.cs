@@ -112,7 +112,7 @@
             this.pcb_qr_coren.TabIndex = 0;
             this.pcb_qr_coren.TabStop = false;
             // 
-            // Imp_Coren
+            // frm_imp_cor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,8 +121,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Imp_Coren";
-            this.Text = "Crachá";
+            this.Name = "frm_imp_cor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_qr_coren)).EndInit();

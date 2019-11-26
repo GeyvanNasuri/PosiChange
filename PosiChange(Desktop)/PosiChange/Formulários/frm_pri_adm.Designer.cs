@@ -64,20 +64,20 @@
             this.cadastrarToolStripMenuItem,
             this.consultarToolStripMenuItem1});
             this.enfermeiroToolStripMenuItem.Name = "enfermeiroToolStripMenuItem";
-            this.enfermeiroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enfermeiroToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.enfermeiroToolStripMenuItem.Text = "&Atendimento";
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.cadastrarToolStripMenuItem.Text = "&Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // consultarToolStripMenuItem1
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.consultarToolStripMenuItem1.Text = "C&onsultar";
             // 
             // sairToolStripMenuItem
@@ -98,7 +98,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frm_pri_adm";
-            this.Text = "Principal_Adm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -40,7 +40,6 @@
             this.ControlBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_monitor";
-            this.Text = "PosiChange | Monitoramento";
             this.ResumeLayout(false);
 
         }

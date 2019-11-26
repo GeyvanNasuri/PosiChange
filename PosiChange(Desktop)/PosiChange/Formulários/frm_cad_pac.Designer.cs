@@ -141,6 +141,7 @@
             this.btn_vol_enf.TabIndex = 15;
             this.btn_vol_enf.Text = "Voltar";
             this.btn_vol_enf.UseVisualStyleBackColor = true;
+            this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
             // 
             // btn_ver_enf
             // 
@@ -234,7 +235,6 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cad_pac";
-            this.Text = "PosiChange | Cadastro de Paciente";
             this.Load += new System.EventHandler(this.Cad_Pac_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

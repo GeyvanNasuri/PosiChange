@@ -21,7 +21,16 @@ namespace PosiChange.Formulários
 
         private void Cad_Enf_Load(object sender, EventArgs e)
         {
-            btn_cad_enf.Enabled = false;
+            btn_cadastrar.Enabled = false;
+            // Sem um mysql.datareader isto não rola!
+            DataTable dt = new DataTable();
+            Nivel nivel = new Nivel();
+            var niveis = nivel.Niveis();
+            dt.Load(niveis);
+            cmb_nivel.DataSource = dt;
+            cmb_nivel.DisplayMember = "nivel";
+            cmb_nivel.ValueMember = "cod_nivel";
+            cmb_nivel.Text = "";
         }
 
         private void btn_vol_enf_Click(object sender, EventArgs e)
@@ -38,21 +47,34 @@ namespace PosiChange.Formulários
         {
             var enf = new Enfermeiro();
 
-            if (txt_coren_cad_enf.Text != String.Empty)
+            if (txt_coren.Text != String.Empty)
             {
                 //enf.VerificarCoren(Convert.ToInt32(txt_coren_cad_enf.Text));
-                if (Convert.ToInt32(txt_coren_cad_enf.Text) == enf.Coren)
+                if (Convert.ToInt32(txt_coren.Text) == enf.Coren)
                 {
                     MessageBox.Show("Este Coren ja está em uso!", "PosiChange | Cadastro de Enfermeiro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_coren_cad_enf.Clear();
-                    txt_coren_cad_enf.Focus();
+                    txt_coren.Clear();
+                    txt_coren.Focus();
                 }
 
-                if (Convert.ToInt32(txt_coren_cad_enf.Text) != enf.Coren)
+                if (Convert.ToInt32(txt_coren.Text) != enf.Coren)
                 {
-                    btn_cad_enf.Enabled = true;
+                    btn_cadastrar.Enabled = true;
                 }
             }
+        }
+
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            Enfermeiro enfermeiro = new Enfermeiro();
+            enfermeiro.Nome = txt_nome.Text;
+            enfermeiro.RG = txt_rg.Text;
+            enfermeiro.CPF = txt_cpf.Text;
+            enfermeiro.Coren = Convert.ToInt32(txt_coren.Text);
+            enfermeiro.Turno = txt_turno.Text;
+            enfermeiro.Intervalo = Convert.ToDateTime(txt_intervalo.Text);
+            enfermeiro.Telefone = txt_telefone.Text;
+            enfermeiro.Level.Cod = Convert.ToInt32(cmb_nivel.SelectedValue);
         }
     }
 }

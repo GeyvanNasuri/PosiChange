@@ -139,21 +139,21 @@
             // quartosToolStripMenuItem
             // 
             this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
-            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.quartosToolStripMenuItem.Text = "&Quartos";
             this.quartosToolStripMenuItem.Click += new System.EventHandler(this.quartosToolStripMenuItem_Click);
             // 
             // históricoToolStripMenuItem
             // 
             this.históricoToolStripMenuItem.Name = "históricoToolStripMenuItem";
-            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.históricoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.históricoToolStripMenuItem.Text = "&Histórico";
             this.históricoToolStripMenuItem.Click += new System.EventHandler(this.históricoToolStripMenuItem_Click);
             // 
             // monitoramentoToolStripMenuItem
             // 
             this.monitoramentoToolStripMenuItem.Name = "monitoramentoToolStripMenuItem";
-            this.monitoramentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.monitoramentoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.monitoramentoToolStripMenuItem.Text = "&Monitoramento";
             this.monitoramentoToolStripMenuItem.Click += new System.EventHandler(this.monitoramentoToolStripMenuItem_Click);
             // 
@@ -169,14 +169,14 @@
             // btn_infracao
             // 
             this.btn_infracao.Name = "btn_infracao";
-            this.btn_infracao.Size = new System.Drawing.Size(180, 22);
+            this.btn_infracao.Size = new System.Drawing.Size(155, 22);
             this.btn_infracao.Text = "&Infrações";
             this.btn_infracao.Click += new System.EventHandler(this.infraçõesToolStripMenuItem_Click);
             // 
             // btn_agendamento
             // 
             this.btn_agendamento.Name = "btn_agendamento";
-            this.btn_agendamento.Size = new System.Drawing.Size(180, 22);
+            this.btn_agendamento.Size = new System.Drawing.Size(155, 22);
             this.btn_agendamento.Text = "&Agendamentos";
             this.btn_agendamento.Click += new System.EventHandler(this.btn_agendamento_Click);
             // 
@@ -200,7 +200,6 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_pri_ate";
-            this.Text = "PosiChange";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Principal_Aten_Load);
             this.menuStrip1.ResumeLayout(false);

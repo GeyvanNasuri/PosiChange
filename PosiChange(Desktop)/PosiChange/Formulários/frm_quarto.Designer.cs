@@ -40,7 +40,6 @@
             this.ControlBox = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_quarto";
-            this.Text = "PosiChange | Quartos";
             this.ResumeLayout(false);
 
         }

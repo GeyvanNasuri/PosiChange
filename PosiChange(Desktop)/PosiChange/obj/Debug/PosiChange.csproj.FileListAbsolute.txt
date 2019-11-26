@@ -81,7 +81,6 @@ C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_ate.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_enf.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_pac.resources
-C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frrm_cad_pos.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_res.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_con_enf.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_con_pac.resources
@@ -112,3 +111,4 @@ D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.xml
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.MySql.xml
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_pos.resources
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_pos.resources

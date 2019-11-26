@@ -35,15 +35,15 @@
             this.cmb_nivel = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_vol_enf = new System.Windows.Forms.Button();
-            this.btn_ver_enf = new System.Windows.Forms.Button();
-            this.btn_cad_enf = new System.Windows.Forms.Button();
-            this.txt_telefone_cad_enf = new System.Windows.Forms.MaskedTextBox();
-            this.txt_intervalo_cad_enf = new System.Windows.Forms.MaskedTextBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_verificar = new System.Windows.Forms.Button();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.txt_intervalo = new System.Windows.Forms.MaskedTextBox();
             this.lbl_telefone_cad_enf = new System.Windows.Forms.Label();
-            this.txt_turno_cad_enf = new System.Windows.Forms.TextBox();
-            this.txt_coren_cad_enf = new System.Windows.Forms.TextBox();
-            this.txt_nome_cad_enf = new System.Windows.Forms.TextBox();
+            this.txt_turno = new System.Windows.Forms.TextBox();
+            this.txt_coren = new System.Windows.Forms.TextBox();
+            this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_nivel_cad_enf = new System.Windows.Forms.Label();
             this.lbl_intervalo_cad_enf = new System.Windows.Forms.Label();
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
@@ -59,15 +59,15 @@
             this.groupBox1.Controls.Add(this.cmb_nivel);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btn_vol_enf);
-            this.groupBox1.Controls.Add(this.btn_ver_enf);
-            this.groupBox1.Controls.Add(this.btn_cad_enf);
-            this.groupBox1.Controls.Add(this.txt_telefone_cad_enf);
-            this.groupBox1.Controls.Add(this.txt_intervalo_cad_enf);
+            this.groupBox1.Controls.Add(this.btn_voltar);
+            this.groupBox1.Controls.Add(this.btn_verificar);
+            this.groupBox1.Controls.Add(this.btn_cadastrar);
+            this.groupBox1.Controls.Add(this.txt_telefone);
+            this.groupBox1.Controls.Add(this.txt_intervalo);
             this.groupBox1.Controls.Add(this.lbl_telefone_cad_enf);
-            this.groupBox1.Controls.Add(this.txt_turno_cad_enf);
-            this.groupBox1.Controls.Add(this.txt_coren_cad_enf);
-            this.groupBox1.Controls.Add(this.txt_nome_cad_enf);
+            this.groupBox1.Controls.Add(this.txt_turno);
+            this.groupBox1.Controls.Add(this.txt_coren);
+            this.groupBox1.Controls.Add(this.txt_nome);
             this.groupBox1.Controls.Add(this.lbl_nivel_cad_enf);
             this.groupBox1.Controls.Add(this.lbl_intervalo_cad_enf);
             this.groupBox1.Controls.Add(this.lbl_turno_cad_enf);
@@ -86,7 +86,7 @@
             this.txt_cpf.Mask = "000.000.000-00";
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 22;
+            this.txt_cpf.TabIndex = 3;
             // 
             // txt_rg
             // 
@@ -94,15 +94,15 @@
             this.txt_rg.Mask = "00.000.000-0";
             this.txt_rg.Name = "txt_rg";
             this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 21;
+            this.txt_rg.TabIndex = 2;
             // 
             // cmb_nivel
             // 
             this.cmb_nivel.FormattingEnabled = true;
-            this.cmb_nivel.Location = new System.Drawing.Point(355, 55);
+            this.cmb_nivel.Location = new System.Drawing.Point(350, 55);
             this.cmb_nivel.Name = "cmb_nivel";
-            this.cmb_nivel.Size = new System.Drawing.Size(81, 21);
-            this.cmb_nivel.TabIndex = 20;
+            this.cmb_nivel.Size = new System.Drawing.Size(92, 21);
+            this.cmb_nivel.TabIndex = 4;
             // 
             // label1
             // 
@@ -124,50 +124,51 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "RG";
             // 
-            // btn_vol_enf
+            // btn_voltar
             // 
-            this.btn_vol_enf.Location = new System.Drawing.Point(512, 123);
-            this.btn_vol_enf.Name = "btn_vol_enf";
-            this.btn_vol_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_vol_enf.TabIndex = 15;
-            this.btn_vol_enf.Text = "Voltar";
-            this.btn_vol_enf.UseVisualStyleBackColor = true;
-            this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
+            this.btn_voltar.Location = new System.Drawing.Point(512, 123);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_vol_enf_Click);
             // 
-            // btn_ver_enf
+            // btn_verificar
             // 
-            this.btn_ver_enf.Location = new System.Drawing.Point(431, 123);
-            this.btn_ver_enf.Name = "btn_ver_enf";
-            this.btn_ver_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_ver_enf.TabIndex = 14;
-            this.btn_ver_enf.Text = "Verificar";
-            this.btn_ver_enf.UseVisualStyleBackColor = true;
-            this.btn_ver_enf.Click += new System.EventHandler(this.btn_ver_enf_Click);
+            this.btn_verificar.Location = new System.Drawing.Point(431, 123);
+            this.btn_verificar.Name = "btn_verificar";
+            this.btn_verificar.Size = new System.Drawing.Size(75, 23);
+            this.btn_verificar.TabIndex = 14;
+            this.btn_verificar.Text = "Verificar";
+            this.btn_verificar.UseVisualStyleBackColor = true;
+            this.btn_verificar.Click += new System.EventHandler(this.btn_ver_enf_Click);
             // 
-            // btn_cad_enf
+            // btn_cadastrar
             // 
-            this.btn_cad_enf.Location = new System.Drawing.Point(350, 123);
-            this.btn_cad_enf.Name = "btn_cad_enf";
-            this.btn_cad_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_cad_enf.TabIndex = 13;
-            this.btn_cad_enf.Text = "Cadastrar";
-            this.btn_cad_enf.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Location = new System.Drawing.Point(350, 123);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cadastrar.TabIndex = 13;
+            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
-            // txt_telefone_cad_enf
+            // txt_telefone
             // 
-            this.txt_telefone_cad_enf.Location = new System.Drawing.Point(367, 87);
-            this.txt_telefone_cad_enf.Mask = "(00) 00000-0000";
-            this.txt_telefone_cad_enf.Name = "txt_telefone_cad_enf";
-            this.txt_telefone_cad_enf.Size = new System.Drawing.Size(90, 20);
-            this.txt_telefone_cad_enf.TabIndex = 8;
+            this.txt_telefone.Location = new System.Drawing.Point(367, 87);
+            this.txt_telefone.Mask = "(00) 00000-0000";
+            this.txt_telefone.Name = "txt_telefone";
+            this.txt_telefone.Size = new System.Drawing.Size(90, 20);
+            this.txt_telefone.TabIndex = 8;
             // 
-            // txt_intervalo_cad_enf
+            // txt_intervalo
             // 
-            this.txt_intervalo_cad_enf.Location = new System.Drawing.Point(232, 87);
-            this.txt_intervalo_cad_enf.Mask = "00:00";
-            this.txt_intervalo_cad_enf.Name = "txt_intervalo_cad_enf";
-            this.txt_intervalo_cad_enf.Size = new System.Drawing.Size(38, 20);
-            this.txt_intervalo_cad_enf.TabIndex = 6;
+            this.txt_intervalo.Location = new System.Drawing.Point(232, 87);
+            this.txt_intervalo.Mask = "00:00";
+            this.txt_intervalo.Name = "txt_intervalo";
+            this.txt_intervalo.Size = new System.Drawing.Size(38, 20);
+            this.txt_intervalo.TabIndex = 7;
             // 
             // lbl_telefone_cad_enf
             // 
@@ -179,28 +180,28 @@
             this.lbl_telefone_cad_enf.TabIndex = 12;
             this.lbl_telefone_cad_enf.Text = "Telefone";
             // 
-            // txt_turno_cad_enf
+            // txt_turno
             // 
-            this.txt_turno_cad_enf.Location = new System.Drawing.Point(64, 87);
-            this.txt_turno_cad_enf.Name = "txt_turno_cad_enf";
-            this.txt_turno_cad_enf.Size = new System.Drawing.Size(84, 20);
-            this.txt_turno_cad_enf.TabIndex = 5;
+            this.txt_turno.Location = new System.Drawing.Point(64, 87);
+            this.txt_turno.Name = "txt_turno";
+            this.txt_turno.Size = new System.Drawing.Size(84, 20);
+            this.txt_turno.TabIndex = 6;
             // 
-            // txt_coren_cad_enf
+            // txt_coren
             // 
-            this.txt_coren_cad_enf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_coren_cad_enf.Location = new System.Drawing.Point(503, 54);
-            this.txt_coren_cad_enf.MaxLength = 6;
-            this.txt_coren_cad_enf.Name = "txt_coren_cad_enf";
-            this.txt_coren_cad_enf.Size = new System.Drawing.Size(84, 20);
-            this.txt_coren_cad_enf.TabIndex = 4;
+            this.txt_coren.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txt_coren.Location = new System.Drawing.Point(503, 54);
+            this.txt_coren.MaxLength = 6;
+            this.txt_coren.Name = "txt_coren";
+            this.txt_coren.Size = new System.Drawing.Size(84, 20);
+            this.txt_coren.TabIndex = 5;
             // 
-            // txt_nome_cad_enf
+            // txt_nome
             // 
-            this.txt_nome_cad_enf.Location = new System.Drawing.Point(62, 20);
-            this.txt_nome_cad_enf.Name = "txt_nome_cad_enf";
-            this.txt_nome_cad_enf.Size = new System.Drawing.Size(525, 20);
-            this.txt_nome_cad_enf.TabIndex = 1;
+            this.txt_nome.Location = new System.Drawing.Point(62, 20);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(525, 20);
+            this.txt_nome.TabIndex = 1;
             // 
             // lbl_nivel_cad_enf
             // 
@@ -252,7 +253,7 @@
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
             // 
-            // Cad_Enf
+            // frm_cad_enf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,8 +262,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Cad_Enf";
-            this.Text = "PosiChange | Novo Enfermeiro";
+            this.Name = "frm_cad_enf";
             this.Load += new System.EventHandler(this.Cad_Enf_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -279,14 +279,14 @@
         private System.Windows.Forms.Label lbl_intervalo_cad_enf;
         private System.Windows.Forms.Label lbl_turno_cad_enf;
         private System.Windows.Forms.Label lbl_coren_cad_enf;
-        private System.Windows.Forms.TextBox txt_coren_cad_enf;
-        private System.Windows.Forms.TextBox txt_nome_cad_enf;
-        private System.Windows.Forms.MaskedTextBox txt_telefone_cad_enf;
-        private System.Windows.Forms.MaskedTextBox txt_intervalo_cad_enf;
-        private System.Windows.Forms.TextBox txt_turno_cad_enf;
-        private System.Windows.Forms.Button btn_vol_enf;
-        private System.Windows.Forms.Button btn_ver_enf;
-        private System.Windows.Forms.Button btn_cad_enf;
+        private System.Windows.Forms.TextBox txt_coren;
+        private System.Windows.Forms.TextBox txt_nome;
+        private System.Windows.Forms.MaskedTextBox txt_telefone;
+        private System.Windows.Forms.MaskedTextBox txt_intervalo;
+        private System.Windows.Forms.TextBox txt_turno;
+        private System.Windows.Forms.Button btn_voltar;
+        private System.Windows.Forms.Button btn_verificar;
+        private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_nivel;

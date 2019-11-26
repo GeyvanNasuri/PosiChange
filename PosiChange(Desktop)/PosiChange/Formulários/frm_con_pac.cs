@@ -23,11 +23,11 @@ namespace PosiChange.Formulários
             Paciente pac = new Paciente();
             if (txt_nome.Text != String.Empty)
             {
-                var dr = pac.ListaPaciente(txt_nome.Text);
+                var dr = pac.PacNome(txt_nome.Text);
                 DataTable dt = new DataTable();
-                //dt.Load(dr);
+                dt.Load(pac.PacNome(txt_nome.Text));
                 dgv_informacoes.DataSource = dr;
-                foreach (var item in pac.ListaPaciente(txt_nome.Text))
+                foreach (var item in pac.PacNome(txt_nome.Text))
                 {
                     int linha = dgv_informacoes.Rows.Count;
                     dgv_informacoes.Rows.Add();
@@ -41,11 +41,11 @@ namespace PosiChange.Formulários
             }
             else if (txt_nome.Text == String.Empty)
             {
-                var dr = pac.TodosPacientes();
+                var dr = pac.Pacientes();
                 DataTable dt = new DataTable();
-                //dt.Load(dr);
-                dgv_informacoes.DataSource = dr;
-                foreach (var item in pac.TodosPacientes())
+                dt.Load(pac.Pacientes());
+                dgv_informacoes.DataSource = dt;
+                foreach (var item in pac.Pacientes())
                 {
                     int linha = dgv_informacoes.Rows.Count;
                     dgv_informacoes.Rows.Add();

@@ -90,7 +90,7 @@
             this.cmb_paciente.Location = new System.Drawing.Point(85, 127);
             this.cmb_paciente.Name = "cmb_paciente";
             this.cmb_paciente.Size = new System.Drawing.Size(208, 21);
-            this.cmb_paciente.TabIndex = 29;
+            this.cmb_paciente.TabIndex = 7;
             // 
             // txt_email
             // 
@@ -98,7 +98,7 @@
             this.txt_email.MaxLength = 45;
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(282, 20);
-            this.txt_email.TabIndex = 28;
+            this.txt_email.TabIndex = 6;
             // 
             // label4
             // 
@@ -116,7 +116,7 @@
             this.txt_telefone.Mask = "(00) 00000-0000";
             this.txt_telefone.Name = "txt_telefone";
             this.txt_telefone.Size = new System.Drawing.Size(84, 20);
-            this.txt_telefone.TabIndex = 25;
+            this.txt_telefone.TabIndex = 5;
             // 
             // lbl_telefone_cad_enf
             // 
@@ -135,7 +135,7 @@
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.PasswordChar = '*';
             this.txt_senha.Size = new System.Drawing.Size(169, 20);
-            this.txt_senha.TabIndex = 23;
+            this.txt_senha.TabIndex = 4;
             // 
             // label3
             // 
@@ -153,7 +153,7 @@
             this.txt_cpf.Mask = "000.000.000-00";
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 22;
+            this.txt_cpf.TabIndex = 3;
             // 
             // txt_rg
             // 
@@ -161,7 +161,7 @@
             this.txt_rg.Mask = "00.000.000-0";
             this.txt_rg.Name = "txt_rg";
             this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 21;
+            this.txt_rg.TabIndex = 2;
             // 
             // label1
             // 
@@ -231,7 +231,6 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cad_res";
-            this.Text = "PosiChange | Cadastro de Responsável";
             this.Load += new System.EventHandler(this.frm_cad_res_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

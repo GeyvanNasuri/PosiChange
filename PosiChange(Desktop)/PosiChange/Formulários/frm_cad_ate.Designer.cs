@@ -100,11 +100,11 @@
             // 
             // txt_cpf
             // 
-            this.txt_cpf.Location = new System.Drawing.Point(184, 54);
+            this.txt_cpf.Location = new System.Drawing.Point(177, 54);
             this.txt_cpf.Mask = "000.000.000-00";
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 26;
+            this.txt_cpf.TabIndex = 3;
             // 
             // txt_rg
             // 
@@ -112,38 +112,38 @@
             this.txt_rg.Mask = "00.000.000-0";
             this.txt_rg.Name = "txt_rg";
             this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 25;
+            this.txt_rg.TabIndex = 2;
             // 
             // cmb_nivel
             // 
             this.cmb_nivel.FormattingEnabled = true;
-            this.cmb_nivel.Location = new System.Drawing.Point(510, 89);
+            this.cmb_nivel.Location = new System.Drawing.Point(491, 89);
             this.cmb_nivel.Name = "cmb_nivel";
-            this.cmb_nivel.Size = new System.Drawing.Size(72, 21);
-            this.cmb_nivel.TabIndex = 24;
+            this.cmb_nivel.Size = new System.Drawing.Size(91, 21);
+            this.cmb_nivel.TabIndex = 9;
             // 
             // txt_senha
             // 
-            this.txt_senha.Location = new System.Drawing.Point(498, 54);
+            this.txt_senha.Location = new System.Drawing.Point(483, 54);
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.PasswordChar = '*';
-            this.txt_senha.Size = new System.Drawing.Size(84, 20);
-            this.txt_senha.TabIndex = 21;
+            this.txt_senha.Size = new System.Drawing.Size(99, 20);
+            this.txt_senha.TabIndex = 5;
             // 
             // txt_login
             // 
             this.txt_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txt_login.Location = new System.Drawing.Point(339, 54);
+            this.txt_login.Location = new System.Drawing.Point(324, 54);
             this.txt_login.MaxLength = 6;
             this.txt_login.Name = "txt_login";
             this.txt_login.Size = new System.Drawing.Size(94, 20);
-            this.txt_login.TabIndex = 20;
+            this.txt_login.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(439, 54);
+            this.label3.Location = new System.Drawing.Point(428, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 22;
@@ -153,7 +153,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(283, 54);
+            this.label4.Location = new System.Drawing.Point(273, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 23;
@@ -163,7 +163,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 54);
+            this.label1.Location = new System.Drawing.Point(137, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 17);
             this.label1.TabIndex = 18;
@@ -211,7 +211,7 @@
             // 
             // txt_telefone
             // 
-            this.txt_telefone.Location = new System.Drawing.Point(364, 89);
+            this.txt_telefone.Location = new System.Drawing.Point(351, 88);
             this.txt_telefone.Mask = "(00) 00000-0000";
             this.txt_telefone.Name = "txt_telefone";
             this.txt_telefone.Size = new System.Drawing.Size(84, 20);
@@ -219,7 +219,7 @@
             // 
             // txt_intervalo
             // 
-            this.txt_intervalo.Location = new System.Drawing.Point(84, 88);
+            this.txt_intervalo.Location = new System.Drawing.Point(79, 88);
             this.txt_intervalo.Mask = "00:00";
             this.txt_intervalo.Name = "txt_intervalo";
             this.txt_intervalo.Size = new System.Drawing.Size(38, 20);
@@ -229,7 +229,7 @@
             // 
             this.lbl_telefone_cad_enf.AutoSize = true;
             this.lbl_telefone_cad_enf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone_cad_enf.Location = new System.Drawing.Point(286, 89);
+            this.lbl_telefone_cad_enf.Location = new System.Drawing.Point(276, 89);
             this.lbl_telefone_cad_enf.Name = "lbl_telefone_cad_enf";
             this.lbl_telefone_cad_enf.Size = new System.Drawing.Size(72, 17);
             this.lbl_telefone_cad_enf.TabIndex = 12;
@@ -237,10 +237,10 @@
             // 
             // txt_turno
             // 
-            this.txt_turno.Location = new System.Drawing.Point(193, 89);
+            this.txt_turno.Location = new System.Drawing.Point(185, 89);
             this.txt_turno.Name = "txt_turno";
             this.txt_turno.Size = new System.Drawing.Size(82, 20);
-            this.txt_turno.TabIndex = 5;
+            this.txt_turno.TabIndex = 7;
             // 
             // txt_nome
             // 
@@ -253,7 +253,7 @@
             // 
             this.lbl_nivel_cad_enf.AutoSize = true;
             this.lbl_nivel_cad_enf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nivel_cad_enf.Location = new System.Drawing.Point(460, 89);
+            this.lbl_nivel_cad_enf.Location = new System.Drawing.Point(446, 89);
             this.lbl_nivel_cad_enf.Name = "lbl_nivel_cad_enf";
             this.lbl_nivel_cad_enf.Size = new System.Drawing.Size(44, 17);
             this.lbl_nivel_cad_enf.TabIndex = 12;
@@ -273,7 +273,7 @@
             // 
             this.lbl_turno_cad_enf.AutoSize = true;
             this.lbl_turno_cad_enf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_turno_cad_enf.Location = new System.Drawing.Point(138, 89);
+            this.lbl_turno_cad_enf.Location = new System.Drawing.Point(131, 89);
             this.lbl_turno_cad_enf.Name = "lbl_turno_cad_enf";
             this.lbl_turno_cad_enf.Size = new System.Drawing.Size(51, 17);
             this.lbl_turno_cad_enf.TabIndex = 12;
@@ -299,7 +299,6 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cad_ate";
-            this.Text = "PosiChange | Cadastro de Atendente";
             this.Load += new System.EventHandler(this.frm_cad_ate_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

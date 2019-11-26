@@ -93,13 +93,12 @@ namespace PosiChange.Classes
             while (dr.Read())
             {
                 Paciente pac = new Paciente();
-                pac.Cod = dr.GetInt32(0);
-                pac.Nome = dr.GetString(1);
-                pac.RG = dr.GetString(2);
-                pac.CPF = dr.GetString(3);
-                pac.Ferida = dr.GetBoolean(4);
-                pac.Descricao = dr.GetString(5);
-                pac.Situacao = dr.GetString(6);
+                pac.Nome = dr.GetString(0);
+                pac.RG = dr.GetString(1);
+                pac.CPF = dr.GetString(2);
+                pac.Ferida = dr.GetBoolean(3);
+                pac.Descricao = dr.GetString(4);
+                pac.Situacao = dr.GetString(5);
                 com.ExecuteNonQuery();
                 pacientes.Add(pac);
             }
@@ -116,14 +115,13 @@ namespace PosiChange.Classes
             while (dr.Read())
             {
                 Paciente pac = new Paciente();
-                pac.Cod = dr.GetInt32(0);
-                pac.Nome = dr.GetString(1);
-                pac.RG = dr.GetString(2);
-                pac.CPF = dr.GetString(3);
-                pac.Ferida = dr.GetBoolean(4);
-                pac.Descricao = dr.GetString(5);
-                pac.Situacao = dr.GetString(6);
-                com.ExecuteNonQuery();
+                pac.Nome = dr.GetString(0);
+                pac.RG = dr.GetString(1);
+                pac.CPF = dr.GetString(2);
+                pac.Ferida = dr.GetBoolean(3);
+                pac.Descricao = dr.GetString(4);
+                pac.Situacao = dr.GetString(5);
+                
                 pacientes.Add(pac);
             }
             com.Connection.Close();
@@ -135,6 +133,15 @@ namespace PosiChange.Classes
 
             var com = Banco.Abrir();
             com.CommandText = "select * from paciente";
+            var dr = com.ExecuteReader();
+
+            return dr;
+        }
+        public MySqlDataReader PacNome(string nome)
+        {
+
+            var com = Banco.Abrir();
+            com.CommandText = "select * from paciente where nome = '%" + nome + "%'";
             var dr = com.ExecuteReader();
 
             return dr;
