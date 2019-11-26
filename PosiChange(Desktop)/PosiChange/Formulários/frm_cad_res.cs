@@ -40,7 +40,7 @@ namespace PosiChange.Formulários
             responsavel.Telefone = txt_telefone.Text;
             responsavel.Email = txt_email.Text;
             responsavel.Acesso = true;
-            responsavel.Patient.Cod = Convert.ToInt32(cmb_paciente.Text);
+            responsavel.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
             if (responsavel.Cod > 0)
             {
                 var inseriu = MessageBox.Show("Paciente inserido com sucesso!", "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);

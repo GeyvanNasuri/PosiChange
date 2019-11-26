@@ -21,6 +21,7 @@ namespace PosiChange.Formulários
         private void Cad_Pac_Load(object sender, EventArgs e)
         {
             txt_descricao.Enabled = false;
+            rbt_nao.Checked = true;
         }
 
         private void rbt_sim_CheckedChanged(object sender, EventArgs e)
@@ -28,14 +29,6 @@ namespace PosiChange.Formulários
             if (rbt_sim.Checked)
             {
                 txt_descricao.Enabled = true;
-            }
-        }
-
-        private void rbt_nao_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbt_nao.Checked)
-            {
-                txt_descricao.Enabled = false;
             }
         }
 
