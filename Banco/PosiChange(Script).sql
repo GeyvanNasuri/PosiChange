@@ -2,22 +2,22 @@
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema posichange
+-- Schema softklee_posichange
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema posichange
+-- Schema softklee_posichange
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `posichange` DEFAULT CHARACTER SET utf8 ;
-USE `posichange` ;
+CREATE SCHEMA IF NOT EXISTS `softklee_posichange` DEFAULT CHARACTER SET utf8 ;
+USE `softklee_posichange` ;
 
 -- -----------------------------------------------------
--- Table `posichange`.`paciente`
+-- Table `softklee_posichange`.`paciente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`paciente` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`paciente` (
   `cod_pac` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `rg` VARCHAR(12) NOT NULL,
@@ -25,16 +25,17 @@ CREATE TABLE IF NOT EXISTS `posichange`.`paciente` (
   `apr_fer` BIT(1) NOT NULL,
   `des_fer` VARCHAR(150) NULL DEFAULT NULL,
   `sit_pac` VARCHAR(300) NOT NULL,
-  PRIMARY KEY (`cod_pac`) ,
-  UNIQUE INDEX `cod_pac_UNIQUE` (`cod_pac` ASC) )
+  PRIMARY KEY (`cod_pac`),
+  UNIQUE INDEX `cod_pac_UNIQUE` (`cod_pac` ASC))
 ENGINE = InnoDB
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`responsavel`
+-- Table `softklee_posichange`.`responsavel`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`responsavel` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`responsavel` (
   `cod_res` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `rg` VARCHAR(12) NOT NULL,
@@ -44,14 +45,14 @@ CREATE TABLE IF NOT EXISTS `posichange`.`responsavel` (
   `email` VARCHAR(45) NOT NULL,
   `pri_ace` BIT(1) NOT NULL,
   `_pac` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_res`) ,
-  UNIQUE INDEX `rg_UNIQUE` (`rg` ASC) ,
-  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) ,
-  UNIQUE INDEX `cod_res_UNIQUE` (`cod_res` ASC) ,
-  INDEX `fk_responsavel_paciente1_idx` (`_pac` ASC) ,
+  PRIMARY KEY (`cod_res`),
+  UNIQUE INDEX `rg_UNIQUE` (`rg` ASC),
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC),
+  UNIQUE INDEX `cod_res_UNIQUE` (`cod_res` ASC),
+  INDEX `fk_responsavel_paciente1_idx` (`_pac` ASC),
   CONSTRAINT `fk_responsavel_paciente1`
     FOREIGN KEY (`_pac`)
-    REFERENCES `posichange`.`paciente` (`cod_pac`)
+    REFERENCES `softklee_posichange`.`paciente` (`cod_pac`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -59,18 +60,18 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`agendamento`
+-- Table `softklee_posichange`.`agendamento`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`agendamento` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`agendamento` (
   `cod_age` INT(11) NOT NULL,
   `_cod_res` INT(11) NOT NULL,
   `dia` DATETIME NOT NULL,
-  `nov_age` BIT NOT NULL,
-  PRIMARY KEY (`cod_age`) ,
-  INDEX `fk_agendamento_responsavel1_idx` (`_cod_res` ASC) ,
+  `nov_age` BIT(1) NOT NULL,
+  PRIMARY KEY (`cod_age`),
+  INDEX `fk_agendamento_responsavel1_idx` (`_cod_res` ASC),
   CONSTRAINT `fk_agendamento_responsavel1`
     FOREIGN KEY (`_cod_res`)
-    REFERENCES `posichange`.`responsavel` (`cod_res`)
+    REFERENCES `softklee_posichange`.`responsavel` (`cod_res`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -78,21 +79,22 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`nivel`
+-- Table `softklee_posichange`.`nivel`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`nivel` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`nivel` (
   `cod_nivel` INT(11) NOT NULL AUTO_INCREMENT,
   `nivel` VARCHAR(20) NOT NULL,
   `sigla` CHAR(3) NOT NULL,
-  PRIMARY KEY (`cod_nivel`) )
+  PRIMARY KEY (`cod_nivel`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`atendimento`
+-- Table `softklee_posichange`.`atendimento`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`atendimento` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`atendimento` (
   `cod_ate` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `rg` VARCHAR(12) NOT NULL,
@@ -104,23 +106,24 @@ CREATE TABLE IF NOT EXISTS `posichange`.`atendimento` (
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `pri_ace` BIT(1) NOT NULL,
   `_nivel` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_ate`, `intervalo`) ,
-  UNIQUE INDEX `login_UNIQUE` (`login` ASC) ,
-  UNIQUE INDEX `cod_ate_UNIQUE` (`cod_ate` ASC) ,
-  INDEX `fk_atendimento_nivel1_idx` (`_nivel` ASC) ,
+  PRIMARY KEY (`cod_ate`, `intervalo`),
+  UNIQUE INDEX `login_UNIQUE` (`login` ASC),
+  UNIQUE INDEX `cod_ate_UNIQUE` (`cod_ate` ASC),
+  INDEX `fk_atendimento_nivel1_idx` (`_nivel` ASC),
   CONSTRAINT `fk_atendimento_nivel1`
     FOREIGN KEY (`_nivel`)
-    REFERENCES `posichange`.`nivel` (`cod_nivel`)
+    REFERENCES `softklee_posichange`.`nivel` (`cod_nivel`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`enfermagem`
+-- Table `softklee_posichange`.`enfermagem`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`enfermagem` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`enfermagem` (
   `cod_enf` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
   `rg` VARCHAR(12) NOT NULL,
@@ -130,33 +133,34 @@ CREATE TABLE IF NOT EXISTS `posichange`.`enfermagem` (
   `intervalo` TIME NOT NULL,
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `_nivel` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_enf`) ,
-  UNIQUE INDEX `coren_UNIQUE` (`coren` ASC) ,
-  UNIQUE INDEX `cod_enf_UNIQUE` (`cod_enf` ASC) ,
-  INDEX `fk_enfermagem_nivel1_idx` (`_nivel` ASC) ,
+  PRIMARY KEY (`cod_enf`),
+  UNIQUE INDEX `coren_UNIQUE` (`coren` ASC),
+  UNIQUE INDEX `cod_enf_UNIQUE` (`cod_enf` ASC),
+  INDEX `fk_enfermagem_nivel1_idx` (`_nivel` ASC),
   CONSTRAINT `fk_enfermagem_nivel1`
     FOREIGN KEY (`_nivel`)
-    REFERENCES `posichange`.`nivel` (`cod_nivel`)
+    REFERENCES `softklee_posichange`.`nivel` (`cod_nivel`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`historico_paciente`
+-- Table `softklee_posichange`.`historico_paciente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`historico_paciente` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`historico_paciente` (
   `cod_his_pac` INT(11) NOT NULL AUTO_INCREMENT,
   `razao` VARCHAR(100) NULL DEFAULT NULL,
   `_pac` INT(11) NOT NULL,
   `hora_reg` DATETIME NOT NULL,
-  PRIMARY KEY (`cod_his_pac`) ,
-  UNIQUE INDEX `cod_his_pac_UNIQUE` (`cod_his_pac` ASC) ,
-  INDEX `fk_historico_paciente_paciente1_idx` (`_pac` ASC) ,
+  PRIMARY KEY (`cod_his_pac`),
+  UNIQUE INDEX `cod_his_pac_UNIQUE` (`cod_his_pac` ASC),
+  INDEX `fk_historico_paciente_paciente1_idx` (`_pac` ASC),
   CONSTRAINT `fk_historico_paciente_paciente1`
     FOREIGN KEY (`_pac`)
-    REFERENCES `posichange`.`paciente` (`cod_pac`)
+    REFERENCES `softklee_posichange`.`paciente` (`cod_pac`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -164,26 +168,26 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`infracao`
+-- Table `softklee_posichange`.`infracao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`infracao` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`infracao` (
   `cod_inf` INT(11) NOT NULL AUTO_INCREMENT,
   `infracao_cometida` VARCHAR(45) NOT NULL,
   `_pac` INT(11) NOT NULL,
-  `_enf` INT(11) NULL,
+  `_enf` INT(11) NULL DEFAULT NULL,
   `ocorrido` DATETIME NOT NULL,
-  `nov_inf` BIT NOT NULL,
-  PRIMARY KEY (`cod_inf`) ,
-  INDEX `fk_infracao_paciente1_idx` (`_pac` ASC) ,
-  INDEX `fk_infracao_enfermagem1_idx` (`_enf` ASC) ,
+  `nov_inf` BIT(1) NOT NULL,
+  PRIMARY KEY (`cod_inf`),
+  INDEX `fk_infracao_paciente1_idx` (`_pac` ASC),
+  INDEX `fk_infracao_enfermagem1_idx` (`_enf` ASC),
   CONSTRAINT `fk_infracao_enfermagem1`
     FOREIGN KEY (`_enf`)
-    REFERENCES `posichange`.`enfermagem` (`cod_enf`)
+    REFERENCES `softklee_posichange`.`enfermagem` (`cod_enf`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_infracao_paciente1`
     FOREIGN KEY (`_pac`)
-    REFERENCES `posichange`.`paciente` (`cod_pac`)
+    REFERENCES `softklee_posichange`.`paciente` (`cod_pac`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -191,19 +195,19 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`monitoramento_paciente`
+-- Table `softklee_posichange`.`monitoramento_paciente`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`monitoramento_paciente` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`monitoramento_paciente` (
   `cod_mon` INT(11) NOT NULL AUTO_INCREMENT,
   `des_fer_ant` VARCHAR(100) NOT NULL,
   `des_fer_atu` VARCHAR(100) NOT NULL,
   `_pac` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_mon`) ,
-  UNIQUE INDEX `cod_mon_UNIQUE` (`cod_mon` ASC) ,
-  INDEX `fk_monitoramento_paciente_paciente1_idx` (`_pac` ASC) ,
+  PRIMARY KEY (`cod_mon`),
+  UNIQUE INDEX `cod_mon_UNIQUE` (`cod_mon` ASC),
+  INDEX `fk_monitoramento_paciente_paciente1_idx` (`_pac` ASC),
   CONSTRAINT `fk_monitoramento_paciente_paciente1`
     FOREIGN KEY (`_pac`)
-    REFERENCES `posichange`.`paciente` (`cod_pac`)
+    REFERENCES `softklee_posichange`.`paciente` (`cod_pac`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -211,36 +215,36 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`posicao`
+-- Table `softklee_posichange`.`posicao`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`posicao` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`posicao` (
   `cod_posicao` INT(11) NOT NULL AUTO_INCREMENT,
   `posicao` VARCHAR(50) NOT NULL,
   `imagem` LONGBLOB NOT NULL,
-  PRIMARY KEY (`cod_posicao`) )
+  PRIMARY KEY (`cod_posicao`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`mudancas`
+-- Table `softklee_posichange`.`mudancas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`mudancas` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`mudancas` (
   `_cod_pac` INT(11) NOT NULL,
   `proxima` TIME NOT NULL,
   `_cod_posicao` INT(11) NOT NULL,
   `minimo` TIME NOT NULL,
-  `ativo` BIT NOT NULL,
-  INDEX `fk_mudancas_paciente1_idx` (`_cod_pac` ASC) ,
-  INDEX `fk_mudancas_posicao1_idx` (`_cod_posicao` ASC) ,
+  `ativo` BIT(1) NOT NULL,
+  INDEX `fk_mudancas_paciente1_idx` (`_cod_pac` ASC),
+  INDEX `fk_mudancas_posicao1_idx` (`_cod_posicao` ASC),
   CONSTRAINT `fk_mudancas_paciente1`
     FOREIGN KEY (`_cod_pac`)
-    REFERENCES `posichange`.`paciente` (`cod_pac`)
+    REFERENCES `softklee_posichange`.`paciente` (`cod_pac`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_mudancas_posicao1`
     FOREIGN KEY (`_cod_posicao`)
-    REFERENCES `posichange`.`posicao` (`cod_posicao`)
+    REFERENCES `softklee_posichange`.`posicao` (`cod_posicao`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -248,27 +252,29 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `posichange`.`quarto`
+-- Table `softklee_posichange`.`quarto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `posichange`.`quarto` (
+CREATE TABLE IF NOT EXISTS `softklee_posichange`.`quarto` (
   `andar` VARCHAR(10) NOT NULL,
   `numero` VARCHAR(10) NOT NULL,
   `_pac` INT(11) NOT NULL,
-  INDEX `fk_quarto_paciente1_idx` (`_pac` ASC) ,
+  INDEX `fk_quarto_paciente1_idx` (`_pac` ASC),
   CONSTRAINT `fk_quarto_paciente1`
     FOREIGN KEY (`_pac`)
-    REFERENCES `posichange`.`paciente` (`cod_pac`)
+    REFERENCES `softklee_posichange`.`paciente` (`cod_pac`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+
+USE `softklee_posichange` ;
 
 -- -----------------------------------------------------
 -- procedure sp_insert_atendente
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
+CREATE  PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -277,7 +283,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_atendente`(
     sp_intervalo time,
     sp_turno varchar(10),
     sp_telefone varchar(15),
-    sp_acesso bit(1)
+    sp_acesso bit(1),
+    sp_cod_nivel int
 )
 begin
 	insert into `atendimento` values(
@@ -289,7 +296,9 @@ begin
         sp_senha,
         sp_intervalo,
         sp_turno,
-        sp_telefone
+        sp_telefone,
+        sp_acesso,
+        sp_cod_nivel
     );
 	select * from `atendente` where last_insert_id();
 end$$
@@ -301,7 +310,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_enfermeiro`(
+CREATE  PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
 	sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -314,14 +323,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_enfermeiro`(
 begin
 insert into `enfermagem` values(
 	null,
-    spnome,
+    sp_nome,
 	sp_rg,
 	sp_cpf,
-    spcoren,
-    spturno,
-    spintervalo,
-    sptelefone,
-    sp_cod_nivel
+    sp_coren,
+    sp_turno,
+    sp_intervalo,
+    sp_telefone,
+    sp_code_nivel
 );
 select * from `enfermagem` where last_insert_id();
 end$$
@@ -333,7 +342,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_paciente`(
+CREATE  PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -361,7 +370,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_posicao`(
+CREATE  PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
     sp_imagem longblob
 )
@@ -381,7 +390,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_responsavel`(
+CREATE  PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -417,7 +426,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_atendente`(
+CREATE  PROCEDURE `sp_update_atendente`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_senha varchar(32),
@@ -444,7 +453,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_enfermeiro`(
+CREATE  PROCEDURE `sp_update_enfermeiro`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_turno varchar(10),
@@ -467,7 +476,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_paciente`(
+CREATE  PROCEDURE `sp_update_paciente`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_apr_fer bit,
@@ -490,7 +499,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_posicao`(
+CREATE  PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
     sp_imagem longblob
@@ -509,7 +518,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_responsavel`(
+CREATE  PROCEDURE `sp_update_responsavel`(
 	sp_cod int,
 	sp_nome varchar(50),
     sp_senha varchar(20),

@@ -102,11 +102,9 @@ namespace PosiChange.Classes
                     atendente.CPF = dr.GetString(3);
                     atendente.Login = dr.GetString(4);
                     atendente.Senha = dr.GetString(5);
-                    /*atendente.Intervalo = dr.GetTimeSpan(6);
-                    atendente.Turno = dr.GetString(7);
-                    atendente.Telefone = dr.GetString(8);*/
                     atendente.Acesso = dr.GetBoolean(9);
                     atendente.Level.Cod = dr.GetInt32(10);
+                    com.Connection.Close();
                     logado = true;
                 }
             }
