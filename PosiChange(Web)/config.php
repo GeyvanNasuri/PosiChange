@@ -38,9 +38,9 @@ spl_autoload_register(function($nome_classe)
 });    
 
 //Criar constantes do servidor de banco de dados
-define ('IP_SERVER_DB', '127.0.0.1');
+define ('IP_SERVER_DB', 'softkleen.com.br');
 define ('HOSTNAME','ITQ0626028W10-1');
-define ('NOME_BANCO','posichange');
-define ('USER_DB','root');
-define ('PASS_DB','');
+define ('NOME_BANCO','softklee_posichange');
+define ('USER_DB','softklee_posichange');
+define ('PASS_DB','senac@posic19');
 ?>
