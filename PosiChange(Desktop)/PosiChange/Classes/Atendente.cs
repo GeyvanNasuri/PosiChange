@@ -92,15 +92,21 @@ namespace PosiChange.Classes
             bool logado = false;
             try
             {
+                Atendente atendente = new Atendente();
+                atendente.Level = new Nivel();
                 while (dr.Read())
                 {
-                    Cod = dr.GetInt32(0);
-                    Nome = dr.GetString(1);
-                    RG = dr.GetString(2);
-                    CPF = dr.GetString(3);
-                    Login = dr.GetString(4);
-                    Senha = dr.GetString(5);
-                    Level.Cod = dr.GetInt32(9);            
+                    atendente.Cod = dr.GetInt32(0);
+                    atendente.Nome = dr.GetString(1);
+                    atendente.RG = dr.GetString(2);
+                    atendente.CPF = dr.GetString(3);
+                    atendente.Login = dr.GetString(4);
+                    atendente.Senha = dr.GetString(5);
+                    /*atendente.Intervalo = dr.GetTimeSpan(6);
+                    atendente.Turno = dr.GetString(7);
+                    atendente.Telefone = dr.GetString(8);*/
+                    atendente.Acesso = dr.GetBoolean(9);
+                    atendente.Level.Cod = dr.GetInt32(10);
                     logado = true;
                 }
             }
