@@ -19,12 +19,14 @@ namespace PosiChange.Formulários
             InitializeComponent();
         }
 
-        private void Principal_Adm_Load(object sender, EventArgs e)
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frm_cad_ate ate = new frm_cad_ate();
+            ate.MdiParent = this;
+            ate.Show();
         }
 
-        private void SairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             var respota = MessageBox.Show("Deseja sair?", "PosiChange",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -46,14 +48,6 @@ namespace PosiChange.Formulários
                     formL.Show();
                 }
             }
-        }
-
-
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_cad_ate ate = new frm_cad_ate();
-            ate.MdiParent = this;
-            ate.Show();
         }
     }
 }

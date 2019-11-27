@@ -276,6 +276,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nurse.ico" />
+    <None Include="Resources\The_Final_Station.jpg" />
     <None Include="Resources\nurse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

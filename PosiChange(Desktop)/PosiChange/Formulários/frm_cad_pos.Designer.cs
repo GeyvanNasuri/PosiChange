@@ -52,7 +52,7 @@
             this.groupBox1.Controls.Add(this.txt_posicao);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 355);
+            this.groupBox1.Size = new System.Drawing.Size(260, 355);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Nova Posição";
@@ -79,11 +79,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(121, 325);
+            this.button1.Location = new System.Drawing.Point(174, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Voltar à Página Pricipal";
+            this.button1.Text = "Voltar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -92,14 +92,15 @@
             this.btn_salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salvar.Location = new System.Drawing.Point(6, 325);
             this.btn_salvar.Name = "btn_salvar";
-            this.btn_salvar.Size = new System.Drawing.Size(109, 23);
+            this.btn_salvar.Size = new System.Drawing.Size(75, 23);
             this.btn_salvar.TabIndex = 3;
-            this.btn_salvar.Text = "Salvar Informações";
+            this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_busca
             // 
-            this.btn_busca.Location = new System.Drawing.Point(255, 97);
+            this.btn_busca.Location = new System.Drawing.Point(93, 325);
             this.btn_busca.Name = "btn_busca";
             this.btn_busca.Size = new System.Drawing.Size(75, 23);
             this.btn_busca.TabIndex = 2;
@@ -121,7 +122,7 @@
             // 
             this.txt_posicao.Location = new System.Drawing.Point(6, 40);
             this.txt_posicao.Name = "txt_posicao";
-            this.txt_posicao.Size = new System.Drawing.Size(324, 20);
+            this.txt_posicao.Size = new System.Drawing.Size(243, 20);
             this.txt_posicao.TabIndex = 0;
             // 
             // frm_cad_pos
@@ -129,11 +130,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(370, 380);
+            this.ClientSize = new System.Drawing.Size(283, 380);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_cad_pos";
+            this.Load += new System.EventHandler(this.frm_cad_pos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_posicao)).EndInit();
