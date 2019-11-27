@@ -30,6 +30,7 @@ namespace PosiChange.Formulários
             cmb_nivel.DisplayMember = "nivel";
             cmb_nivel.ValueMember = "cod_nivel";
             cmb_nivel.Text = "";
+            cmb_turno.Text = "";
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
@@ -41,11 +42,30 @@ namespace PosiChange.Formulários
             atendente.Login = txt_login.Text;
             atendente.Senha = txt_senha.Text;
             atendente.Intervalo = Convert.ToDateTime(txt_intervalo.Text);
-            atendente.Turno = txt_turno.Text;
+            atendente.Turno = cmb_turno.Text;
             atendente.Telefone = txt_telefone.Text;
             atendente.Acesso = rbt_acesso.Checked;
+            atendente.Level = new Nivel();
             atendente.Level.Cod = Convert.ToInt32(cmb_nivel.SelectedValue);
             atendente.Inserir();
+            if (atendente.Cod > 0)
+            {
+                var inseriu = MessageBox.Show("Usuario inserido com sucesso!", "PosiChange | Cadastro de Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (inseriu == DialogResult.OK)
+                {
+                    txt_telefone.Clear();
+                    cmb_turno.Text = "";
+                    txt_intervalo.Clear();
+                    txt_senha.Clear();
+                    txt_login.Clear();
+                    txt_cpf.Clear();
+                    txt_rg.Clear();
+                    txt_cpf.Clear();
+                    txt_nome.Clear();
+                    cmb_nivel.Text = "";
+                }
+                
+            }
         }
 
         private void btn_verificar_Click(object sender, EventArgs e)

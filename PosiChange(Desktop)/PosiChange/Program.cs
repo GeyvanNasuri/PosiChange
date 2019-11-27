@@ -17,7 +17,7 @@ namespace PosiChange
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_pri_ate());
+            Application.Run(new frm_login());
         }
     }
 }

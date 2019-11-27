@@ -46,17 +46,18 @@
             this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
             this.txt_intervalo = new System.Windows.Forms.MaskedTextBox();
             this.lbl_telefone_cad_enf = new System.Windows.Forms.Label();
-            this.txt_turno = new System.Windows.Forms.TextBox();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_nivel_cad_enf = new System.Windows.Forms.Label();
             this.lbl_intervalo_cad_enf = new System.Windows.Forms.Label();
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
+            this.cmb_turno = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmb_turno);
             this.groupBox1.Controls.Add(this.rbt_acesso);
             this.groupBox1.Controls.Add(this.txt_cpf);
             this.groupBox1.Controls.Add(this.txt_rg);
@@ -73,7 +74,6 @@
             this.groupBox1.Controls.Add(this.txt_telefone);
             this.groupBox1.Controls.Add(this.txt_intervalo);
             this.groupBox1.Controls.Add(this.lbl_telefone_cad_enf);
-            this.groupBox1.Controls.Add(this.txt_turno);
             this.groupBox1.Controls.Add(this.txt_nome);
             this.groupBox1.Controls.Add(this.lbl_nivel_cad_enf);
             this.groupBox1.Controls.Add(this.lbl_intervalo_cad_enf);
@@ -235,13 +235,6 @@
             this.lbl_telefone_cad_enf.TabIndex = 12;
             this.lbl_telefone_cad_enf.Text = "Telefone";
             // 
-            // txt_turno
-            // 
-            this.txt_turno.Location = new System.Drawing.Point(185, 89);
-            this.txt_turno.Name = "txt_turno";
-            this.txt_turno.Size = new System.Drawing.Size(82, 20);
-            this.txt_turno.TabIndex = 7;
-            // 
             // txt_nome
             // 
             this.txt_nome.Location = new System.Drawing.Point(62, 20);
@@ -289,6 +282,17 @@
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
             // 
+            // cmb_turno
+            // 
+            this.cmb_turno.FormattingEnabled = true;
+            this.cmb_turno.Items.AddRange(new object[] {
+            "Diurno",
+            "Noturno"});
+            this.cmb_turno.Location = new System.Drawing.Point(185, 89);
+            this.cmb_turno.Name = "cmb_turno";
+            this.cmb_turno.Size = new System.Drawing.Size(85, 21);
+            this.cmb_turno.TabIndex = 7;
+            // 
             // frm_cad_ate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,7 +321,6 @@
         private System.Windows.Forms.MaskedTextBox txt_telefone;
         private System.Windows.Forms.MaskedTextBox txt_intervalo;
         private System.Windows.Forms.Label lbl_telefone_cad_enf;
-        private System.Windows.Forms.TextBox txt_turno;
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label lbl_nivel_cad_enf;
         private System.Windows.Forms.Label lbl_intervalo_cad_enf;
@@ -331,5 +334,6 @@
         private System.Windows.Forms.MaskedTextBox txt_rg;
         private System.Windows.Forms.MaskedTextBox txt_cpf;
         private System.Windows.Forms.RadioButton rbt_acesso;
+        private System.Windows.Forms.ComboBox cmb_turno;
     }
 }

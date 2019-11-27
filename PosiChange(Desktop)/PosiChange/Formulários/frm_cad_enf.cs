@@ -31,6 +31,7 @@ namespace PosiChange.Formulários
             cmb_nivel.DisplayMember = "nivel";
             cmb_nivel.ValueMember = "cod_nivel";
             cmb_nivel.Text = "";
+            cmb_turno.Text = "";
         }
 
         private void btn_vol_enf_Click(object sender, EventArgs e)
@@ -71,10 +72,27 @@ namespace PosiChange.Formulários
             enfermeiro.RG = txt_rg.Text;
             enfermeiro.CPF = txt_cpf.Text;
             enfermeiro.Coren = Convert.ToInt32(txt_coren.Text);
-            enfermeiro.Turno = txt_turno.Text;
+            enfermeiro.Turno = cmb_turno.Text;
             enfermeiro.Intervalo = Convert.ToDateTime(txt_intervalo.Text);
             enfermeiro.Telefone = txt_telefone.Text;
+            enfermeiro.Level = new Nivel();
             enfermeiro.Level.Cod = Convert.ToInt32(cmb_nivel.SelectedValue);
+            enfermeiro.Inserir();
+            if (enfermeiro.Cod > 0)
+            {
+                var inseriu = MessageBox.Show("Enfermeiro inserido com sucesso!", "PosiChange | Cadastro de Enfermeiro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (inseriu == DialogResult.OK)
+                {
+                    txt_nome.Clear();
+                    txt_rg.Clear();
+                    txt_cpf.Clear();
+                    txt_telefone.Clear();
+                    cmb_nivel.Text = "";
+                    txt_coren.Clear();
+                    txt_intervalo.Clear();
+                    cmb_turno.Text = "";
+                }
+            }
         }
     }
 }

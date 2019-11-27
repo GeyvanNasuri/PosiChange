@@ -75,7 +75,7 @@ namespace PosiChange.Classes
             com.Parameters.Add("sp_cpf", MySqlDbType.VarChar).Value = CPF;
             com.Parameters.Add("sp_login", MySqlDbType.VarChar).Value = Login;
             com.Parameters.Add("sp_senha", MySqlDbType.VarChar).Value = GerarMd5(Senha);
-            com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
+            com.Parameters.Add("sp_intervalo", MySqlDbType.Timestamp).Value = Intervalo;
             com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
             com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
             com.Parameters.Add("sp_acesso", MySqlDbType.Bit).Value = Acesso;
@@ -100,11 +100,7 @@ namespace PosiChange.Classes
                     CPF = dr.GetString(3);
                     Login = dr.GetString(4);
                     Senha = dr.GetString(5);
-                    Intervalo = dr.GetDateTime(6);
-                    Turno = dr.GetString(7);
-                    Telefone = dr.GetString(8);
-                    com.ExecuteNonQuery();
-                    com.Connection.Close();
+                    Level.Cod = dr.GetInt32(9);            
                     logado = true;
                 }
             }

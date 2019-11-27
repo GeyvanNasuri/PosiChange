@@ -57,10 +57,10 @@ namespace PosiChange.Classes
             com.Parameters.Add("sp_rg", MySqlDbType.VarChar).Value = RG;
             com.Parameters.Add("sp_cpf", MySqlDbType.VarChar).Value = CPF;
             com.Parameters.Add("sp_coren", MySqlDbType.Int32).Value = Coren;
-            com.Parameters.Add("sp_intervalo", MySqlDbType.Time).Value = Intervalo;
             com.Parameters.Add("sp_turno", MySqlDbType.VarChar).Value = Turno;
+            com.Parameters.Add("sp_intervalo", MySqlDbType.Timestamp).Value = Intervalo;
             com.Parameters.Add("sp_telefone", MySqlDbType.VarChar).Value = Telefone;
-            com.Parameters.Add("sp_cod_nivel", MySqlDbType.Int32).Value = Level;
+            com.Parameters.Add("sp_code_nivel", MySqlDbType.Int32).Value = Level.Cod;
             Cod = Convert.ToInt32(com.ExecuteScalar());
             com.Connection.Close();
         }

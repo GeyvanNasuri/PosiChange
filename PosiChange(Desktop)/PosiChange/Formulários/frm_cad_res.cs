@@ -40,6 +40,7 @@ namespace PosiChange.Formulários
             responsavel.Telefone = txt_telefone.Text;
             responsavel.Email = txt_email.Text;
             responsavel.Acesso = true;
+            responsavel.Patient = new Paciente();
             responsavel.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
             if (responsavel.Cod > 0)
             {
@@ -52,6 +53,7 @@ namespace PosiChange.Formulários
                     txt_telefone.Clear();
                     txt_email.Clear();
                     txt_senha.Clear();
+                    cmb_paciente.Text = "";
                 }
             }
         }
