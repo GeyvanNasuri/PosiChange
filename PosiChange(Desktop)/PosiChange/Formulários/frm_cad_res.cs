@@ -42,9 +42,10 @@ namespace PosiChange.Formulários
             responsavel.Acesso = true;
             responsavel.Patient = new Paciente();
             responsavel.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
+            responsavel.Insert();
             if (responsavel.Cod > 0)
             {
-                var inseriu = MessageBox.Show("Paciente inserido com sucesso!", "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var inseriu = MessageBox.Show("Responsável inserido com sucesso!", "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (inseriu == DialogResult.OK)
                 {
                     txt_nome.Clear();

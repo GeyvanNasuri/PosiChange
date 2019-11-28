@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using PosiChange.Classes;
 
 namespace PosiChange.Classes
@@ -111,6 +112,16 @@ namespace PosiChange.Classes
                 throw ex;
             }
             return feita;
+        }
+
+        public MySqlDataReader Agendas()
+        {
+
+            var com = Banco.Abrir();
+            com.CommandText = "select * from agendamento";
+            var dr = com.ExecuteReader();
+
+            return dr;
         }
     }
 }

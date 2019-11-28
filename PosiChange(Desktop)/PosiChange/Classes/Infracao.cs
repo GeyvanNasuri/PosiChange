@@ -116,20 +116,15 @@ namespace PosiChange.Classes
             }
             return verificado;
         }
-        /*
-        public void Inserir()
+
+        public MySqlDataReader Infracoes()
         {
+
             var com = Banco.Abrir();
-            com.CommandType = System.Data.CommandType.StoredProcedure;
-            com.CommandText = "sp_insert_infracao";
-            com.Parameters.Add("sp_infracao", MySqlDbType.VarChar).Value = Infringement;
-            com.Parameters.Add("sp_cod_pac", MySqlDbType.Int32).Value = Patient.Cod;
-            com.Parameters.Add("sp_cod_enf", MySqlDbType.Int32).Value = Nurse.Cod;
-            com.Parameters.Add("sp_data", MySqlDbType.DateTime).Value = Data;
-            com.Parameters.Add("sp_nova", MySqlDbType.Bit).Value = Nova;
-            Cod = Convert.ToInt32(com.ExecuteScalar());
-            com.Connection.Close();
+            com.CommandText = "select * from infracao";
+            var dr = com.ExecuteReader();
+
+            return dr;
         }
-        */
     }
 }

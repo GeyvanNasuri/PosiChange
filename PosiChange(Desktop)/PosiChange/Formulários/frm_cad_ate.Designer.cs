@@ -30,16 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_ate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_turno = new System.Windows.Forms.ComboBox();
             this.rbt_acesso = new System.Windows.Forms.RadioButton();
-            this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
-            this.txt_rg = new System.Windows.Forms.MaskedTextBox();
             this.cmb_nivel = new System.Windows.Forms.ComboBox();
             this.txt_senha = new System.Windows.Forms.TextBox();
             this.txt_login = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.btn_verificar = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
@@ -51,23 +48,26 @@
             this.lbl_intervalo_cad_enf = new System.Windows.Forms.Label();
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.cmb_turno = new System.Windows.Forms.ComboBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
+            this.txt_rg = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmb_turno);
-            this.groupBox1.Controls.Add(this.rbt_acesso);
             this.groupBox1.Controls.Add(this.txt_cpf);
             this.groupBox1.Controls.Add(this.txt_rg);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cmb_turno);
+            this.groupBox1.Controls.Add(this.rbt_acesso);
             this.groupBox1.Controls.Add(this.cmb_nivel);
             this.groupBox1.Controls.Add(this.txt_senha);
             this.groupBox1.Controls.Add(this.txt_login);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_voltar);
             this.groupBox1.Controls.Add(this.btn_verificar);
             this.groupBox1.Controls.Add(this.btn_cadastrar);
@@ -86,6 +86,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Atendente";
             // 
+            // cmb_turno
+            // 
+            this.cmb_turno.FormattingEnabled = true;
+            this.cmb_turno.Items.AddRange(new object[] {
+            "Diurno",
+            "Noturno"});
+            this.cmb_turno.Location = new System.Drawing.Point(185, 89);
+            this.cmb_turno.Name = "cmb_turno";
+            this.cmb_turno.Size = new System.Drawing.Size(85, 21);
+            this.cmb_turno.TabIndex = 7;
+            // 
             // rbt_acesso
             // 
             this.rbt_acesso.AutoSize = true;
@@ -97,22 +108,6 @@
             this.rbt_acesso.TabStop = true;
             this.rbt_acesso.Text = "Primeiro Acesso";
             this.rbt_acesso.UseVisualStyleBackColor = true;
-            // 
-            // txt_cpf
-            // 
-            this.txt_cpf.Location = new System.Drawing.Point(177, 54);
-            this.txt_cpf.Mask = "000.000.000-00";
-            this.txt_cpf.Name = "txt_cpf";
-            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 3;
-            // 
-            // txt_rg
-            // 
-            this.txt_rg.Location = new System.Drawing.Point(44, 54);
-            this.txt_rg.Mask = "00.000.000-0";
-            this.txt_rg.Name = "txt_rg";
-            this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 2;
             // 
             // cmb_nivel
             // 
@@ -158,26 +153,6 @@
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "Login";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "CPF";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 17);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "RG";
             // 
             // btn_voltar
             // 
@@ -282,16 +257,41 @@
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
             // 
-            // cmb_turno
+            // txt_cpf
             // 
-            this.cmb_turno.FormattingEnabled = true;
-            this.cmb_turno.Items.AddRange(new object[] {
-            "Diurno",
-            "Noturno"});
-            this.cmb_turno.Location = new System.Drawing.Point(185, 89);
-            this.cmb_turno.Name = "cmb_turno";
-            this.cmb_turno.Size = new System.Drawing.Size(85, 21);
-            this.cmb_turno.TabIndex = 7;
+            this.txt_cpf.Location = new System.Drawing.Point(185, 55);
+            this.txt_cpf.MaxLength = 11;
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
+            this.txt_cpf.TabIndex = 29;
+            // 
+            // txt_rg
+            // 
+            this.txt_rg.Location = new System.Drawing.Point(49, 54);
+            this.txt_rg.MaxLength = 9;
+            this.txt_rg.Name = "txt_rg";
+            this.txt_rg.Size = new System.Drawing.Size(84, 20);
+            this.txt_rg.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "CPF";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 17);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "RG";
             // 
             // frm_cad_ate
             // 
@@ -313,8 +313,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.Button btn_verificar;
         private System.Windows.Forms.Button btn_cadastrar;
@@ -331,9 +329,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmb_nivel;
-        private System.Windows.Forms.MaskedTextBox txt_rg;
-        private System.Windows.Forms.MaskedTextBox txt_cpf;
         private System.Windows.Forms.RadioButton rbt_acesso;
         private System.Windows.Forms.ComboBox cmb_turno;
+        private System.Windows.Forms.TextBox txt_cpf;
+        private System.Windows.Forms.TextBox txt_rg;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -104,7 +104,6 @@ namespace PosiChange.Classes
                     atendente.Senha = dr.GetString(5);
                     atendente.Acesso = dr.GetBoolean(9);
                     atendente.Level.Cod = dr.GetInt32(10);
-                    com.Connection.Close();
                     logado = true;
                 }
             }

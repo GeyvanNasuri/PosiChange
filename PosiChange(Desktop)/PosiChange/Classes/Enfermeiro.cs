@@ -132,7 +132,8 @@ namespace PosiChange.Classes
                 enf.RG = dr.GetString(2);
                 enf.CPF = dr.GetString(3);
                 enf.Coren = dr.GetInt32(4);
-                enf.Intervalo = dr.GetDateTime(5);
+                DateTime origin = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                enf.Intervalo =  origin.AddSeconds(Convert.ToDouble(dr.GetValue(5)));
                 enf.Turno = dr.GetString(6);
                 enf.Telefone = dr.GetString(7);
                 enf.Level.Cod = dr.GetInt32(8);

@@ -38,19 +38,21 @@
             this.lbl_telefone_cad_enf = new System.Windows.Forms.Label();
             this.txt_senha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
-            this.txt_rg = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_vol_enf = new System.Windows.Forms.Button();
-            this.btn_cad_enf = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
+            this.txt_rg = new System.Windows.Forms.TextBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_cpf);
+            this.groupBox1.Controls.Add(this.txt_rg);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cmb_paciente);
             this.groupBox1.Controls.Add(this.txt_email);
@@ -59,12 +61,10 @@
             this.groupBox1.Controls.Add(this.lbl_telefone_cad_enf);
             this.groupBox1.Controls.Add(this.txt_senha);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txt_cpf);
-            this.groupBox1.Controls.Add(this.txt_rg);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btn_vol_enf);
-            this.groupBox1.Controls.Add(this.btn_cad_enf);
+            this.groupBox1.Controls.Add(this.btn_voltar);
+            this.groupBox1.Controls.Add(this.btn_cadastrar);
             this.groupBox1.Controls.Add(this.txt_nome);
             this.groupBox1.Controls.Add(this.lbl_nome_cad_enf);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -147,22 +147,6 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Senha";
             // 
-            // txt_cpf
-            // 
-            this.txt_cpf.Location = new System.Drawing.Point(209, 55);
-            this.txt_cpf.Mask = "000.000.000-00";
-            this.txt_cpf.Name = "txt_cpf";
-            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 3;
-            // 
-            // txt_rg
-            // 
-            this.txt_rg.Location = new System.Drawing.Point(62, 54);
-            this.txt_rg.Mask = "00.000.000-0";
-            this.txt_rg.Name = "txt_rg";
-            this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -183,25 +167,25 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "RG";
             // 
-            // btn_vol_enf
+            // btn_voltar
             // 
-            this.btn_vol_enf.Location = new System.Drawing.Point(461, 125);
-            this.btn_vol_enf.Name = "btn_vol_enf";
-            this.btn_vol_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_vol_enf.TabIndex = 15;
-            this.btn_vol_enf.Text = "Voltar";
-            this.btn_vol_enf.UseVisualStyleBackColor = true;
-            this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
+            this.btn_voltar.Location = new System.Drawing.Point(461, 125);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_vol_enf_Click);
             // 
-            // btn_cad_enf
+            // btn_cadastrar
             // 
-            this.btn_cad_enf.Location = new System.Drawing.Point(380, 125);
-            this.btn_cad_enf.Name = "btn_cad_enf";
-            this.btn_cad_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_cad_enf.TabIndex = 13;
-            this.btn_cad_enf.Text = "Cadastrar";
-            this.btn_cad_enf.UseVisualStyleBackColor = true;
-            this.btn_cad_enf.Click += new System.EventHandler(this.btn_cad_enf_Click);
+            this.btn_cadastrar.Location = new System.Drawing.Point(380, 125);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cadastrar.TabIndex = 13;
+            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = true;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cad_enf_Click);
             // 
             // txt_nome
             // 
@@ -220,6 +204,22 @@
             this.lbl_nome_cad_enf.Size = new System.Drawing.Size(49, 17);
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
+            // 
+            // txt_rg
+            // 
+            this.txt_rg.Location = new System.Drawing.Point(62, 54);
+            this.txt_rg.MaxLength = 9;
+            this.txt_rg.Name = "txt_rg";
+            this.txt_rg.Size = new System.Drawing.Size(84, 20);
+            this.txt_rg.TabIndex = 2;
+            // 
+            // txt_cpf
+            // 
+            this.txt_cpf.Location = new System.Drawing.Point(209, 55);
+            this.txt_cpf.MaxLength = 11;
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
+            this.txt_cpf.TabIndex = 3;
             // 
             // frm_cad_res
             // 
@@ -241,12 +241,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox txt_cpf;
-        private System.Windows.Forms.MaskedTextBox txt_rg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_vol_enf;
-        private System.Windows.Forms.Button btn_cad_enf;
+        private System.Windows.Forms.Button btn_voltar;
+        private System.Windows.Forms.Button btn_cadastrar;
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label lbl_nome_cad_enf;
         private System.Windows.Forms.TextBox txt_senha;
@@ -257,5 +255,7 @@
         private System.Windows.Forms.Label lbl_telefone_cad_enf;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmb_paciente;
+        private System.Windows.Forms.TextBox txt_cpf;
+        private System.Windows.Forms.TextBox txt_rg;
     }
 }

@@ -62,7 +62,7 @@ namespace PosiChange.Classes
         {
             var com = Banco.Abrir();
             com.CommandType = System.Data.CommandType.StoredProcedure;
-            com.CommandText = "sp_insert_paciente";
+            com.CommandText = "sp_insert_responsavel";
             com.Parameters.Add("sp_nome", MySqlDbType.VarChar).Value = Nome;
             com.Parameters.Add("sp_rg", MySqlDbType.VarChar).Value = RG;
             com.Parameters.Add("sp_cpf", MySqlDbType.VarChar).Value = CPF;

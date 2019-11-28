@@ -40,26 +40,40 @@ namespace PosiChange.Formulários
             {
                 if (atendente.Level.Cod == 1 || atendente.Level.Cod == 2)
                 {
-                    this.Hide();
-                    Form formD = new frm_pri_adm();
-                    formD.Closed += (s, args) => this.Close();
-                    formD.Show();
+                    if (atendente.Acesso == true)
+                    {
+
+                    }
+
+                    else if (atendente.Acesso == false)
+                    {
+                        this.Hide();
+                        Form formD = new frm_pri_adm();
+                        formD.Closed += (s, args) => this.Close();
+                        formD.Show();
+                    }
                 }
                 if (atendente.Level.Cod == 3)
                 {
-                    this.Hide();
-                    Form formA = new frm_pri_ate();
-                    formA.Closed += (s, args) => this.Close();
-                    formA.Show();
+                    if (atendente.Acesso == true)
+                    {
+
+                    }
+
+                    else if (atendente.Acesso == false)
+                    {
+                        this.Hide();
+                        Form formA = new frm_pri_ate();
+                        formA.Closed += (s, args) => this.Close();
+                        formA.Show();
+                    }
                 }
             }
-            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == false || atendente.Cod == 0)
+            else if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == false || atendente.Cod == 0)
             {
-                MessageBox.Show("Login e/ou senha incoenrente", "PosiChange",
+                MessageBox.Show("Login e/ou senha inexistente", "PosiChange",
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-       
     }
 }
