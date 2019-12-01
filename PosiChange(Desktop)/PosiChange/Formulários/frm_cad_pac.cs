@@ -34,24 +34,42 @@ namespace PosiChange.Formulários
 
         private void btn_cad_enf_Click(object sender, EventArgs e)
         {
-            Paciente paciente = new Paciente();
-            paciente.Nome = txt_nome.Text;
-            paciente.RG = txt_rg.Text;
-            paciente.CPF = txt_cpf.Text;
-            paciente.Ferida = rbt_sim.Checked || false;
-            paciente.Descricao = txt_descricao.Text;
-            paciente.Situacao = txt_situacao.Text;
-            paciente.Insert();
-            if (paciente.Cod > 0)
+            try
             {
-                var inseriu = MessageBox.Show("Paciente inserido com sucesso!", "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (inseriu == DialogResult.OK)
+                Paciente paciente = new Paciente();
+                paciente.Nome = txt_nome.Text;
+                paciente.RG = txt_rg.Text;
+                paciente.CPF = txt_cpf.Text;
+                paciente.Ferida = rbt_sim.Checked || false;
+                paciente.Descricao = txt_descricao.Text;
+                paciente.Situacao = txt_situacao.Text;
+                paciente.Insert();
+                if (paciente.Cod > 0)
                 {
-                    txt_nome.Clear();
+                    var inseriu = MessageBox.Show("Paciente inserido com sucesso!",
+                        "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (inseriu == DialogResult.OK)
+                    {
+                        txt_nome.Clear();
+                        txt_rg.Clear();
+                        txt_cpf.Clear();
+                        txt_descricao.Clear();
+                        txt_situacao.Clear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                //throw ex;
+                var erro = MessageBox.Show("Sinto muito, RG e/ou CPF já em uso, por favor verifique",
+                    "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (erro == DialogResult.OK)
+                {
                     txt_rg.Clear();
                     txt_cpf.Clear();
-                    txt_descricao.Clear();
-                    txt_situacao.Clear();
+                    txt_rg.Focus();
+                    txt_cpf.Focus();
                 }
             }
         }
@@ -63,6 +81,14 @@ namespace PosiChange.Formulários
             if (respota == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void rbt_nao_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbt_nao.Checked)
+            {
+                txt_descricao.Enabled = false;
             }
         }
     }

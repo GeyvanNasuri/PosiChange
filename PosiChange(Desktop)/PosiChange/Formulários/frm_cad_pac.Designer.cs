@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_vol_enf = new System.Windows.Forms.Button();
-            this.btn_ver_enf = new System.Windows.Forms.Button();
             this.btn_cad_enf = new System.Windows.Forms.Button();
             this.txt_situacao = new System.Windows.Forms.TextBox();
             this.txt_descricao = new System.Windows.Forms.TextBox();
@@ -58,7 +57,6 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_vol_enf);
-            this.groupBox1.Controls.Add(this.btn_ver_enf);
             this.groupBox1.Controls.Add(this.btn_cad_enf);
             this.groupBox1.Controls.Add(this.txt_situacao);
             this.groupBox1.Controls.Add(this.txt_descricao);
@@ -84,6 +82,7 @@
             this.rbt_nao.TabStop = true;
             this.rbt_nao.Text = "Não";
             this.rbt_nao.UseVisualStyleBackColor = true;
+            this.rbt_nao.CheckedChanged += new System.EventHandler(this.rbt_nao_CheckedChanged);
             // 
             // rbt_sim
             // 
@@ -142,15 +141,6 @@
             this.btn_vol_enf.Text = "Voltar";
             this.btn_vol_enf.UseVisualStyleBackColor = true;
             this.btn_vol_enf.Click += new System.EventHandler(this.btn_vol_enf_Click);
-            // 
-            // btn_ver_enf
-            // 
-            this.btn_ver_enf.Location = new System.Drawing.Point(377, 156);
-            this.btn_ver_enf.Name = "btn_ver_enf";
-            this.btn_ver_enf.Size = new System.Drawing.Size(75, 23);
-            this.btn_ver_enf.TabIndex = 14;
-            this.btn_ver_enf.Text = "Verificar";
-            this.btn_ver_enf.UseVisualStyleBackColor = true;
             // 
             // btn_cad_enf
             // 
@@ -250,7 +240,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_vol_enf;
-        private System.Windows.Forms.Button btn_ver_enf;
         private System.Windows.Forms.Button btn_cad_enf;
         private System.Windows.Forms.TextBox txt_situacao;
         private System.Windows.Forms.TextBox txt_descricao;

@@ -32,31 +32,49 @@ namespace PosiChange.Formulários
 
         private void btn_cad_enf_Click(object sender, EventArgs e)
         {
-            Responsavel responsavel = new Responsavel();
-            responsavel.Nome = txt_nome.Text;
-            responsavel.RG = txt_rg.Text;
-            responsavel.CPF = txt_cpf.Text;
-            responsavel.Senha = txt_senha.Text;
-            responsavel.Telefone = txt_telefone.Text;
-            responsavel.Email = txt_email.Text;
-            responsavel.Acesso = true;
-            responsavel.Patient = new Paciente();
-            responsavel.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
-            responsavel.Insert();
-            if (responsavel.Cod > 0)
+            try
             {
-                var inseriu = MessageBox.Show("Responsável inserido com sucesso!", "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (inseriu == DialogResult.OK)
+                Responsavel responsavel = new Responsavel();
+                responsavel.Nome = txt_nome.Text;
+                responsavel.RG = txt_rg.Text;
+                responsavel.CPF = txt_cpf.Text;
+                responsavel.Senha = txt_senha.Text;
+                responsavel.Telefone = txt_telefone.Text;
+                responsavel.Email = txt_email.Text;
+                responsavel.Acesso = true;
+                responsavel.Patient = new Paciente();
+                responsavel.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
+                responsavel.Insert();
+                if (responsavel.Cod > 0)
                 {
-                    txt_nome.Clear();
-                    txt_rg.Clear();
-                    txt_cpf.Clear();
-                    txt_telefone.Clear();
-                    txt_email.Clear();
-                    txt_senha.Clear();
-                    cmb_paciente.Text = "";
+                    var inseriu = MessageBox.Show("Responsável inserido com sucesso!", "PosiChange | Cadastro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (inseriu == DialogResult.OK)
+                    {
+                        txt_nome.Clear();
+                        txt_rg.Clear();
+                        txt_cpf.Clear();
+                        txt_telefone.Clear();
+                        txt_email.Clear();
+                        txt_senha.Clear();
+                        cmb_paciente.Text = "";
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+
+                //throw ex;
+                var erro = MessageBox.Show("Sinto muito, RG e/ou CPF já em uso, por favor verifique",
+                    "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (erro == DialogResult.OK)
+                {
+                    txt_rg.Clear();
+                    txt_cpf.Clear();
+                    txt_rg.Focus();
+                    txt_cpf.Focus();
+                }
+            }
+
         }
 
         private void btn_vol_enf_Click(object sender, EventArgs e)

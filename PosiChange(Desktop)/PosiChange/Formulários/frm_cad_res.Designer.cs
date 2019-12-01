@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_res));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
+            this.txt_rg = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmb_paciente = new System.Windows.Forms.ComboBox();
             this.txt_email = new System.Windows.Forms.TextBox();
@@ -44,8 +46,6 @@
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.txt_rg = new System.Windows.Forms.TextBox();
-            this.txt_cpf = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,22 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Resposável";
+            // 
+            // txt_cpf
+            // 
+            this.txt_cpf.Location = new System.Drawing.Point(209, 55);
+            this.txt_cpf.MaxLength = 11;
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
+            this.txt_cpf.TabIndex = 3;
+            // 
+            // txt_rg
+            // 
+            this.txt_rg.Location = new System.Drawing.Point(62, 54);
+            this.txt_rg.MaxLength = 9;
+            this.txt_rg.Name = "txt_rg";
+            this.txt_rg.Size = new System.Drawing.Size(84, 20);
+            this.txt_rg.TabIndex = 2;
             // 
             // label5
             // 
@@ -204,22 +220,6 @@
             this.lbl_nome_cad_enf.Size = new System.Drawing.Size(49, 17);
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
-            // 
-            // txt_rg
-            // 
-            this.txt_rg.Location = new System.Drawing.Point(62, 54);
-            this.txt_rg.MaxLength = 9;
-            this.txt_rg.Name = "txt_rg";
-            this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 2;
-            // 
-            // txt_cpf
-            // 
-            this.txt_cpf.Location = new System.Drawing.Point(209, 55);
-            this.txt_cpf.MaxLength = 11;
-            this.txt_cpf.Name = "txt_cpf";
-            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 3;
             // 
             // frm_cad_res
             // 

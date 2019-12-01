@@ -87,23 +87,21 @@ namespace PosiChange.Classes
         public bool EfetuarLogin(string login, string senha)
         {
             var com = Banco.Abrir();
-            com.CommandText = "select * from atendimento where login = '" + login + "' and senha = '" + GerarMd5(senha) + "'";
+            com.CommandText = "select * from atendimento where login = '" + login +
+                "' and senha = '" + GerarMd5(senha) + "'";
             var dr = com.ExecuteReader();
             bool logado = false;
             try
             {
-                Atendente atendente = new Atendente();
-                atendente.Level = new Nivel();
+                Level = new Nivel();
                 while (dr.Read())
                 {
-                    atendente.Cod = dr.GetInt32(0);
-                    atendente.Nome = dr.GetString(1);
-                    atendente.RG = dr.GetString(2);
-                    atendente.CPF = dr.GetString(3);
-                    atendente.Login = dr.GetString(4);
-                    atendente.Senha = dr.GetString(5);
-                    atendente.Acesso = dr.GetBoolean(9);
-                    atendente.Level.Cod = dr.GetInt32(10);
+                    Cod = dr.GetInt32(0);
+                    Nome = dr.GetString(1);
+                    Login = dr.GetString(4);
+                    Senha = dr.GetString(5);
+                    Acesso = dr.GetBoolean(9);
+                    Level.Cod = dr.GetInt32(10);
                     logado = true;
                 }
             }
@@ -178,9 +176,8 @@ namespace PosiChange.Classes
                 com.Connection.Close();
                 existe = true;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-
                 throw ex;
             }
             return existe;

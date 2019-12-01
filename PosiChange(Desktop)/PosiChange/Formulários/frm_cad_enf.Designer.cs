@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_enf));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_turno = new System.Windows.Forms.ComboBox();
             this.txt_cpf = new System.Windows.Forms.MaskedTextBox();
             this.txt_rg = new System.Windows.Forms.MaskedTextBox();
             this.cmb_nivel = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,6 @@
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
             this.lbl_coren_cad_enf = new System.Windows.Forms.Label();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.cmb_turno = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,18 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Enfermeiro";
+            // 
+            // cmb_turno
+            // 
+            this.cmb_turno.FormattingEnabled = true;
+            this.cmb_turno.Items.AddRange(new object[] {
+            "Manhã",
+            "Tarde",
+            "Noite"});
+            this.cmb_turno.Location = new System.Drawing.Point(64, 87);
+            this.cmb_turno.Name = "cmb_turno";
+            this.cmb_turno.Size = new System.Drawing.Size(82, 21);
+            this.cmb_turno.TabIndex = 20;
             // 
             // txt_cpf
             // 
@@ -245,18 +257,6 @@
             this.lbl_nome_cad_enf.Size = new System.Drawing.Size(49, 17);
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
-            // 
-            // cmb_turno
-            // 
-            this.cmb_turno.FormattingEnabled = true;
-            this.cmb_turno.Items.AddRange(new object[] {
-            "Manhã",
-            "Tarde",
-            "Noite"});
-            this.cmb_turno.Location = new System.Drawing.Point(64, 87);
-            this.cmb_turno.Name = "cmb_turno";
-            this.cmb_turno.Size = new System.Drawing.Size(82, 21);
-            this.cmb_turno.TabIndex = 20;
             // 
             // frm_cad_enf
             // 

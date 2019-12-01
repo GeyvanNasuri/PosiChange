@@ -20,7 +20,8 @@ namespace PosiChange.Formulários
 
         private void frm_cad_ate_Load(object sender, EventArgs e)
         {
-            btn_cadastrar.Enabled = false;
+            btn_cadastrar.Enabled = true;
+            btn_verificar.Visible = false;
             // Sem um mysql.datareader isto não rola!
             DataTable dt = new DataTable();
             Nivel nivel = new Nivel();
@@ -35,45 +36,66 @@ namespace PosiChange.Formulários
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Atendente atendente = new Atendente();
-            atendente.Nome = txt_nome.Text;
-            atendente.RG = txt_rg.Text;
-            atendente.CPF = txt_cpf.Text;
-            atendente.Login = txt_login.Text;
-            atendente.Senha = txt_senha.Text;
-            atendente.Intervalo = Convert.ToDateTime(txt_intervalo.Text);
-            atendente.Turno = cmb_turno.Text;
-            atendente.Telefone = txt_telefone.Text;
-            atendente.Acesso = rbt_acesso.Checked;
-            atendente.Level = new Nivel();
-            atendente.Level.Cod = Convert.ToInt32(cmb_nivel.SelectedValue);
-            atendente.Inserir();
-            if (atendente.Cod > 0)
+            try
             {
-                var inseriu = MessageBox.Show("Usuario inserido com sucesso!", "PosiChange | Cadastro de Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (inseriu == DialogResult.OK)
+                Atendente atendente = new Atendente();
+                atendente.Nome = txt_nome.Text;
+                atendente.RG = txt_rg.Text;
+                atendente.CPF = txt_cpf.Text;
+                atendente.Login = txt_login.Text;
+                atendente.Senha = txt_senha.Text;
+                atendente.Intervalo = Convert.ToDateTime(txt_intervalo.Text);
+                atendente.Turno = cmb_turno.Text;
+                atendente.Telefone = txt_telefone.Text;
+                atendente.Acesso = rbt_acesso.Checked;
+                atendente.Level = new Nivel();
+                atendente.Level.Cod = Convert.ToInt32(cmb_nivel.SelectedValue);
+                atendente.Inserir();
+                if (atendente.Cod > 0)
                 {
-                    txt_telefone.Clear();
-                    cmb_turno.Text = "";
-                    txt_intervalo.Clear();
-                    txt_senha.Clear();
+                    var inseriu = MessageBox.Show("Usuario inserido com sucesso!",
+                        "PosiChange | Cadastro de Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (inseriu == DialogResult.OK)
+                    {
+                        txt_telefone.Clear();
+                        cmb_turno.Text = "";
+                        txt_intervalo.Clear();
+                        txt_senha.Clear();
+                        txt_login.Clear();
+                        txt_cpf.Clear();
+                        txt_rg.Clear();
+                        txt_cpf.Clear();
+                        txt_nome.Clear();
+                        cmb_nivel.Text = "";
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                //throw ex;
+                var erro = MessageBox.Show("Sinto muito, RG ou CPF e/ou Login já em uso, por favor verifique",
+                    "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (erro == DialogResult.OK)
+                {
                     txt_login.Clear();
-                    txt_cpf.Clear();
                     txt_rg.Clear();
                     txt_cpf.Clear();
-                    txt_nome.Clear();
-                    cmb_nivel.Text = "";
+                    txt_login.Focus();
+                    txt_rg.Focus();
+                    txt_cpf.Focus();
                 }
-                
             }
         }
 
         private void btn_verificar_Click(object sender, EventArgs e)
         {
             Atendente atendente = new Atendente();
-            if (atendente.Login == txt_login.Text)
+            if (atendente.Verificalogin(txt_login.Text) == true && atendente.Cod > 0)
             {
-                var existe = MessageBox.Show("Este Login já está em uso!", "PosiChange | Cadastro de Atendente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var existe = MessageBox.Show("Este Login já está em uso!",
+                    "PosiChange | Cadastro de Atendente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (existe == DialogResult.OK)
                 {
                     txt_login.Clear();

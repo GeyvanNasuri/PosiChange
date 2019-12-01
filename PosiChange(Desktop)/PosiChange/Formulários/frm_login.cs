@@ -34,43 +34,59 @@ namespace PosiChange.Formulários
 
         private void btn_entrar_login_Click(object sender, EventArgs e)
         {
-            Atendente atendente = new Atendente();
-            atendente.Level = new Nivel();
-            if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == true && atendente.Cod > 0)
+            try
             {
-                if (atendente.Level.Cod == 1 || atendente.Level.Cod == 2)
+                Atendente atendente = new Atendente();
+                atendente.Level = new Nivel();
+                if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == true)
                 {
-                    if (atendente.Acesso == true)
+                    if (atendente.Level.Cod == 1 || atendente.Level.Cod == 2)
                     {
+                        if (atendente.Acesso == true)
+                        {
+                            this.Hide();
+                            Form formD = new frm_pri_adm();
+                            formD.Closed += (s, args) => this.Close();
+                            formD.Show();
+                        }
 
+                        else if (atendente.Acesso == false)
+                        {
+                            this.Hide();
+                            Form formD = new frm_pri_adm();
+                            formD.Closed += (s, args) => this.Close();
+                            formD.Show();
+                        }
                     }
-
-                    else if (atendente.Acesso == false)
+                    if (atendente.Level.Cod == 3)
                     {
-                        this.Hide();
-                        Form formD = new frm_pri_adm();
-                        formD.Closed += (s, args) => this.Close();
-                        formD.Show();
+                        if (atendente.Acesso == true)
+                        {
+                            this.Hide();
+                            Form formA = new frm_pri_ate();
+                            formA.Closed += (s, args) => this.Close();
+                            formA.Show();
+                        }
+
+                        else if (atendente.Acesso == false)
+                        {
+                            this.Hide();
+                            Form formA = new frm_pri_ate();
+                            formA.Closed += (s, args) => this.Close();
+                            formA.Show();
+                        }
                     }
                 }
-                if (atendente.Level.Cod == 3)
+                else if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == false)
                 {
-                    if (atendente.Acesso == true)
-                    {
-
-                    }
-
-                    else if (atendente.Acesso == false)
-                    {
-                        this.Hide();
-                        Form formA = new frm_pri_ate();
-                        formA.Closed += (s, args) => this.Close();
-                        formA.Show();
-                    }
+                    MessageBox.Show("Login e/ou senha inexistente", "PosiChange",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else if (atendente.EfetuarLogin(txt_usuario_login.Text, txt_senha_login.Text) == false || atendente.Cod == 0)
+            catch (Exception ex)
             {
+
+                //throw ex;
                 MessageBox.Show("Login e/ou senha inexistente", "PosiChange",
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

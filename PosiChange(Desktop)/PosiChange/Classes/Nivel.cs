@@ -13,10 +13,7 @@ namespace PosiChange.Classes
         public string Level { get; set; }
         public string Sigla { get; set; }
 
-        public Nivel()
-        {
-
-        }
+        public Nivel() { }
 
         public Nivel(int cod, string level, string sigla)
         {

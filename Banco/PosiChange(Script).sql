@@ -274,7 +274,7 @@ USE `softklee_posichange` ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_insert_atendente`(
+CREATE PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -310,7 +310,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_insert_enfermeiro`(
+CREATE PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
 	sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -342,7 +342,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_insert_paciente`(
+CREATE PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -370,15 +370,15 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_insert_posicao`(
+CREATE PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
-    sp_imagem longblob
+    sp_img longblob
 )
 begin
 insert into `responsavel` values(
 	null,
     sp_posicao,
-    sp_imagem
+    sp_img
 );
 select * from `posicao` where last_insert_id();
 end$$
@@ -390,7 +390,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_insert_responsavel`(
+CREATE PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -426,7 +426,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_update_atendente`(
+CREATE PROCEDURE `sp_update_atendente`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_senha varchar(32),
@@ -453,7 +453,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_update_enfermeiro`(
+CREATE PROCEDURE `sp_update_enfermeiro`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_turno varchar(10),
@@ -476,7 +476,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_update_paciente`(
+CREATE PROCEDURE `sp_update_paciente`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_apr_fer bit,
@@ -499,7 +499,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_update_posicao`(
+CREATE PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
     sp_imagem longblob
@@ -518,7 +518,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_update_responsavel`(
+CREATE PROCEDURE `sp_update_responsavel`(
 	sp_cod int,
 	sp_nome varchar(50),
     sp_senha varchar(20),

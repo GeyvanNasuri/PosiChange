@@ -11,18 +11,18 @@ namespace PosiChange.Classes
     {
         public int Cod { get; set; }
         public string Position { get; set; }
-        public byte Imagem { get; set; }
+        public byte[] Imagem { get; set; }
 
         public Posicao() { }
 
-        public Posicao(int cod, string position, byte imagem)
+        public Posicao(int cod, string position, byte[] imagem)
         {
             Cod = cod;
             Position = position;
             Imagem = imagem;
         }
 
-        public Posicao(string position, byte imagem)
+        public Posicao(string position, byte[] imagem)
         {
             Position = position;
             Imagem = imagem;
@@ -50,7 +50,7 @@ namespace PosiChange.Classes
                 Posicao pos = new Posicao();
                 pos.Cod = dr.GetInt32(0);
                 pos.Position = dr.GetString(1);
-                pos.Imagem = dr.GetByte(3);
+                //pos.Imagem = dr.GetByte(3);
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 posicoes.Add(pos);
@@ -69,7 +69,7 @@ namespace PosiChange.Classes
                 Posicao pos = new Posicao();
                 pos.Cod = dr.GetInt32(0);
                 pos.Position = dr.GetString(1);
-                pos.Imagem = dr.GetByte(3);
+                //pos.Imagem = dr.GetByte(3);
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 posicoes.Add(pos);
@@ -87,7 +87,7 @@ namespace PosiChange.Classes
             {
                 com.Parameters.Add("sp_cod", MySqlDbType.Int32).Value = Cod;
                 com.Parameters.Add("sp_posicao", MySqlDbType.VarChar).Value = Position;
-                com.Parameters.Add("sp_imagem", MySqlDbType.LongBlob).Value = Imagem;
+                com.Parameters.Add("sp_img", MySqlDbType.LongBlob).Value = Imagem;
                 com.ExecuteNonQuery();
                 com.Connection.Close();
                 alterado = true;

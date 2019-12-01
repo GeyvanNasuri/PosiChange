@@ -487,3 +487,213 @@ Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
 2019-11-26 21:18:04 1772 [Note] Event Scheduler: Loaded 0 events
 2019-11-26 21:18:04 1772 [Note] D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver/mysql/bin/mysqld_usbwv8.exe: ready for connections.
 Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-11-28 00:35:48 3900 [Note] Plugin 'FEDERATED' is disabled.
+2019-11-28 00:35:49 3900 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2019-11-28 00:35:49 3900 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-11-28 00:35:49 3900 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-11-28 00:35:49 3900 [Note] InnoDB: Memory barrier is not used
+2019-11-28 00:35:49 3900 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-11-28 00:35:49 3900 [Note] InnoDB: Not using CPU crc32 instructions
+2019-11-28 00:35:49 3900 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2019-11-28 00:35:49 3900 [Note] InnoDB: Completed initialization of buffer pool
+2019-11-28 00:35:50 3900 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-11-28 00:35:50 3900 [Note] InnoDB: The log sequence numbers 1626656 and 1626656 in ibdata files do not match the log sequence number 4914745 in the ib_logfiles!
+2019-11-28 00:35:50 3900 [Note] InnoDB: Database was not shutdown normally!
+2019-11-28 00:35:50 3900 [Note] InnoDB: Starting crash recovery.
+2019-11-28 00:35:50 3900 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2019-11-28 00:35:50 3900 [Note] InnoDB: Restoring possible half-written data pages 
+2019-11-28 00:35:50 3900 [Note] InnoDB: from the doublewrite buffer...
+2019-11-28 00:35:54 3900 [Note] InnoDB: 128 rollback segment(s) are active.
+2019-11-28 00:35:54 3900 [Note] InnoDB: Waiting for purge to start
+2019-11-28 00:35:54 3900 [Note] InnoDB: 5.6.34 started; log sequence number 4914745
+2019-11-28 00:35:54 3900 [Note] Server hostname (bind-address): '*'; port: 3306
+2019-11-28 00:35:54 3900 [Note] IPv6 is available.
+2019-11-28 00:35:54 3900 [Note]   - '::' resolves to '::';
+2019-11-28 00:35:54 3900 [Note] Server socket created on IP: '::'.
+2019-11-28 00:36:03 3900 [Note] Event Scheduler: Loaded 0 events
+2019-11-28 00:36:03 3900 [Note] D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-11-29 18:14:37 4332 [Note] Plugin 'FEDERATED' is disabled.
+2019-11-29 18:14:40 4332 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2019-11-29 18:14:40 4332 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-11-29 18:14:40 4332 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-11-29 18:14:40 4332 [Note] InnoDB: Memory barrier is not used
+2019-11-29 18:14:40 4332 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-11-29 18:14:42 4332 [Note] InnoDB: Not using CPU crc32 instructions
+2019-11-29 18:14:42 4332 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2019-11-29 18:14:43 4332 [Note] InnoDB: Completed initialization of buffer pool
+2019-11-29 18:14:45 4332 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-11-29 18:14:45 4332 [Note] InnoDB: The log sequence numbers 1626656 and 1626656 in ibdata files do not match the log sequence number 4914755 in the ib_logfiles!
+2019-11-29 18:14:45 4332 [Note] InnoDB: Database was not shutdown normally!
+2019-11-29 18:14:45 4332 [Note] InnoDB: Starting crash recovery.
+2019-11-29 18:14:45 4332 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2019-11-29 18:14:48 4332 [Note] InnoDB: Restoring possible half-written data pages 
+2019-11-29 18:14:48 4332 [Note] InnoDB: from the doublewrite buffer...
+2019-11-29 18:15:01 4332 [Note] InnoDB: 128 rollback segment(s) are active.
+2019-11-29 18:15:01 4332 [Note] InnoDB: Waiting for purge to start
+2019-11-29 18:15:01 4332 [Note] InnoDB: 5.6.34 started; log sequence number 4914755
+2019-11-29 18:15:01 4332 [Note] Server hostname (bind-address): '*'; port: 3306
+2019-11-29 18:15:01 4332 [Note] IPv6 is available.
+2019-11-29 18:15:01 4332 [Note]   - '::' resolves to '::';
+2019-11-29 18:15:01 4332 [Note] Server socket created on IP: '::'.
+2019-11-29 18:15:37 4332 [Note] Event Scheduler: Loaded 0 events
+2019-11-29 18:15:37 4332 [Note] D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-11-29 19:39:47 4580 [Note] Plugin 'FEDERATED' is disabled.
+2019-11-29 19:39:49 4580 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2019-11-29 19:39:49 4580 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-11-29 19:39:49 4580 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-11-29 19:39:49 4580 [Note] InnoDB: Memory barrier is not used
+2019-11-29 19:39:49 4580 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-11-29 19:39:49 4580 [Note] InnoDB: Not using CPU crc32 instructions
+2019-11-29 19:39:49 4580 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2019-11-29 19:39:49 4580 [Note] InnoDB: Completed initialization of buffer pool
+2019-11-29 19:39:50 4580 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-11-29 19:39:50 4580 [Note] InnoDB: The log sequence numbers 1626656 and 1626656 in ibdata files do not match the log sequence number 4914765 in the ib_logfiles!
+2019-11-29 19:39:50 4580 [Note] InnoDB: Database was not shutdown normally!
+2019-11-29 19:39:50 4580 [Note] InnoDB: Starting crash recovery.
+2019-11-29 19:39:50 4580 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2019-11-29 19:39:50 4580 [Note] InnoDB: Restoring possible half-written data pages 
+2019-11-29 19:39:50 4580 [Note] InnoDB: from the doublewrite buffer...
+2019-11-29 19:39:56 4580 [Note] InnoDB: 128 rollback segment(s) are active.
+2019-11-29 19:39:56 4580 [Note] InnoDB: Waiting for purge to start
+2019-11-29 19:39:57 4580 [Note] InnoDB: 5.6.34 started; log sequence number 4914765
+2019-11-29 19:39:57 4580 [Note] Server hostname (bind-address): '*'; port: 3306
+2019-11-29 19:39:57 4580 [Note] IPv6 is available.
+2019-11-29 19:39:57 4580 [Note]   - '::' resolves to '::';
+2019-11-29 19:39:57 4580 [Note] Server socket created on IP: '::'.
+2019-11-29 19:40:09 4580 [Note] Event Scheduler: Loaded 0 events
+2019-11-29 19:40:09 4580 [Note] D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.6.34'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-11-30 15:05:34 5956 [Note] Plugin 'FEDERATED' is disabled.
+2019-11-30 15:05:37 5956 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2019-11-30 15:05:37 5956 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-11-30 15:05:37 5956 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-11-30 15:05:37 5956 [Note] InnoDB: Memory barrier is not used
+2019-11-30 15:05:37 5956 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-11-30 15:05:37 5956 [Note] InnoDB: Not using CPU crc32 instructions
+2019-11-30 15:05:37 5956 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2019-11-30 15:05:38 5956 [Note] InnoDB: Completed initialization of buffer pool
+2019-11-30 15:05:38 5956 [ERROR] InnoDB: D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver\mysql\data\ibdata1 can't be opened in read-write mode
+2019-11-30 15:05:38 5956 [ERROR] InnoDB: The system tablespace must be writable!
+2019-11-30 15:05:38 5956 [ERROR] Plugin 'InnoDB' init function returned error.
+2019-11-30 15:05:38 5956 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2019-11-30 15:05:38 5956 [ERROR] Unknown/unsupported storage engine: InnoDB
+2019-11-30 15:05:38 5956 [ERROR] Aborting
+
+2019-11-30 15:05:38 5956 [Note] Binlog end
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'partition'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_CMP'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'INNODB_TRX'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'BLACKHOLE'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'ARCHIVE'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'MyISAM'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'MEMORY'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'CSV'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'sha256_password'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'mysql_old_password'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'mysql_native_password'
+2019-11-30 15:05:38 5956 [Note] Shutting down plugin 'binlog'
+2019-11-30 15:05:38 5956 [Note] D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver/mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+
+2019-11-30 15:06:02 5916 [Note] Plugin 'FEDERATED' is disabled.
+2019-11-30 15:06:02 5916 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2019-11-30 15:06:02 5916 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-11-30 15:06:02 5916 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-11-30 15:06:02 5916 [Note] InnoDB: Memory barrier is not used
+2019-11-30 15:06:02 5916 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-11-30 15:06:02 5916 [Note] InnoDB: Not using CPU crc32 instructions
+2019-11-30 15:06:02 5916 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2019-11-30 15:06:02 5916 [Note] InnoDB: Completed initialization of buffer pool
+2019-11-30 15:06:03 5916 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-11-30 15:06:04 5916 [Note] InnoDB: The log sequence numbers 1626656 and 1626656 in ibdata files do not match the log sequence number 4914775 in the ib_logfiles!
+2019-11-30 15:06:04 5916 [Note] InnoDB: Database was not shutdown normally!
+2019-11-30 15:06:04 5916 [Note] InnoDB: Starting crash recovery.
+2019-11-30 15:06:04 5916 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2019-11-30 15:06:07 5616 [Note] Plugin 'FEDERATED' is disabled.
+2019-11-30 15:06:07 5616 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2019-11-30 15:06:07 5616 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-11-30 15:06:07 5616 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-11-30 15:06:07 5616 [Note] InnoDB: Memory barrier is not used
+2019-11-30 15:06:07 5616 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-11-30 15:06:07 5616 [Note] InnoDB: Not using CPU crc32 instructions
+2019-11-30 15:06:07 5616 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2019-11-30 15:06:07 5616 [Note] InnoDB: Completed initialization of buffer pool
+2019-11-30 15:06:07 5616 [ERROR] InnoDB: D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver\mysql\data\ibdata1 can't be opened in read-write mode
+2019-11-30 15:06:07 5616 [ERROR] InnoDB: The system tablespace must be writable!
+2019-11-30 15:06:07 5616 [ERROR] Plugin 'InnoDB' init function returned error.
+2019-11-30 15:06:07 5616 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2019-11-30 15:06:07 5616 [ERROR] Unknown/unsupported storage engine: InnoDB
+2019-11-30 15:06:07 5616 [ERROR] Aborting
+
+2019-11-30 15:06:07 5616 [Note] Binlog end
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'partition'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_CMP'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'INNODB_TRX'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'BLACKHOLE'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'ARCHIVE'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-11-30 15:06:07 5616 [Note] Shutting down plugin 'MyISAM'
+2019-11-30 15:06:08 5616 [Note] Shutting down plugin 'MEMORY'
+2019-11-30 15:06:08 5616 [Note] Shutting down plugin 'CSV'
+2019-11-30 15:06:08 5616 [Note] Shutting down plugin 'sha256_password'
+2019-11-30 15:06:08 5616 [Note] Shutting down plugin 'mysql_old_password'
+2019-11-30 15:06:08 5616 [Note] Shutting down plugin 'mysql_native_password'
+2019-11-30 15:06:08 5616 [Note] Shutting down plugin 'binlog'
+2019-11-30 15:06:08 5616 [Note] D:\Documentos\Cenarios\GitHub\Tentacion\usbwebserver/mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+

@@ -27,21 +27,24 @@ namespace PosiChange.Formulários
 
         private void btn_busca_Click(object sender, EventArgs e)
         {
-            string imgPos;
+            // Instancia para Localizar a imagem!
             try
             {
                 OpenFileDialog img_pos = new OpenFileDialog();
-                img_pos.Filter = "Imagens | *.jpg";
+                img_pos.Filter = "JPG Files(*.jpeg) |*.jpg |PNG Files(*.png)|*png |AllFiles(*.*) |*.*";
                 if (img_pos.ShowDialog() == DialogResult.OK)
                 {
-                    imgPos = img_pos.FileName;
-                    pic_posicao.Image = Image.FromFile(img_pos.FileName);
+                    string imgPos = img_pos.FileName.ToString();
+                    txt_caminho.Text = imgPos;
+                    //pic_posicao.Image = Image.FromFile(img_pos.FileName);
+                    pic_posicao.ImageLocation = imgPos;
                 }
             }
             catch (Exception Ex)
             {
-
-                MessageBox.Show(Ex.Message);
+                //throw Ex;
+                MessageBox.Show("Sinto Muito, mas não consegui buscar a imagem", "PosiChange",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -57,20 +60,37 @@ namespace PosiChange.Formulários
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
+            byte[] img = null;
+            FileStream stream = new FileStream(this.txt_caminho.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader binary = new BinaryReader(stream);
+            img = binary.ReadBytes((int)stream.Length);
             Posicao posicao = new Posicao();
             posicao.Position = txt_posicao.Text;
-            posicao.Imagem = Convert.ToByte(pic_posicao.Image);
-            posicao.Inserir();
-            if (posicao.Cod > 0)
+            posicao.Imagem = img;
+            try
             {
-                var gravou = MessageBox.Show("Nova posição gravada com sucesso!", "PosiChange | Cadastro de Posicao",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (gravou == DialogResult.OK)
+                posicao.Inserir();
+                if (posicao.Cod > 0)
                 {
-                    pic_posicao.Image = null;
-                    txt_posicao.Clear();
+                    var gravou = MessageBox.Show("Nova posição gravada com sucesso!",
+                        "PosiChange | Cadastro de Posicao",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (gravou == DialogResult.OK)
+                    {
+                        pic_posicao.Image = null;
+                        txt_posicao.Clear();
+                        txt_caminho.Clear();
+                    }
                 }
             }
+            catch (Exception Ex)
+            {
+                throw Ex;
+
+                MessageBox.Show("Sinto Muito, Não cosegui gravar as informações",
+                    "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }

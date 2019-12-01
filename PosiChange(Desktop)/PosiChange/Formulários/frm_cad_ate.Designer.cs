@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_ate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
+            this.txt_rg = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cmb_turno = new System.Windows.Forms.ComboBox();
             this.rbt_acesso = new System.Windows.Forms.RadioButton();
             this.cmb_nivel = new System.Windows.Forms.ComboBox();
@@ -48,10 +52,6 @@
             this.lbl_intervalo_cad_enf = new System.Windows.Forms.Label();
             this.lbl_turno_cad_enf = new System.Windows.Forms.Label();
             this.lbl_nome_cad_enf = new System.Windows.Forms.Label();
-            this.txt_cpf = new System.Windows.Forms.TextBox();
-            this.txt_rg = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,42 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Atendente";
+            // 
+            // txt_cpf
+            // 
+            this.txt_cpf.Location = new System.Drawing.Point(185, 55);
+            this.txt_cpf.MaxLength = 11;
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
+            this.txt_cpf.TabIndex = 29;
+            // 
+            // txt_rg
+            // 
+            this.txt_rg.Location = new System.Drawing.Point(49, 54);
+            this.txt_rg.MaxLength = 9;
+            this.txt_rg.Name = "txt_rg";
+            this.txt_rg.Size = new System.Drawing.Size(84, 20);
+            this.txt_rg.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "CPF";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 17);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "RG";
             // 
             // cmb_turno
             // 
@@ -256,42 +292,6 @@
             this.lbl_nome_cad_enf.Size = new System.Drawing.Size(49, 17);
             this.lbl_nome_cad_enf.TabIndex = 12;
             this.lbl_nome_cad_enf.Text = "Nome";
-            // 
-            // txt_cpf
-            // 
-            this.txt_cpf.Location = new System.Drawing.Point(185, 55);
-            this.txt_cpf.MaxLength = 11;
-            this.txt_cpf.Name = "txt_cpf";
-            this.txt_cpf.Size = new System.Drawing.Size(84, 20);
-            this.txt_cpf.TabIndex = 29;
-            // 
-            // txt_rg
-            // 
-            this.txt_rg.Location = new System.Drawing.Point(49, 54);
-            this.txt_rg.MaxLength = 9;
-            this.txt_rg.Name = "txt_rg";
-            this.txt_rg.Size = new System.Drawing.Size(84, 20);
-            this.txt_rg.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(144, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "CPF";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 17);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "RG";
             // 
             // frm_cad_ate
             // 

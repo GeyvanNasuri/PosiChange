@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cad_pos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_caminho = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_caminho);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
@@ -56,6 +58,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Nova Posição";
+            // 
+            // txt_caminho
+            // 
+            this.txt_caminho.Location = new System.Drawing.Point(9, 167);
+            this.txt_caminho.Name = "txt_caminho";
+            this.txt_caminho.Size = new System.Drawing.Size(243, 20);
+            this.txt_caminho.TabIndex = 7;
+            this.txt_caminho.Visible = false;
             // 
             // label2
             // 
@@ -153,5 +163,6 @@
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_busca;
         private System.Windows.Forms.PictureBox pic_posicao;
+        private System.Windows.Forms.TextBox txt_caminho;
     }
 }

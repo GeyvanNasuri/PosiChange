@@ -33,5 +33,16 @@ namespace PosiChange.Properties {
                 return ((string)(this["posichangeConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("User Id=softklee_posichange;Host=softkleen.com.br;Database=softklee_posichange;Pe" +
+            "rsist Security Info=True")]
+        public string softklee_posichangeConnectionString {
+            get {
+                return ((string)(this["softklee_posichangeConnectionString"]));
+            }
+        }
     }
 }
