@@ -90,7 +90,7 @@
             this.cmb_turno.Location = new System.Drawing.Point(64, 87);
             this.cmb_turno.Name = "cmb_turno";
             this.cmb_turno.Size = new System.Drawing.Size(82, 21);
-            this.cmb_turno.TabIndex = 20;
+            this.cmb_turno.TabIndex = 6;
             // 
             // txt_cpf
             // 

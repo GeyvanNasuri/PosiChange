@@ -60,10 +60,10 @@ namespace PosiChange.Formulários
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
-            byte[] img = null;
+            //byte[] img = null;
             FileStream stream = new FileStream(this.txt_caminho.Text, FileMode.Open, FileAccess.Read);
             BinaryReader binary = new BinaryReader(stream);
-            img = binary.ReadBytes((int)stream.Length);
+            byte[] img = binary.ReadBytes((int)stream.Length);
             Posicao posicao = new Posicao();
             posicao.Position = txt_posicao.Text;
             posicao.Imagem = img;
@@ -85,12 +85,11 @@ namespace PosiChange.Formulários
             }
             catch (Exception Ex)
             {
-                throw Ex;
+                //throw Ex;
 
-                MessageBox.Show("Sinto Muito, Não cosegui gravar as informações",
+                MessageBox.Show("Sinto muito, mas não cosegui gravar as informações",
                     "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
     }
 }

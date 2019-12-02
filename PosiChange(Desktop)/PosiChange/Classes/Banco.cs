@@ -20,7 +20,6 @@ namespace PosiChange.Classes
             MySqlCommand comm = new MySqlCommand();
             comm.Connection = cn;
             return comm;
-
         }
     }
 }

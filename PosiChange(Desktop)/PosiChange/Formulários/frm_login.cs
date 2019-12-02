@@ -87,8 +87,8 @@ namespace PosiChange.Formulários
             {
 
                 //throw ex;
-                MessageBox.Show("Login e/ou senha inexistente", "PosiChange",
-                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sem conexão com a rede, por favor verifique!", "PosiChange",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

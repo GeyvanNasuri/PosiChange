@@ -130,6 +130,13 @@ namespace PosiChange.Formulários
                 "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        private void btn_cracha_Click(object sender, EventArgs e)
+        {
+            frm_imp_cor coren = new frm_imp_cor();
+            coren.MdiParent = this;
+            coren.Show();
+        }
+
         private void btn_sair_Click(object sender, EventArgs e)
         {
             var respota = MessageBox.Show("Deseja sair?", "PosiChange",
@@ -143,6 +150,5 @@ namespace PosiChange.Formulários
                 formL.Show();
             }
         }
-
     }
 }
