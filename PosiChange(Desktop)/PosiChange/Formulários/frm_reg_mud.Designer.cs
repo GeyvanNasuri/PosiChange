@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_reg_mud));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmb_paciente = new System.Windows.Forms.ComboBox();
-            this.cmb_posicao = new System.Windows.Forms.ComboBox();
-            this.txt_proxima = new System.Windows.Forms.MaskedTextBox();
-            this.txt_tolerancia = new System.Windows.Forms.MaskedTextBox();
-            this.btn_inserir = new System.Windows.Forms.Button();
             this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_inserir = new System.Windows.Forms.Button();
+            this.txt_tolerancia = new System.Windows.Forms.MaskedTextBox();
+            this.txt_proxima = new System.Windows.Forms.MaskedTextBox();
+            this.cmb_posicao = new System.Windows.Forms.ComboBox();
+            this.cmb_paciente = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,77 +62,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar Mudanças de Posições";
             // 
-            // label1
+            // btn_voltar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Paciente";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Posição";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Próxima Troca";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(187, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tolerância";
-            // 
-            // cmb_paciente
-            // 
-            this.cmb_paciente.FormattingEnabled = true;
-            this.cmb_paciente.Location = new System.Drawing.Point(75, 31);
-            this.cmb_paciente.Name = "cmb_paciente";
-            this.cmb_paciente.Size = new System.Drawing.Size(227, 21);
-            this.cmb_paciente.TabIndex = 4;
-            // 
-            // cmb_posicao
-            // 
-            this.cmb_posicao.FormattingEnabled = true;
-            this.cmb_posicao.Location = new System.Drawing.Point(70, 70);
-            this.cmb_posicao.Name = "cmb_posicao";
-            this.cmb_posicao.Size = new System.Drawing.Size(232, 21);
-            this.cmb_posicao.TabIndex = 5;
-            // 
-            // txt_proxima
-            // 
-            this.txt_proxima.Location = new System.Drawing.Point(112, 107);
-            this.txt_proxima.Mask = "00:00";
-            this.txt_proxima.Name = "txt_proxima";
-            this.txt_proxima.Size = new System.Drawing.Size(39, 20);
-            this.txt_proxima.TabIndex = 8;
-            // 
-            // txt_tolerancia
-            // 
-            this.txt_tolerancia.Location = new System.Drawing.Point(268, 107);
-            this.txt_tolerancia.Mask = "00:00";
-            this.txt_tolerancia.Name = "txt_tolerancia";
-            this.txt_tolerancia.Size = new System.Drawing.Size(34, 20);
-            this.txt_tolerancia.TabIndex = 9;
+            this.btn_voltar.Location = new System.Drawing.Point(330, 68);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 11;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // btn_inserir
             // 
@@ -144,14 +82,77 @@
             this.btn_inserir.UseVisualStyleBackColor = true;
             this.btn_inserir.Click += new System.EventHandler(this.btn_inserir_Click);
             // 
-            // btn_voltar
+            // txt_tolerancia
             // 
-            this.btn_voltar.Location = new System.Drawing.Point(330, 68);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
-            this.btn_voltar.TabIndex = 11;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.txt_tolerancia.Location = new System.Drawing.Point(268, 107);
+            this.txt_tolerancia.Mask = "00:00";
+            this.txt_tolerancia.Name = "txt_tolerancia";
+            this.txt_tolerancia.Size = new System.Drawing.Size(34, 20);
+            this.txt_tolerancia.TabIndex = 9;
+            // 
+            // txt_proxima
+            // 
+            this.txt_proxima.Location = new System.Drawing.Point(112, 107);
+            this.txt_proxima.Mask = "00:00";
+            this.txt_proxima.Name = "txt_proxima";
+            this.txt_proxima.Size = new System.Drawing.Size(39, 20);
+            this.txt_proxima.TabIndex = 8;
+            // 
+            // cmb_posicao
+            // 
+            this.cmb_posicao.FormattingEnabled = true;
+            this.cmb_posicao.Location = new System.Drawing.Point(70, 70);
+            this.cmb_posicao.Name = "cmb_posicao";
+            this.cmb_posicao.Size = new System.Drawing.Size(232, 21);
+            this.cmb_posicao.TabIndex = 5;
+            // 
+            // cmb_paciente
+            // 
+            this.cmb_paciente.FormattingEnabled = true;
+            this.cmb_paciente.Location = new System.Drawing.Point(75, 31);
+            this.cmb_paciente.Name = "cmb_paciente";
+            this.cmb_paciente.Size = new System.Drawing.Size(227, 21);
+            this.cmb_paciente.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(187, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tolerância";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Próxima Troca";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Posição";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Paciente";
             // 
             // frm_reg_mud
             // 

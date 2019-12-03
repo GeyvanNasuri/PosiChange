@@ -150,5 +150,12 @@ namespace PosiChange.Formulários
                 formL.Show();
             }
         }
+
+        private void btn_mudanca_Click(object sender, EventArgs e)
+        {
+            frm_reg_mud mudanca = new frm_reg_mud();
+            mudanca.MdiParent = this;
+            mudanca.Show();
+        }
     }
 }

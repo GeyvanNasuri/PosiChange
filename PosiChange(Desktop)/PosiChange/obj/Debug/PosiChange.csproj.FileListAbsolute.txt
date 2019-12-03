@@ -110,3 +110,10 @@ D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug
 D:\Documentos\Cenarios\GitHub\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_pos.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_cad_pos.resources
 C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.csprojAssemblyReference.cache
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.xml
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\Devart.Data.MySql.xml
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.Formulários.frm_reg_mud.resources
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\PosiChange.exe.manifest
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\bin\Debug\PosiChange.application
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.exe.manifest
+C:\Users\gabriel.vrnascimento\Pictures\Tentacion\PosiChange(Desktop)\PosiChange\obj\Debug\PosiChange.application

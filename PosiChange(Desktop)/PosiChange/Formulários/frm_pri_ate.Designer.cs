@@ -42,8 +42,9 @@
             this.btn_monitor = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_infracao = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_agendamento = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_sair = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_cracha = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_sair = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_mudanca = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@
             this.btn_infracao,
             this.btn_agendamento,
             this.btn_cracha,
+            this.btn_mudanca,
             this.btn_sair});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -155,6 +157,13 @@
             this.btn_agendamento.Text = "&Agendamentos";
             this.btn_agendamento.Click += new System.EventHandler(this.btn_agendamento_Click_1);
             // 
+            // btn_cracha
+            // 
+            this.btn_cracha.Name = "btn_cracha";
+            this.btn_cracha.Size = new System.Drawing.Size(56, 20);
+            this.btn_cracha.Text = "&Crachá";
+            this.btn_cracha.Click += new System.EventHandler(this.btn_cracha_Click);
+            // 
             // btn_sair
             // 
             this.btn_sair.Name = "btn_sair";
@@ -162,12 +171,12 @@
             this.btn_sair.Text = "&Sair";
             this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
             // 
-            // btn_cracha
+            // btn_mudanca
             // 
-            this.btn_cracha.Name = "btn_cracha";
-            this.btn_cracha.Size = new System.Drawing.Size(56, 20);
-            this.btn_cracha.Text = "&Crachá";
-            this.btn_cracha.Click += new System.EventHandler(this.btn_cracha_Click);
+            this.btn_mudanca.Name = "btn_mudanca";
+            this.btn_mudanca.Size = new System.Drawing.Size(69, 20);
+            this.btn_mudanca.Text = "&Mudança";
+            this.btn_mudanca.Click += new System.EventHandler(this.btn_mudanca_Click);
             // 
             // frm_pri_ate
             // 
@@ -210,5 +219,6 @@
         private System.Windows.Forms.ToolStripMenuItem btn_infracao;
         private System.Windows.Forms.ToolStripMenuItem btn_agendamento;
         private System.Windows.Forms.ToolStripMenuItem btn_cracha;
+        private System.Windows.Forms.ToolStripMenuItem btn_mudanca;
     }
 }

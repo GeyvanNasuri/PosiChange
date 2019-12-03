@@ -34,9 +34,9 @@ namespace PosiChange.Formulários
 
         private void btn_gera_qr_Click(object sender, EventArgs e)
         {
-            
+            // comando para gerar um qr
             QRCodeGenerator qr = new QRCodeGenerator();
-            QRCodeData data = qr.CreateQrCode(txt_coren.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCodeData data = qr.CreateQrCode(txt_coren.Text, QRCodeGenerator.ECCLevel.H);
             QRCode code = new QRCode(data);
             pcb_qr_coren.Image = code.GetGraphic(5);
         }

@@ -31,28 +31,29 @@ namespace PosiChange.Formulários
             cmb_paciente.Text = "";
 
             // Posicao
-            DataTable data = new DataTable();
-            Posicao posicao = new Posicao();
-            var posics = posicao.Posicoes();
-            data.Load(posics);
-            cmb_posicao.DataSource = dt;
-            cmb_posicao.DisplayMember = "posicao";
-            cmb_posicao.ValueMember = "cod_pos";
+            //DataTable data = new DataTable();
+            //Posicao posicao = new Posicao();
+            //var posics = posicao.Posicoes();
+            //data.Load(posics);
+            //cmb_posicao.DataSource = dt;
+            //cmb_posicao.DisplayMember = "posicao";
+            //cmb_posicao.ValueMember = "cod_pos";
             cmb_posicao.Text = "";
         }
 
         private void btn_inserir_Click(object sender, EventArgs e)
         {
-            Mudanca mudanca = new Mudanca();
-            mudanca.Patient = new Paciente();
-            mudanca.Position = new Posicao();
-
-            mudanca.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
-            mudanca.Proxima = Convert.ToDateTime(txt_proxima.Text);
-            mudanca.Position.Cod = Convert.ToInt32(cmb_posicao.SelectedValue);
-            mudanca.Tempo = Convert.ToDateTime(txt_tolerancia.Text);
+     
             try
             {
+                Mudanca mudanca = new Mudanca();
+                mudanca.Patient = new Paciente();
+                mudanca.Position = new Posicao();
+
+                mudanca.Patient.Cod = Convert.ToInt32(cmb_paciente.SelectedValue);
+                mudanca.Proxima = Convert.ToDateTime(txt_proxima.Text);
+                mudanca.Position.Cod = Convert.ToInt32(cmb_posicao.SelectedValue);
+                mudanca.Tempo = Convert.ToDateTime(txt_tolerancia.Text);
                 mudanca.Inserir();
             }
             catch (Exception)
@@ -60,6 +61,16 @@ namespace PosiChange.Formulários
 
                 MessageBox.Show("Sinto muito, mas não foi possível gravar as informações",
                     "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            var respota = MessageBox.Show("Deseja voltar para a janela principal?",
+                "PosiChange | Registro de mudanças", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respota == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }

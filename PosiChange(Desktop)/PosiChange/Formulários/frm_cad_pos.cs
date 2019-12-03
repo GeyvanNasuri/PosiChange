@@ -85,7 +85,7 @@ namespace PosiChange.Formulários
             }
             catch (Exception Ex)
             {
-                throw Ex;
+                //throw Ex;
 
                 MessageBox.Show("Sinto muito, mas não cosegui gravar as informações",
                     "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Warning);

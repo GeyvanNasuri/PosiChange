@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `softklee_posichange`.`atendimento` (
   `telefone` VARCHAR(15) NULL DEFAULT NULL,
   `pri_ace` BIT(1) NOT NULL,
   `_nivel` INT(11) NOT NULL,
-  PRIMARY KEY (`cod_ate`, `intervalo`),
+  PRIMARY KEY (`cod_ate`),
   UNIQUE INDEX `login_UNIQUE` (`login` ASC),
   UNIQUE INDEX `cod_ate_UNIQUE` (`cod_ate` ASC),
   INDEX `fk_atendimento_nivel1_idx` (`_nivel` ASC),
@@ -220,7 +220,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `softklee_posichange`.`posicao` (
   `cod_posicao` INT(11) NOT NULL AUTO_INCREMENT,
   `posicao` VARCHAR(50) NOT NULL,
-  `imagem` VARBINARY(60) NULL DEFAULT NULL,
+  `imagem` LONGBLOB NOT NULL,
   PRIMARY KEY (`cod_posicao`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -267,13 +267,14 @@ CREATE TABLE IF NOT EXISTS `softklee_posichange`.`quarto` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+USE `softklee_posichange` ;
 
 -- -----------------------------------------------------
 -- procedure sp_insert_atendente
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_insert_atendente`(
+CREATE  PROCEDURE `sp_insert_atendente`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -309,7 +310,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_insert_enfermeiro`(
+CREATE  PROCEDURE `sp_insert_enfermeiro`(
 	sp_nome varchar(50),
 	sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -337,35 +338,11 @@ end$$
 DELIMITER ;
 
 -- -----------------------------------------------------
--- procedure sp_insert_mudanca
--- -----------------------------------------------------
-
-DELIMITER $$
-CREATE PROCEDURE `sp_insert_mudanca`(
-	sp_cod_pac int,
-    sp_proxima time,
-    sp_cod_pos int,
-    sp_tempo time,
-    sp_ativo bit(1)
-)
-begin
-insert into `mudancas` values(
-	sp_cod_pac,
-    sp_proxima,
-    sp_cod_pos,
-    sp_tempo,
-    sp_ativo
-);
-end$$
-
-DELIMITER ;
-
--- -----------------------------------------------------
 -- procedure sp_insert_paciente
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_insert_paciente`(
+CREATE  PROCEDURE `sp_insert_paciente`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -393,15 +370,15 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_insert_posicao`(
+CREATE  PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
-    sp_img varbinary(60)
+    sp_imagem longblob
 )
 begin
 insert into `responsavel` values(
 	null,
     sp_posicao,
-    sp_img
+    sp_imagem
 );
 select * from `posicao` where last_insert_id();
 end$$
@@ -413,7 +390,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_insert_responsavel`(
+CREATE  PROCEDURE `sp_insert_responsavel`(
 	sp_nome varchar(50),
     sp_rg varchar(12),
     sp_cpf varchar(15),
@@ -449,7 +426,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_update_atendente`(
+CREATE  PROCEDURE `sp_update_atendente`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_senha varchar(32),
@@ -476,7 +453,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_update_enfermeiro`(
+CREATE  PROCEDURE `sp_update_enfermeiro`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_turno varchar(10),
@@ -499,7 +476,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_update_paciente`(
+CREATE  PROCEDURE `sp_update_paciente`(
 	sp_cod int,
     sp_nome varchar(50),
     sp_apr_fer bit,
@@ -522,7 +499,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_update_posicao`(
+CREATE  PROCEDURE `sp_update_posicao`(
 	sp_cod int,
 	sp_posicao varchar(50),
     sp_imagem longblob
@@ -541,7 +518,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-CREATE PROCEDURE `sp_update_responsavel`(
+CREATE  PROCEDURE `sp_update_responsavel`(
 	sp_cod int,
 	sp_nome varchar(50),
     sp_senha varchar(20),
