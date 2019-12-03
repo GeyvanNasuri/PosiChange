@@ -33,7 +33,7 @@
             this.txt_caminho = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.btn_busca = new System.Windows.Forms.Button();
             this.pic_posicao = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@
             this.groupBox1.Controls.Add(this.txt_caminho);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btn_voltar);
             this.groupBox1.Controls.Add(this.btn_salvar);
             this.groupBox1.Controls.Add(this.btn_busca);
             this.groupBox1.Controls.Add(this.pic_posicao);
@@ -87,15 +87,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Posição";
             // 
-            // button1
+            // btn_voltar
             // 
-            this.button1.Location = new System.Drawing.Point(174, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_voltar.Location = new System.Drawing.Point(174, 325);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 4;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // btn_salvar
             // 
@@ -159,7 +159,7 @@
         private System.Windows.Forms.TextBox txt_posicao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Button btn_busca;
         private System.Windows.Forms.PictureBox pic_posicao;

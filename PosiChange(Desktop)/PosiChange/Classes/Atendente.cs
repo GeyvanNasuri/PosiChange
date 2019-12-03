@@ -176,11 +176,57 @@ namespace PosiChange.Classes
                 com.Connection.Close();
                 existe = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
             return existe;
+        }
+
+        public void Select(int cod)
+        {
+            Level = new Nivel();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from atendimento where cod_ate = " + cod;
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Cod = dr.GetInt32(0);
+                Nome = dr.GetString(1);
+                RG = dr.GetString(2);
+                CPF = dr.GetString(3);
+                Login = dr.GetString(4);
+                Senha = dr.GetString(5);
+                //Intervalo = dr.GetDateTime(6);
+                Turno = dr.GetString(7);
+                Telefone = dr.GetString(8);
+                Acesso = dr.GetBoolean(9);
+                Level.Cod = dr.GetInt32(10);
+            }
+            com.Connection.Close();
+        }
+
+        public void Buscar()
+        {
+            Level = new Nivel();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from atendimento";
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Cod = dr.GetInt32(0);
+                Nome = dr.GetString(1);
+                RG = dr.GetString(2);
+                CPF = dr.GetString(3);
+                Login = dr.GetString(4);
+                Senha = dr.GetString(5);
+                //Intervalo = dr.GetDateTime(6);
+                Turno = dr.GetString(7);
+                Telefone = dr.GetString(8);
+                Acesso = dr.GetBoolean(9);
+                Level.Cod = dr.GetInt32(10);
+            }
+            com.Connection.Close();
         }
     }
 }

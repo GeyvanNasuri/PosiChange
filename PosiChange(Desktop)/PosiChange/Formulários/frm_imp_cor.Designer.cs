@@ -36,23 +36,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_atuacao = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.btn_gera_qr = new System.Windows.Forms.Button();
             this.pcb_qr_coren = new System.Windows.Forms.PictureBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_qr_coren)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_voltar);
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.txt_coren);
             this.groupBox1.Controls.Add(this.cmb_enfermeiro);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lbl_atuacao);
             this.groupBox1.Controls.Add(this.lbl_nome);
-            this.groupBox1.Controls.Add(this.btn_close);
             this.groupBox1.Controls.Add(this.btn_imprimir);
             this.groupBox1.Controls.Add(this.btn_gera_qr);
             this.groupBox1.Controls.Add(this.pcb_qr_coren);
@@ -119,16 +119,6 @@
             this.lbl_nome.TabIndex = 4;
             this.lbl_nome.Text = "Nome";
             // 
-            // btn_close
-            // 
-            this.btn_close.Location = new System.Drawing.Point(302, 483);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 23);
-            this.btn_close.TabIndex = 3;
-            this.btn_close.Text = "Cancelar";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // btn_imprimir
             // 
             this.btn_imprimir.Location = new System.Drawing.Point(160, 483);
@@ -151,12 +141,26 @@
             // 
             // pcb_qr_coren
             // 
+            this.pcb_qr_coren.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pcb_qr_coren.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pcb_qr_coren.Location = new System.Drawing.Point(16, 150);
             this.pcb_qr_coren.Name = "pcb_qr_coren";
             this.pcb_qr_coren.Size = new System.Drawing.Size(359, 327);
+            this.pcb_qr_coren.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pcb_qr_coren.TabIndex = 0;
             this.pcb_qr_coren.TabStop = false;
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Location = new System.Drawing.Point(300, 483);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(75, 23);
+            this.btn_voltar.TabIndex = 10;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // frm_imp_cor
             // 
@@ -182,12 +186,12 @@
         private System.Windows.Forms.PictureBox pcb_qr_coren;
         private System.Windows.Forms.Button btn_imprimir;
         private System.Windows.Forms.Button btn_gera_qr;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.TextBox txt_coren;
         private System.Windows.Forms.ComboBox cmb_enfermeiro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_atuacao;
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }

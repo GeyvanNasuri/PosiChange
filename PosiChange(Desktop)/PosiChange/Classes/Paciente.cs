@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PosiChange.Classes;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace PosiChange.Classes
 {

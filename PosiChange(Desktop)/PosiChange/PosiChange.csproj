@@ -200,6 +200,12 @@
     <Compile Include="Formulários\frm_pri_ate.Designer.cs">
       <DependentUpon>frm_pri_ate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulários\frm_reg_mud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frm_reg_mud.Designer.cs">
+      <DependentUpon>frm_reg_mud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários\frm_agenda.resx">
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários\frm_pri_ate.resx">
       <DependentUpon>frm_pri_ate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frm_reg_mud.resx">
+      <DependentUpon>frm_reg_mud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

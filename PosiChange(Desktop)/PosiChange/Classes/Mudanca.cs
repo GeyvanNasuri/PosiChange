@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace PosiChange.Classes
 {
@@ -26,10 +27,16 @@ namespace PosiChange.Classes
             Ativo = ativo;
         }
 
-        public void Inserir(Paciente patient, DateTime proxima, Posicao position, DateTime tempo, bool ativo)
+        public void Inserir()
         {
             var com = Banco.Abrir();
-            com.CommandText = "insert into mudancas values(" + patient.Cod + ", '" + proxima + "', " + position.Cod + ", '" + tempo + ", " + ativo + "')";
+            com.CommandType = System.Data.CommandType.StoredProcedure;
+            com.CommandText = "sp_insert_mudanca";
+            com.Parameters.Add("sp_cod_pac", MySqlDbType.Int32).Value = Patient.Cod;
+            com.Parameters.Add("sp_proxima", MySqlDbType.Timestamp).Value = Proxima;
+            com.Parameters.Add("sp_cod_pos", MySqlDbType.Int32).Value = Position.Cod;
+            com.Parameters.Add("sp_tempo", MySqlDbType.Timestamp).Value = Tempo;
+	    com.Parameters.Add("sp_ativo", MySqlDbType.Bit).Value = Ativo;
             com.ExecuteNonQuery();
             com.Connection.Close();
 

@@ -220,7 +220,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `softklee_posichange`.`posicao` (
   `cod_posicao` INT(11) NOT NULL AUTO_INCREMENT,
   `posicao` VARCHAR(50) NOT NULL,
-  `imagem` LONGBLOB NOT NULL,
+  `imagem` VARBINARY(60) NULL DEFAULT NULL,
   PRIMARY KEY (`cod_posicao`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -267,7 +267,6 @@ CREATE TABLE IF NOT EXISTS `softklee_posichange`.`quarto` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-USE `softklee_posichange` ;
 
 -- -----------------------------------------------------
 -- procedure sp_insert_atendente
@@ -338,6 +337,30 @@ end$$
 DELIMITER ;
 
 -- -----------------------------------------------------
+-- procedure sp_insert_mudanca
+-- -----------------------------------------------------
+
+DELIMITER $$
+CREATE PROCEDURE `sp_insert_mudanca`(
+	sp_cod_pac int,
+    sp_proxima time,
+    sp_cod_pos int,
+    sp_tempo time,
+    sp_ativo bit(1)
+)
+begin
+insert into `mudancas` values(
+	sp_cod_pac,
+    sp_proxima,
+    sp_cod_pos,
+    sp_tempo,
+    sp_ativo
+);
+end$$
+
+DELIMITER ;
+
+-- -----------------------------------------------------
 -- procedure sp_insert_paciente
 -- -----------------------------------------------------
 
@@ -372,7 +395,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE PROCEDURE `sp_insert_posicao`(
 	sp_posicao varchar(50),
-    sp_img longblob
+    sp_img varbinary(60)
 )
 begin
 insert into `responsavel` values(

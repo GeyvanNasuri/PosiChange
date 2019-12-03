@@ -34,7 +34,7 @@ namespace PosiChange.Classes
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.CommandText = "sp_insert_posicao";
             com.Parameters.Add("sp_posicao", MySqlDbType.VarChar).Value = Position;
-            com.Parameters.Add("sp_img", MySqlDbType.LongBlob).Value = Imagem;
+            com.Parameters.Add("sp_img", MySqlDbType.VarBinary).Value = Imagem;
             Cod = Convert.ToInt32(com.ExecuteScalar());
             com.Connection.Close();
         }
@@ -98,6 +98,16 @@ namespace PosiChange.Classes
                 throw ex;
             }
             return alterado;
+        }
+
+        public MySqlDataReader Posicoes()
+        {
+
+            var com = Banco.Abrir();
+            com.CommandText = "select * from posicao";
+            var dr = com.ExecuteReader();
+
+            return dr;
         }
     }
 }

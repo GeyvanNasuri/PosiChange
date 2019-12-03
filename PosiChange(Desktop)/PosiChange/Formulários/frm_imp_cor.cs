@@ -47,7 +47,14 @@ namespace PosiChange.Formulários
                 "PosiChange", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            Enfermeiro enf = new Enfermeiro();
+            enf.Select(Convert.ToInt32(cmb_enfermeiro.SelectedValue));
+            txt_coren.Text = Convert.ToString(enf.Coren);
+        }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
         {
             var respota = MessageBox.Show("Deseja voltar a tela inicial?",
                 "PosiChange | Gerar Crachá", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -55,13 +62,6 @@ namespace PosiChange.Formulários
             {
                 this.Close();
             }
-        }
-
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-            Enfermeiro enf = new Enfermeiro();
-            enf.Select(Convert.ToInt32(cmb_enfermeiro.SelectedValue));
-            txt_coren.Text = Convert.ToString(enf.Coren);
         }
     }
 }

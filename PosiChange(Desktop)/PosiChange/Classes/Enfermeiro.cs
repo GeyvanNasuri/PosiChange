@@ -193,5 +193,26 @@ namespace PosiChange.Classes
             }
             com.Connection.Close();
         }
+
+        public void Buscar()
+        {
+            Level = new Nivel();
+            var com = Banco.Abrir();
+            com.CommandText = "select * from enfermagem";
+            var dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                Cod = dr.GetInt32(0);
+                Nome = dr.GetString(1);
+                RG = dr.GetString(2);
+                CPF = dr.GetString(3);
+                Coren = dr.GetInt32(4);
+                Turno = dr.GetString(5);
+                //Intervalo = dr.GetDateTime(6);
+                Telefone = dr.GetString(7);
+                Level.Cod = dr.GetInt32(8);
+            }
+            com.Connection.Close();
+        }
     }
 }
